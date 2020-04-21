@@ -1,6 +1,6 @@
 # space_soccer
 
-Sejam bem todos Bem vindo a app <b>Space Soccer. <br><\b>
+Sejam bem todos Bem vindo a app <b>Space Soccer. <br></b>
 Trabalho Feito em kotlin. <br>
 
 Programadores-> <br>
