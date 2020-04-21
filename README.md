@@ -1,12 +1,15 @@
 # space_soccer
 
-Sejam bem todos Bem vindo a app <b>Space Soccer. <br></b>
-Trabalho Feito em kotlin. <br>
+This repository refers to the PBL (Project Based Learning) of students in the 2nd Period of the Higher Technical Course for Mobile Applications.
 
-Programadores-> <br>
-Pedro   <br>
-Nuno <br>
-Yuri<br>
-Fabio<br>
-Francisco<br>
+The Project consists in create a Football Tournament Management application, in the Training category, for Android.
 
+The application is being developed in Android Studio using the Kotlin language, SQL Server for the Database and the Figma program for the design.
+
+The students responsible for the Project are:
+
+Fábio Brito     --> fabiofazcode                      Pedro Martins --> PedroBBC
+
+Francisco Simão --> a18094ipca                        Yuri Machado  --> macyuri94
+
+Nuno Fernandes  --> NunoFighT8
