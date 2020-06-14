@@ -9,10 +9,6 @@ The application is being developed in Android Studio using the Kotlin language, 
 
 The students responsible for the Project are:
 
-Fábio Brito --> fabiofazcode
-
-Francisco Simão --> a18094ipca
-
 Nuno Fernandes --> NunoFighT8
 
 Pedro Martins --> PedroBBC
