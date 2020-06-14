@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpaceSoccerTorneios"
+    android:background="@drawable/background_blue_orange_white">
+
+    <ImageView
+        android:id="@+id/imgperfiluser"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_user" />
+
+    <ImageView
+        android:id="@+id/img_painel_torneio"
+        android:layout_width="490dp"
+        android:layout_height="152dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196"
+        app:srcCompat="@drawable/img_painel_torneios" />
+
+    <Button
+        android:id="@+id/btnometorneio"
+        android:layout_width="160sp"
+        android:layout_height="40sp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/background_bt_blue"
+        android:fontFamily="@font/roboto"
+        android:text="Torneio A"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_painel_torneio"
+        app:layout_constraintStart_toStartOf="@+id/img_painel_torneio"
+        app:layout_constraintTop_toTopOf="@+id/img_painel_torneio"
+        app:layout_constraintVertical_bias="0.937" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

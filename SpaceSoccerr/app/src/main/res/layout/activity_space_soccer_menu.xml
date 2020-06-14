@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpaceSoccerMenu"
+    android:background="@drawable/background_blue_orange_white">
+
+    <ImageView
+        android:id="@+id/imgperfiluser"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_user"/>
+
+    <Button
+        android:id="@+id/bthome"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/bt_home_torneios"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bttorneios"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="32sp"
+        android:background="@drawable/bt_jogos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btequipas"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bt_equipa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bthome" />
+
+    <Button
+        android:id="@+id/btfotos"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/bt_fotos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttorneios" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

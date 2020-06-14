@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpaceSoccerRegistar"
+    android:background="@drawable/background_blue">
+
+    <TextView
+        android:id="@+id/textFirstNameRegister"
+        android:layout_width="260sp"
+        android:layout_height="40sp"
+        android:layout_marginStart="75sp"
+        android:layout_marginTop="130sp"
+        android:layout_marginEnd="75sp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Primeiro Nome"
+        android:textColorHint="#000000"
+        android:paddingLeft="15sp"/>
+
+    <TextView
+        android:id="@+id/textLastNameRegister"
+        android:layout_width="260sp"
+        android:layout_height="40sp"
+        android:layout_marginStart="75sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="75sp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFirstNameRegister"
+        android:hint="Ultimo Nome"
+        android:textColorHint="#000000"
+        android:paddingLeft="15sp"/>
+
+    <TextView
+        android:id="@+id/textUserNameRegister"
+        android:layout_width="260sp"
+        android:layout_height="40sp"
+        android:layout_marginStart="75sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="75sp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLastNameRegister"
+        android:hint="Nome utilizador"
+        android:textColorHint="#000000"
+        android:paddingLeft="15sp"/>
+
+    <TextView
+        android:id="@+id/textEmailRegister"
+        android:layout_width="260sp"
+        android:layout_height="40sp"
+        android:layout_marginStart="75sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="75sp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textUserNameRegister"
+        android:hint="Email"
+        android:textColorHint="#000000"
+        android:paddingLeft="15sp"/>
+
+    <TextView
+        android:id="@+id/textPasswordRegister"
+        android:layout_width="260sp"
+        android:layout_height="40sp"
+        android:layout_marginStart="75sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="75sp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEmailRegister"
+        android:hint="Palavra-passe"
+        android:textColorHint="#000000"
+        android:paddingLeft="15sp"/>
+
+    <TextView
+        android:id="@+id/textConfirmPasswordRegister"
+        android:layout_width="260sp"
+        android:layout_height="40sp"
+        android:layout_marginStart="75sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="75sp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPasswordRegister"
+        android:hint="Confirmar palavra-passe"
+        android:textColorHint="#000000"
+        android:paddingLeft="15sp"/>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textConfirmPasswordRegister" />
+
+    <TextView
+        android:id="@+id/textTermsOfUse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16sp"
+        android:layout_marginTop="32sp"
+        android:layout_marginEnd="80sp"
+        android:fontFamily="@font/roboto"
+        android:text="Eu aceito os Termos de Uso"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/textConfirmPasswordRegister" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="180sp"
+        android:layout_height="50sp"
+        android:layout_marginStart="112sp"
+        android:layout_marginEnd="119sp"
+        android:layout_marginBottom="60sp"
+        android:background="@drawable/bt_registar_orange"
+        android:fontFamily="@font/roboto"
+        android:text="Registar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

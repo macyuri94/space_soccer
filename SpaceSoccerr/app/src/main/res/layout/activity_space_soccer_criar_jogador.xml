@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpaceSoccerCriarJogador"
+    android:background="@drawable/background_blue">
+
+    <TextView
+        android:id="@+id/txtclube"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Clube"
+        android:paddingLeft="15sp"
+        android:textColor="#F4705B"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtpeso" />
+
+    <TextView
+        android:id="@+id/txtnomejogador"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Nome"
+        android:paddingLeft="15sp"
+        android:textColor="#F4705B"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtpeso"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Peso"
+        android:paddingLeft="15sp"
+        android:textColor="#F4705B"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtaltura" />
+
+    <TextView
+        android:id="@+id/txtaltura"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Altura"
+        android:paddingLeft="15sp"
+        android:textColor="#F4705B"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtposicao" />
+
+    <TextView
+        android:id="@+id/txtposicao"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Posição"
+        android:paddingLeft="15sp"
+        android:textColor="#F4705B"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnacionalidade" />
+
+    <TextView
+        android:id="@+id/txtnacionalidade"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Nacionalidade"
+        android:paddingLeft="15sp"
+        android:textColor="#F4705B"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtidade" />
+
+    <TextView
+        android:id="@+id/txtemail"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Email"
+        android:paddingLeft="15sp"
+        android:textColor="#F4705B"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnomejogador" />
+
+    <TextView
+        android:id="@+id/txtidade"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Idade"
+        android:paddingLeft="15sp"
+        android:textColor="#F4705B"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtemail" />
+
+    <Button
+        android:id="@+id/btguardardados"
+        android:layout_width="163sp"
+        android:layout_height="40sp"
+        android:layout_marginStart="112sp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="119sp"
+        android:background="@drawable/bt_registar_orange"
+        android:fontFamily="@font/roboto"
+        android:text="Guardar dados"
+        android:textColor="#ffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.705"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtclube" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
