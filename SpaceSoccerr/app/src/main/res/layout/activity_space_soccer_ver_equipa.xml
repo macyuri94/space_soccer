@@ -7,8 +7,18 @@
     tools:context=".SpaceSoccerVerEquipa"
     android:background="@drawable/background_blue_orange_white">
 
+    <Button
+        android:id="@+id/bthomeverequipa"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bt_home_torneios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/imgperfiluser"
+        android:id="@+id/imgperfiluserverequipa"
         android:layout_width="55sp"
         android:layout_height="55sp"
         android:layout_marginTop="11dp"
@@ -19,7 +29,7 @@
         app:srcCompat="@drawable/img_user"/>
 
     <ImageView
-        android:id="@+id/painel1"
+        android:id="@+id/painel1verequipa"
         android:layout_width="383dp"
         android:layout_height="97dp"
         android:layout_marginTop="116dp"
@@ -39,9 +49,9 @@
         android:text="Manchester United"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/painel1"
-        app:layout_constraintStart_toStartOf="@+id/painel1"
-        app:layout_constraintTop_toTopOf="@+id/painel1"
+        app:layout_constraintBottom_toBottomOf="@+id/painel1verequipa"
+        app:layout_constraintStart_toStartOf="@+id/painel1verequipa"
+        app:layout_constraintTop_toTopOf="@+id/painel1verequipa"
         app:layout_constraintVertical_bias="0.377" />
 
     <Button
@@ -50,9 +60,9 @@
         android:layout_height="35sp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/bt_apagar"
-        app:layout_constraintBottom_toBottomOf="@+id/painel1"
-        app:layout_constraintEnd_toEndOf="@+id/painel1"
-        app:layout_constraintTop_toTopOf="@+id/painel1"
+        app:layout_constraintBottom_toBottomOf="@+id/painel1verequipa"
+        app:layout_constraintEnd_toEndOf="@+id/painel1verequipa"
+        app:layout_constraintTop_toTopOf="@+id/painel1verequipa"
         app:layout_constraintVertical_bias="0.516" />
 
     <ImageView
@@ -60,9 +70,9 @@
         android:layout_width="70sp"
         android:layout_height="70sp"
         android:layout_marginStart="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/painel1"
-        app:layout_constraintStart_toStartOf="@+id/painel1"
-        app:layout_constraintTop_toTopOf="@+id/painel1"
+        app:layout_constraintBottom_toBottomOf="@+id/painel1verequipa"
+        app:layout_constraintStart_toStartOf="@+id/painel1verequipa"
+        app:layout_constraintTop_toTopOf="@+id/painel1verequipa"
         app:layout_constraintVertical_bias="0.555"
         app:srcCompat="@drawable/img_logo_equipa" />
 

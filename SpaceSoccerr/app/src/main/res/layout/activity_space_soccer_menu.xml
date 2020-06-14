@@ -11,51 +11,85 @@
         android:id="@+id/imgperfiluser"
         android:layout_width="55sp"
         android:layout_height="55sp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="11dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_user"/>
+        app:srcCompat="@drawable/img_user" />
 
     <Button
         android:id="@+id/bthome"
-        android:layout_width="145sp"
-        android:layout_height="145sp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="128dp"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/bt_home_torneios"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/bttorneios"
-        android:layout_width="145sp"
-        android:layout_height="145sp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="32sp"
-        android:background="@drawable/bt_jogos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btequipas"
-        android:layout_width="145sp"
-        android:layout_height="145sp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/bt_equipa"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bthome" />
 
     <Button
         android:id="@+id/btfotos"
         android:layout_width="145sp"
         android:layout_height="145sp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/bt_fotos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btjogadores" />
+
+    <Button
+        android:id="@+id/btjogos"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bt_jogos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bttorneios" />
+        app:layout_constraintTop_toBottomOf="@+id/btequipasmenu" />
+
+    <Button
+        android:id="@+id/btstats"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/bt_stats"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btjogadores"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/bt_jogadores"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btstats" />
+
+    <Button
+        android:id="@+id/btequipasmenu"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bt_equipas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTituloTorneio"
+        android:layout_width="375dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="108dp"
+        android:text="TORNEIO A"
+        android:textAlignment="center"
+        android:textColor="#F4705B"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

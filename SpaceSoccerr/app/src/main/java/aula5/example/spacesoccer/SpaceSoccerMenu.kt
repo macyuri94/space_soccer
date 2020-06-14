@@ -17,12 +17,12 @@ class SpaceSoccerMenu : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btequipas.setOnClickListener {
+        btequipasmenu.setOnClickListener {
             val intent = Intent(this, SpaceSoccerVerEquipa::class.java)
             startActivity(intent)
         }
 
-        bttorneios.setOnClickListener {
+        btjogadores.setOnClickListener {
             val intent = Intent(this, SpaceSoccerVerJogador::class.java)
             startActivity(intent)
         }
@@ -31,7 +31,6 @@ class SpaceSoccerMenu : AppCompatActivity() {
             val intent = Intent(this, SpaceSoccerInformacaoJogador::class.java)
             startActivity(intent)
         }
-
 
     }
 }

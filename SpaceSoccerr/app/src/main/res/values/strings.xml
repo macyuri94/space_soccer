@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SpaceSoccer</string>
+    <string name="toast_msg_login">Dados inválidos</string>
 </resources>

@@ -21,5 +21,10 @@ class SpaceSoccerTorneios : AppCompatActivity() {
             val intent = Intent(this, SpaceSoccerMenu::class.java)
             startActivity(intent)
         }
+
+        imgperfilusertorneios.setOnClickListener {
+            val intent = Intent(this, SpaceSoccerInformacaoJogador::class.java)
+            startActivity(intent)
+        }
     }
 }
