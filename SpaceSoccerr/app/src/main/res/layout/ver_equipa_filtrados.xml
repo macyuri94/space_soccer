@@ -7,8 +7,21 @@
     tools:context=".views.VerEquipaFiltradosActivity"
     android:background="@drawable/background_blue_orange_white">
 
+    <ListView
+        android:id="@+id/listViewEquipas_verEquipaFiltrado"
+        android:layout_width="384dp"
+        android:layout_height="628dp"
+        android:divider="@color/colorWhite"
+        android:dividerHeight="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.844"></ListView>
+
     <ImageView
-        android:id="@+id/imgPerfilUser_verEquipa_filtrado"
+        android:id="@+id/imgPerfilUser_verEquipaFiltrado"
         android:layout_width="55sp"
         android:layout_height="55sp"
         android:layout_marginTop="11dp"
@@ -19,7 +32,7 @@
         app:srcCompat="@drawable/img_user" />
 
     <Button
-        android:id="@+id/btHome_verEquipa_filtrado"
+        android:id="@+id/btHome_verEquipaFiltrado"
         android:layout_width="55sp"
         android:layout_height="55sp"
         android:layout_marginTop="11dp"
@@ -27,42 +40,5 @@
         android:background="@drawable/bt_home_torneios"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/painel1_verEquipa_filtrado"
-        android:layout_width="383dp"
-        android:layout_height="97dp"
-        android:layout_marginTop="116dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_painel_equipa_jogador" />
-
-    <ImageView
-        android:id="@+id/imgEquipaFutebol_verEquipa_filtrado"
-        android:layout_width="70sp"
-        android:layout_height="70sp"
-        android:layout_marginStart="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/painel1_verEquipa_filtrado"
-        app:layout_constraintStart_toStartOf="@+id/painel1_verEquipa_filtrado"
-        app:layout_constraintTop_toTopOf="@+id/painel1_verEquipa_filtrado"
-        app:layout_constraintVertical_bias="0.555"
-        app:srcCompat="@drawable/img_logo_equipa" />
-
-    <TextView
-        android:id="@+id/btNomeTorneio_verEquipa_filtrado"
-        android:layout_width="198dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/roboto"
-        android:text="Manchester United"
-        android:textColor="#FFFFFF"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/painel1_verEquipa_filtrado"
-        app:layout_constraintStart_toStartOf="@+id/painel1_verEquipa_filtrado"
-        app:layout_constraintTop_toTopOf="@+id/painel1_verEquipa_filtrado"
-        app:layout_constraintVertical_bias="0.377" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
