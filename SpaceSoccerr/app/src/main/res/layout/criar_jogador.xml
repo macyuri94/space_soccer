@@ -27,15 +27,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtNumeroCartaoCidadao_criarJogador"
+        android:id="@+id/txtEmail_criarJogador"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
         android:autofillHints=""
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
-        android:hint="NIF"
-        android:inputType="textPersonName"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
         android:paddingLeft="15sp"
         android:textColor="#000000"
         android:textColorHint="#000000"
@@ -46,15 +46,15 @@
         app:layout_constraintTop_toBottomOf="@+id/txtNomeJogador_criarJogadorr" />
 
     <EditText
-        android:id="@+id/txtNumero_criarJogador"
+        android:id="@+id/txtIdade_criarJogador"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
         android:autofillHints=""
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
-        android:hint="Numero camisola"
-        android:inputType="textEmailAddress"
+        android:hint="Idade"
+        android:inputType="number"
         android:paddingLeft="15sp"
         android:textColor="#000000"
         android:textColorHint="#000000"
@@ -62,25 +62,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNumeroCartaoCidadao_criarJogador" />
-
-    <EditText
-        android:id="@+id/txtDataNascimento_criarJogador"
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="24dp"
-        android:autofillHints=""
-        android:background="@drawable/background_txt"
-        android:fontFamily="@font/roboto"
-        android:hint="Data Nascimento"
-        android:paddingLeft="15sp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNumero_criarJogador" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail_criarJogador" />
 
     <EditText
         android:id="@+id/txtNacionalidade_criarJogador"
@@ -99,7 +81,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDataNascimento_criarJogador" />
+        app:layout_constraintTop_toBottomOf="@+id/txtIdade_criarJogador" />
 
     <EditText
         android:id="@+id/txtPosicao_criarJogador"
@@ -182,7 +164,7 @@
         android:layout_width="163sp"
         android:layout_height="40sp"
         android:layout_marginStart="112sp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="119sp"
         android:background="@drawable/bt_registar_orange"
         android:fontFamily="@font/roboto"

@@ -7,20 +7,6 @@
     tools:context=".views.VerEquipaActivity"
     android:background="@drawable/background_blue_orange_white">
 
-    <ListView
-        android:id="@+id/listViewEquipas"
-        android:layout_width="384dp"
-        android:layout_height="628dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98"
-        android:dividerHeight="7dp"
-        android:divider="@color/colorWhite">
-    </ListView>
-
     <ImageView
         android:id="@+id/imgPerfilUser_verEquipa"
         android:layout_width="55sp"
@@ -41,6 +27,54 @@
         android:background="@drawable/bt_home_torneios"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/painel1_verEquipa"
+        android:layout_width="383dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="116dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_painel_equipa_jogador" />
+
+    <ImageView
+        android:id="@+id/imgEquipaFutebol_verEquipa"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/painel1_verEquipa"
+        app:layout_constraintStart_toStartOf="@+id/painel1_verEquipa"
+        app:layout_constraintTop_toTopOf="@+id/painel1_verEquipa"
+        app:layout_constraintVertical_bias="0.555"
+        app:srcCompat="@drawable/img_logo_equipa" />
+
+    <TextView
+        android:id="@+id/btNomeTorneio_verEquipa"
+        android:layout_width="198dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto"
+        android:text="Manchester United"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/painel1_verEquipa"
+        app:layout_constraintStart_toStartOf="@+id/painel1_verEquipa"
+        app:layout_constraintTop_toTopOf="@+id/painel1_verEquipa"
+        app:layout_constraintVertical_bias="0.377" />
+
+    <Button
+        android:id="@+id/btApagar_verEquipa"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bt_apagar"
+        app:layout_constraintBottom_toBottomOf="@+id/painel1_verEquipa"
+        app:layout_constraintEnd_toEndOf="@+id/painel1_verEquipa"
+        app:layout_constraintTop_toTopOf="@+id/painel1_verEquipa"
+        app:layout_constraintVertical_bias="0.516" />
 
     <Button
         android:id="@+id/btCriarEquipa_verEquipa"

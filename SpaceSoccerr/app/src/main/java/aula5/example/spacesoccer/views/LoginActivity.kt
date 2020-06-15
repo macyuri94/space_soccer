@@ -15,35 +15,19 @@ import aula5.example.spacesoccer.helper.VolleyHelper
 
 class LoginActivity : AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
         val username = findViewById<EditText>(R.id.txtEmail_login)
-        val password = findViewById<EditText>(R.id.txtPassword_login)
+        val Password = findViewById<EditText>(R.id.txtPassword_login)
         val loginButton = findViewById<Button>(R.id.btLogin_login)
 
-        username.setText("nuno@gmail.com")
-        password.setText("nuno")
 
         loginButton.setOnClickListener {
-            if(username.text.toString() == "nuno@gmail.com" && password.text.toString() == "nuno") {
-                val intent = Intent(this@LoginActivity, TorneiosActivity::class.java)
-                startActivity(intent)
-            }else{
-                Toast.makeText(
-                    this@LoginActivity,
-                    this@LoginActivity.getString(R.string.login_failed),
-                    Toast.LENGTH_LONG
-                ).show()
-            }
-        }
-
-        /*loginButton.setOnClickListener {
             VolleyHelper.instance.userLogin ( this@LoginActivity,
                 username.text.toString(),
-                password.text.toString()
+                Password.text.toString()
             ) {
                 if (it) {
                     val intent = Intent(this@LoginActivity, TorneiosActivity::class.java)
@@ -56,6 +40,6 @@ class LoginActivity : AppCompatActivity() {
                     ).show()
                 }
             }
-        }*/
+        }
     }
 }

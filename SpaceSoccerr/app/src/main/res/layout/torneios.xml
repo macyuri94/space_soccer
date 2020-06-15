@@ -7,7 +7,10 @@
     tools:context=".views.TorneiosActivity"
     android:background="@drawable/background_blue_orange_white">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aa29a41cfe72eed4f1986efeb88abd56ccf5c0ba
     <ImageView
         android:id="@+id/imgPerfilUserTorneios_torneios"
         android:layout_width="55sp"
@@ -18,6 +21,42 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_user" />
 
+<<<<<<< HEAD
+=======
+
+    <ImageView
+        android:id="@+id/imgPainelTorneio_torneios"
+        android:layout_width="490dp"
+        android:layout_height="152dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196"
+        app:srcCompat="@drawable/img_painel_torneios"/>
+
+    <TextView
+        android:id="@+id/txtNomeTorneio_torneios"
+        android:layout_width="170dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPainelTorneio_torneios"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgPainelTorneio_torneios"
+<<<<<<< HEAD:SpaceSoccerr/app/src/main/res/layout/torneios_provisorio.xml
+        app:layout_constraintVertical_bias="0.923"
+        tools:text="TorneioA" />
+=======
+        app:layout_constraintVertical_bias="0.923" />
+>>>>>>> aa29a41cfe72eed4f1986efeb88abd56ccf5c0ba:SpaceSoccerr/app/src/main/res/layout/torneios.xml
+
+>>>>>>> aa29a41cfe72eed4f1986efeb88abd56ccf5c0ba
     <Button
         android:id="@+id/btCriarTorneio_Torneio"
         android:layout_width="50sp"
@@ -28,6 +67,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+<<<<<<< HEAD
     <ListView
         android:id="@+id/listViewTorneios"
         android:layout_width="384dp"
@@ -41,4 +81,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.62" />
 
+=======
+>>>>>>> aa29a41cfe72eed4f1986efeb88abd56ccf5c0ba
 </androidx.constraintlayout.widget.ConstraintLayout>
