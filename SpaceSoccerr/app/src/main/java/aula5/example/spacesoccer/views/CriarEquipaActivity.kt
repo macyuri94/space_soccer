@@ -45,6 +45,7 @@ class CriarEquipaActivity : AppCompatActivity() {
                 cityfundation.text.toString()
             ) {
                 if (it) {
+                    //Mudar string
                     Toast.makeText(
                         this@CriarEquipaActivity,
                         this@CriarEquipaActivity.getString(R.string.creatTeam_failed),

@@ -45,8 +45,12 @@ class CriarJogadorActivity : AppCompatActivity() {
                 team.text.toString()
             ) {
                 if (it) {
-                    val intent = Intent(this@CriarJogadorActivity, VerEquipaActivity::class.java)
-                    startActivity(intent)
+                    //Mudar string
+                    Toast.makeText(
+                        this@CriarJogadorActivity,
+                        this@CriarJogadorActivity.getString(R.string.creatTeam_failed),
+                        Toast.LENGTH_LONG
+                    ).show()
                 } else {
                     Toast.makeText(
                         this@CriarJogadorActivity,
@@ -55,6 +59,8 @@ class CriarJogadorActivity : AppCompatActivity() {
                     ).show()
                 }
             }
+            val intent = Intent(this@CriarJogadorActivity, VerJogadorActivity::class.java)
+            startActivity(intent)
         }
     }
 }

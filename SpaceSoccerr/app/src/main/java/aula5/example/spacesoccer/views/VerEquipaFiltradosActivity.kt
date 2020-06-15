@@ -16,7 +16,7 @@ import org.json.JSONObject
 
 class VerEquipaFiltradosActivity : AppCompatActivity() {
 
-    var idTorneio: Int? = null
+    var idEquipa: Int? = null
     var listarEquipasFiltrado : MutableList<Equipas> = ArrayList()
     var equipasFiltradoAdapter : VerEquipaFiltradosActivity.EquipasFiltradoAdapter? = null
 
@@ -26,7 +26,7 @@ class VerEquipaFiltradosActivity : AppCompatActivity() {
 
         val bundle = intent.extras
         bundle?.let {
-            idTorneio = it.getInt("IdTorneio")
+            idEquipa = it.getInt("IdClube")
         }
 
         equipasFiltradoAdapter = EquipasFiltradoAdapter()
@@ -57,6 +57,12 @@ class VerEquipaFiltradosActivity : AppCompatActivity() {
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
             val rowView = layoutInflater.inflate(R.layout.row_equipa_filtrado,parent,false)
             val nomeEquipa = rowView.findViewById<TextView>(R.id.txtNomeEquipa_verEquipaFiltrado)
+
+            rowView.setOnClickListener{
+                val intent = Intent(this@VerEquipaFiltradosActivity, VerJogadorActivity::class.java)
+                intent.putExtra("IdClube", listarEquipasFiltrado[position].IdClube)
+                startActivity(intent)
+            }
 
             nomeEquipa.text = listarEquipasFiltrado[position].NomeClube
 
