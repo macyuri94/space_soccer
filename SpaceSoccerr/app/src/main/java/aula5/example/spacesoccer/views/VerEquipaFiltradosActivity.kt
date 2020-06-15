@@ -7,15 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import android.widget.Toast
 import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
 import aula5.example.spacesoccer.models.Equipas
+import aula5.example.spacesoccer.models.Torneios
+import kotlinx.android.synthetic.main.row_equipa_filtrado.*
 import kotlinx.android.synthetic.main.ver_equipa.*
 import kotlinx.android.synthetic.main.ver_equipa_filtrados.*
 import org.json.JSONObject
 
 class VerEquipaFiltradosActivity : AppCompatActivity() {
 
+    var idTorneio: Int? = null
     var idEquipa: Int? = null
     var listarEquipasFiltrado : MutableList<Equipas> = ArrayList()
     var equipasFiltradoAdapter : VerEquipaFiltradosActivity.EquipasFiltradoAdapter? = null
@@ -27,16 +31,17 @@ class VerEquipaFiltradosActivity : AppCompatActivity() {
         val bundle = intent.extras
         bundle?.let {
             idEquipa = it.getInt("IdClube")
+            idTorneio = it.getInt("IdTorneio")
         }
 
         equipasFiltradoAdapter = EquipasFiltradoAdapter()
         listViewEquipas_verEquipaFiltrado.adapter = equipasFiltradoAdapter
 
-        VolleyHelper.instance.getAllTeams(this ){ response ->
+        VolleyHelper.instance.getTournamentsClubById(this, idTorneio!!.toInt()) { response ->
             response?.let {
-                for(index in 0 until it.length()){
-                    val jsonPlayer = it[index] as JSONObject
-                    listarEquipasFiltrado.add(Equipas.parseJson(jsonPlayer))
+                for (index in 0 until it.length()) {
+                    val teamJSON : JSONObject = it[index] as JSONObject
+                    listarEquipasFiltrado.add(Equipas.parseJson(teamJSON))
                 }
                 equipasFiltradoAdapter?.notifyDataSetChanged()
             }

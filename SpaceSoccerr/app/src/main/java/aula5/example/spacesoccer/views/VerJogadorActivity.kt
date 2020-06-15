@@ -10,10 +10,13 @@ import android.widget.TextView
 import aula5.example.spacesoccer.models.Jogadores
 import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
+import aula5.example.spacesoccer.models.Equipas
 import kotlinx.android.synthetic.main.ver_jogador.*
 import org.json.JSONObject
 
 class VerJogadorActivity : AppCompatActivity() {
+
+    var idEquipa: Int? = null
 
     var listarJogadores : MutableList<Jogadores> = ArrayList()
     var jogadoresAdapter : JogadoresAdapter? = null
@@ -21,6 +24,11 @@ class VerJogadorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ver_jogador)
+
+        val bundle = intent.extras
+        bundle?.let {
+            idEquipa = it.getInt("IdClube")
+        }
 
         btCriarJogador_verJogador.setOnClickListener {
             val intent = Intent(this, CriarJogadorActivity:: class.java)
@@ -30,11 +38,11 @@ class VerJogadorActivity : AppCompatActivity() {
         jogadoresAdapter = JogadoresAdapter()
         listViewJogadores.adapter = jogadoresAdapter
 
-        VolleyHelper.instance.getAllPlayers(this ){response ->
+        VolleyHelper.instance.getPlayersById(this, idEquipa!!.toInt()) { response ->
             response?.let {
-                for(index in 0 until it.length()){
-                    val jsonPlayer = it[index] as JSONObject
-                    listarJogadores.add(Jogadores.parseJson(jsonPlayer))
+                for (index in 0 until it.length()) {
+                    val teamJSON : JSONObject = it[index] as JSONObject
+                    listarJogadores.add(Jogadores.parseJson(teamJSON))
                 }
                 jogadoresAdapter?.notifyDataSetChanged()
             }

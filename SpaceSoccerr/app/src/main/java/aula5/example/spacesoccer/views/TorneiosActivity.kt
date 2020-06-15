@@ -11,6 +11,7 @@ import android.widget.TextView
 import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
 import aula5.example.spacesoccer.models.Torneios
+import aula5.example.spacesoccer.models.Utilizador
 import kotlinx.android.synthetic.main.torneios.*
 import kotlinx.android.synthetic.main.torneios.btCriarTorneio_Torneio
 import kotlinx.android.synthetic.main.torneios.imgPerfilUserTorneios_torneios
@@ -59,6 +60,9 @@ class TorneiosActivity : AppCompatActivity() {
                 val intent = Intent(this@TorneiosActivity, MenuActivity::class.java)
                 intent.putExtra("IdTorneio", listarTorneios[position].IdTorneio)
                 intent.putExtra("Nome", listarTorneios[position].Nome)
+                intent.putExtra("dtInicio", listarTorneios[position].dtInicio)
+                intent.putExtra("dtFim", listarTorneios[position].dtFim)
+                intent.putExtra("NumEquipas", listarTorneios[position].NumEquipas)
                 startActivity(intent)
             }
 
