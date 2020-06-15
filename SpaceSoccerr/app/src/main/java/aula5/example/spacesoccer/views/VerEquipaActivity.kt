@@ -56,7 +56,6 @@ class VerEquipaActivity : AppCompatActivity() {
                 equipasAdapter?.notifyDataSetChanged()
             }
         }
-
     }
 
     inner class EquipasAdapter : BaseAdapter(){
@@ -77,6 +76,5 @@ class VerEquipaActivity : AppCompatActivity() {
         override fun getCount(): Int {
             return listarEquipas.size
         }
-
     }
 }
