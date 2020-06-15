@@ -5,4 +5,5 @@
     <string name="creatPlayer_failed">Falha na criação do jogador</string>
     <string name="creatTournament_failed">Falha na criação do torneio</string>
     <string name="creatTeam_failed">Falha na criação da equipa</string>
+    <string name="deleteTeam_failed">Falha ao apagar equipa</string>
 </resources>
