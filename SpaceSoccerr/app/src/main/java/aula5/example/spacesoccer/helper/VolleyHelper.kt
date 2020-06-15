@@ -78,6 +78,29 @@ class VolleyHelper {
         }
     }
 
+    fun getAllUsers(context: Context, playersEvent : ((JSONArray?)->Unit)){
+        doAsync {
+            queue = Volley.newRequestQueue(context)
+
+            val stringRequest = object : StringRequest( GET,
+                BASE_API + USERS,
+                Response.Listener<String>{
+                    playersEvent.invoke(JSONArray(it))
+                }, Response.ErrorListener {
+                    Log.d("VolleyHelper", it.toString())
+                    playersEvent.invoke(null)
+                }
+            ) {
+                override fun getHeaders(): MutableMap<String, String> {
+                    val map : MutableMap<String, String> = mutableMapOf<String, String>()
+                    map.put(tokenName, token)
+                    return map
+                }
+            }
+            queue!!.add(stringRequest)
+        }
+    }
+
 // << -----------------------------------------------FimUtilizador---------------------------------------------------- >> //
 
 
@@ -281,7 +304,7 @@ class VolleyHelper {
             queue = Volley.newRequestQueue(context)
 
             val stringRequest = object : StringRequest( GET,
-                "$BASE_API$TORNEIOS_CLUBE/$id",
+                BASE_API + TORNEIOS_CLUBE + "/" + id,
                 Response.Listener<String>{
                     playersEvent.invoke(JSONArray(it))
                 }, Response.ErrorListener {
@@ -358,18 +381,41 @@ class VolleyHelper {
         }
     }
 
+    fun deleteTeamsById(context: Context, id: Int, playersEvent : ((Boolean)->Unit)){
+        doAsync {
+            queue = Volley.newRequestQueue(context)
+
+            val stringRequest = object : StringRequest( DELETE,
+                BASE_API + TEAMS + "/" + id,
+
+                Response.Listener<String> {
+                    Log.d("VolleyHelper", it.toString()) //playersEvent.invoke(JSONArray(it))
+                },Response.ErrorListener {
+                    Log.d("VolleyHelper", it.toString())
+                }
+            ){
+                override fun getHeaders(): MutableMap<String, String> {
+                    val map : MutableMap<String, String> = mutableMapOf<String, String>()
+                    map.put(tokenName, token)
+                    return map
+                }
+            }
+            queue!!.add(stringRequest)
+        }
+    }
 // << --------------------------------------------------FimEquipas---------------------**----------------------------- >> //
 
 
     companion object {
 
-        const val  BASE_API      = "http://192.168.1.64:3000"
-        const val  USER_LOGIN    = "/authentication/login"
-        const val  USER_REGISTER = "/authentication/register"
-        const val  PLAYERS       = "/api/players"
-        const val  TORNEIOS      = "/api/torneio"
-        const val  TEAMS         = "/api/clube"
-        const val  TORNEIOS_CLUBE = "/api/torneioclube/"
+        const val  BASE_API       = "http://192.168.1.64:3000"
+        const val  USER_LOGIN     = "/authentication/login"
+        const val  USER_REGISTER  = "/authentication/register"
+        const val  PLAYERS        = "/api/players"
+        const val  TORNEIOS       = "/api/torneio"
+        const val  TEAMS          = "/api/clube"
+        const val  TORNEIOS_CLUBE = "/api/torneioclube"
+        const val  USERS          = "/authentication/list"
 
         var   token         = ""
         const val tokenName = "x-access-token"

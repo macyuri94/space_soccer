@@ -10,11 +10,13 @@ import android.widget.EditText
 import android.widget.Toast
 import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
+import aula5.example.spacesoccer.models.Utilizador
 
 // << ---------------------------------------------------------------------------------------------------------------- >> //
 
 class LoginActivity : AppCompatActivity() {
 
+    var listarUtilizador : MutableList<Utilizador> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
