@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.EstatisticasActivity"
+    android:background="@drawable/background_blue_orange_white">
+
+    <ImageView
+        android:id="@+id/imgperfiluser_estatisticas"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_user" />
+
+    <Button
+        android:id="@+id/bthome_estatisticas"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bt_home_torneios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/painel_estatisticas"
+        android:layout_width="388dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="104dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/painel_estatisticas2" />
+
+    <ImageView
+        android:id="@+id/painel2_estatisticas"
+        android:layout_width="388dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/painel_estatisticas"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/painel_estatisticas" />
+
+    <TextView
+        android:id="@+id/txtpossedebolaequipa1_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toTopOf="@+id/painel2_estatisticas" />
+
+    <TextView
+        android:id="@+id/txtnometorneio_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toTopOf="@+id/painel_estatisticas" />
+
+    <TextView
+        android:id="@+id/txtdatajogo_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="296dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toTopOf="@+id/painel_estatisticas" />
+
+    <TextView
+        android:id="@+id/txtnomequipa1_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toTopOf="@+id/painel_estatisticas" />
+
+    <TextView
+        android:id="@+id/txtnomequipa2_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="88dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toTopOf="@+id/painel_estatisticas" />
+
+    <TextView
+        android:id="@+id/txttempofinal_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toTopOf="@+id/painel_estatisticas" />
+
+    <TextView
+        android:id="@+id/txtpossedebolaequipa2_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toTopOf="@+id/painel2_estatisticas" />
+
+    <TextView
+        android:id="@+id/txttotalrematesequipa2_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toBottomOf="@+id/txtpossedebolaequipa2_estatisticas" />
+
+    <TextView
+        android:id="@+id/txtresultadoequipa1_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="92dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toTopOf="@+id/painel_estatisticas" />
+
+    <TextView
+        android:id="@+id/txtresultadoequipa2_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="92dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toTopOf="@+id/painel_estatisticas" />
+
+    <TextView
+        android:id="@+id/txttotalrematesequipa1_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toBottomOf="@+id/txtpossedebolaequipa2_estatisticas" />
+
+    <TextView
+        android:id="@+id/txttotalrematesabalizaequipa2_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toBottomOf="@+id/txtpossedebolaequipa2_estatisticas" />
+
+    <TextView
+        android:id="@+id/txttotalrematesabalizaequipa1_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toBottomOf="@+id/txtpossedebolaequipa2_estatisticas" />
+
+    <TextView
+        android:id="@+id/txtcantosequipa1_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toTopOf="@+id/painel2_estatisticas" />
+
+    <TextView
+        android:id="@+id/txtcantosequipa2_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toTopOf="@+id/painel2_estatisticas" />
+
+    <TextView
+        android:id="@+id/txtforasdejogoequipa1_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="205dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toTopOf="@+id/painel2_estatisticas" />
+
+    <TextView
+        android:id="@+id/txtforasdejogoequipa2_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="205dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toTopOf="@+id/painel2_estatisticas" />
+
+    <TextView
+        android:id="@+id/txtincidenciasequipa2_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="254dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toTopOf="@+id/painel2_estatisticas" />
+
+    <TextView
+        android:id="@+id/txtincidenciasequipa1_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="254dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="@+id/painel2_estatisticas"
+        app:layout_constraintTop_toTopOf="@+id/painel2_estatisticas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
