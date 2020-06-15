@@ -33,7 +33,7 @@ class VerEquipaActivity : AppCompatActivity() {
             intent.putExtra("IdTorneio", idTorneio)
             startActivity(intent)
         }
-0
+
         btHome_verEquipa.setOnClickListener {
             val intent = Intent(this, TorneiosActivity::class.java)
             startActivity(intent)
@@ -56,7 +56,6 @@ class VerEquipaActivity : AppCompatActivity() {
                 equipasAdapter?.notifyDataSetChanged()
             }
         }
-
     }
 
     inner class EquipasAdapter : BaseAdapter(){
@@ -77,6 +76,5 @@ class VerEquipaActivity : AppCompatActivity() {
         override fun getCount(): Int {
             return listarEquipas.size
         }
-
     }
 }

@@ -281,7 +281,7 @@ class VolleyHelper {
             queue = Volley.newRequestQueue(context)
 
             val stringRequest = object : StringRequest( GET,
-                "$BASE_API$TORNEIOSCLUBE/$id",
+                "$BASE_API$TORNEIOS_CLUBE/$id",
                 Response.Listener<String>{
                     playersEvent.invoke(JSONArray(it))
                 }, Response.ErrorListener {
@@ -363,13 +363,13 @@ class VolleyHelper {
 
     companion object {
 
-        const val  BASE_API      = "http://192.168.1.64:3000"
+        const val  BASE_API      = "http://192.168.1.72:3000"
         const val  USER_LOGIN    = "/authentication/login"
         const val  USER_REGISTER = "/authentication/register"
         const val  PLAYERS       = "/api/players"
         const val  TORNEIOS      = "/api/torneio"
         const val  TEAMS         = "/api/clube"
-        const val  TORNEIOSCLUBE = "/api/torneioclube/"
+        const val  TORNEIOS_CLUBE = "/api/torneioclube/"
 
         var   token         = ""
         const val tokenName = "x-access-token"
