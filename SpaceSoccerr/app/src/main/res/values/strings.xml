@@ -2,4 +2,7 @@
     <string name="app_name">SpaceSoccer</string>
     <string name="toast_msg_login">Dados inválidos</string>
     <string name="login_failed">Falha na Autenticação</string>
+    <string name="creatPlayer_failed">Falha na criação do jogador</string>
+    <string name="creatTournament_failed">Falha na criação do torneio</string>
+    <string name="creatTeam_failed">Falha na criação da equipa</string>
 </resources>
