@@ -33,7 +33,7 @@ class VerEquipaActivity : AppCompatActivity() {
             intent.putExtra("IdTorneio", idTorneio)
             startActivity(intent)
         }
-0
+
         btHome_verEquipa.setOnClickListener {
             val intent = Intent(this, TorneiosActivity::class.java)
             startActivity(intent)
