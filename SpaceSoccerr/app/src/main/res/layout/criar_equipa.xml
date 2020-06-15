@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CriarEquipaActivity"
+    tools:context=".views.CriarEquipaActivity"
     android:background="@drawable/background_blue">
 
     <EditText
-        android:id="@+id/txtnomeequipa_criarequipa"
+        android:id="@+id/txtNomeEquipa_criarEquipa"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="156dp"
@@ -24,75 +24,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btguardardados_criarequipa"
-        android:layout_width="163sp"
-        android:layout_height="40sp"
-        android:layout_marginStart="112sp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="119sp"
-        android:background="@drawable/bt_registar_orange"
-        android:fontFamily="@font/roboto"
-        android:text="Guardar dados"
-        android:textColor="#ffff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.705"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtestadio_criarequipa" />
-
     <EditText
-        android:id="@+id/txtestadio_criarequipa"
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/background_txt"
-        android:fontFamily="@font/roboto"
-        android:hint="Estádio"
-        android:paddingLeft="15sp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtcidadefundacao_criarequipa" />
-
-    <EditText
-        android:id="@+id/txtcidadefundacao_criarequipa"
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/background_txt"
-        android:fontFamily="@font/roboto"
-        android:hint="Cidade fundação"
-        android:paddingLeft="15sp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtanofundacao_criarequipa" />
-
-    <EditText
-        android:id="@+id/txtanofundacao_criarequipa"
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/background_txt"
-        android:fontFamily="@font/roboto"
-        android:hint="Ano fundação"
-        android:paddingLeft="15sp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtpresidente_criarequipa" />
-
-    <EditText
-        android:id="@+id/txtpresidente_criarequipa"
+        android:id="@+id/txtPresidente_criarEquipa"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="36dp"
@@ -106,7 +39,74 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtnomeequipa_criarequipa" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeEquipa_criarEquipa" />
+
+    <EditText
+        android:id="@+id/txtAnoFundacao_criarEquipa"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Ano fundação"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPresidente_criarEquipa" />
+
+    <EditText
+        android:id="@+id/txtCidadeFundacao_criarEquipa"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Cidade fundação"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAnoFundacao_criarEquipa" />
+
+    <EditText
+        android:id="@+id/txtEstadio_criarEquipa"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Estádio"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCidadeFundacao_criarEquipa" />
+
+    <Button
+        android:id="@+id/btGuardarDados_criarEquipa"
+        android:layout_width="163sp"
+        android:layout_height="40sp"
+        android:layout_marginStart="112sp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="119sp"
+        android:background="@drawable/bt_registar_orange"
+        android:fontFamily="@font/roboto"
+        android:text="Guardar dados"
+        android:textColor="#ffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.705"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEstadio_criarEquipa" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

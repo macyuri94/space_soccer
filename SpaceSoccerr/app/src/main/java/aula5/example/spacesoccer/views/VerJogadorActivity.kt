@@ -1,32 +1,33 @@
-package aula5.example.spacesoccer
+package aula5.example.spacesoccer.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_space_soccer_ver_jogador.*
+import aula5.example.spacesoccer.R
+import kotlinx.android.synthetic.main.ver_jogador.*
 
 class VerJogadorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_space_soccer_ver_jogador)
+        setContentView(R.layout.ver_jogador)
 
-        btcriarjogador_verjogador.setOnClickListener {
+        btCriarJogador_verJogador.setOnClickListener {
             val intent = Intent(this, CriarEquipaActivity:: class.java)
             startActivity(intent)
         }
 
-        bthome_verjogador.setOnClickListener {
+        btHome_verJogador.setOnClickListener {
             val intent = Intent(this, TorneiosActivity::class.java)
             startActivity(intent)
         }
 
-        imgperfiluser_verjogador.setOnClickListener {
+        imgPerfilUser_verJogador.setOnClickListener {
             val intent = Intent(this, InformacaoJogadorActivity::class.java)
             startActivity(intent)
         }
 
-        painel1_verjogador.setOnClickListener {
+        painel1_verJogador.setOnClickListener {
             val intent = Intent(this, InformacaoJogadorActivity::class.java)
             startActivity(intent)
         }

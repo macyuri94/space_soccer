@@ -1,15 +1,20 @@
-package aula5.example.spacesoccer
+package aula5.example.spacesoccer.views
+
+// << ---------------------------------------------------------------------------------------------------------------- >> //
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_space_soccer_estatisticas.*
+import aula5.example.spacesoccer.R
+import kotlinx.android.synthetic.main.estatisticas.*
+
+// << ---------------------------------------------------------------------------------------------------------------- >> //
 
 class EstatisticasActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_space_soccer_estatisticas)
+        setContentView(R.layout.estatisticas)
 
         bthome_estatisticas.setOnClickListener {
             val intent = Intent(this, MenuActivity::class.java)

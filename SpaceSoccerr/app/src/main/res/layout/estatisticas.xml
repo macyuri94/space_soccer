@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EstatisticasActivity"
+    tools:context=".views.EstatisticasActivity"
     android:background="@drawable/background_blue_orange_white">
 
     <ImageView
@@ -28,6 +28,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/painel_estatisticas"
+        android:layout_width="388dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="104dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/painel_estatisticas2" />
+
+    <ImageView
         android:id="@+id/painel2_estatisticas"
         android:layout_width="388dp"
         android:layout_height="300dp"
@@ -38,17 +49,6 @@
         app:layout_constraintTop_toBottomOf="@+id/painel_estatisticas"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/painel_estatisticas" />
-
-    <ImageView
-        android:id="@+id/painel_estatisticas"
-        android:layout_width="388dp"
-        android:layout_height="139dp"
-        android:layout_marginTop="104dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/painel_estatisticas2" />
 
     <TextView
         android:id="@+id/txtpossedebolaequipa1_estatisticas"

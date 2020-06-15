@@ -8,7 +8,7 @@
     android:background="@drawable/background_blue_orange_white">
 
     <ImageView
-        android:id="@+id/imgperfiluser_jogos"
+        android:id="@+id/imgPerfilUser_jogos"
         android:layout_width="55sp"
         android:layout_height="55sp"
         android:layout_marginStart="16dp"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/img_user" />
 
     <Button
-        android:id="@+id/bthome_jogos"
+        android:id="@+id/btHome_jogos"
         android:layout_width="55sp"
         android:layout_height="55sp"
         android:layout_marginTop="11dp"
@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/painel_jogos2"
+        android:id="@+id/painel2_jogos"
         android:layout_width="389dp"
         android:layout_height="70dp"
         android:layout_marginTop="116dp"
@@ -44,8 +44,8 @@
         android:layout_marginTop="20dp"
         android:text="TextView"
         android:textColor="#ffff"
-        app:layout_constraintEnd_toEndOf="@+id/painel_jogos2"
-        app:layout_constraintStart_toStartOf="@+id/painel_jogos2"
-        app:layout_constraintTop_toTopOf="@+id/painel_jogos2" />
+        app:layout_constraintEnd_toEndOf="@+id/painel2_jogos"
+        app:layout_constraintStart_toStartOf="@+id/painel2_jogos"
+        app:layout_constraintTop_toTopOf="@+id/painel2_jogos" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

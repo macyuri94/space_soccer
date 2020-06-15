@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TorneiosActivity"
+    tools:context=".views.TorneiosActivity"
     android:background="@drawable/background_blue_orange_white">
 
     <ImageView
-        android:id="@+id/imgperfilusertorneios_torneios"
+        android:id="@+id/imgPerfilUserTorneios_torneios"
         android:layout_width="55sp"
         android:layout_height="55sp"
         android:layout_marginStart="16dp"
@@ -19,7 +19,7 @@
 
 
     <ImageView
-        android:id="@+id/img_painel_torneio_torneios"
+        android:id="@+id/imgPainelTorneio_torneios"
         android:layout_width="490dp"
         android:layout_height="152dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/img_painel_torneioss"/>
 
     <TextView
-        android:id="@+id/txtnometorneio_torneios"
+        android:id="@+id/txtNomeTorneio_torneios"
         android:layout_width="170dp"
         android:layout_height="36dp"
         android:layout_marginStart="22dp"
@@ -40,9 +40,9 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/img_painel_torneio_torneios"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPainelTorneio_torneios"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/img_painel_torneio_torneios"
+        app:layout_constraintTop_toTopOf="@+id/imgPainelTorneio_torneios"
         app:layout_constraintVertical_bias="0.923" />
 
 

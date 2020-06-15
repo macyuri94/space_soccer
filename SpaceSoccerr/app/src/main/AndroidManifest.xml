@@ -15,21 +15,21 @@
         android:usesCleartextTraffic="true"
         android:fullBackupContent="true">
 
-        <activity android:name=".JogosActivity" />
-        <activity android:name=".VerEquipaFiltradosActivity" />
-        <activity android:name=".EstatisticasActivity" />
-        <activity android:name=".MenuActivity" />
-        <activity android:name=".InformacaoJogadorActivity" />
-        <activity android:name=".InformacaoEquipaActivity" />
-        <activity android:name=".VerJogadorActivity" />
-        <activity android:name=".VerEquipaActivity" />
-        <activity android:name=".CriarJogadorActivity" />
-        <activity android:name=".CriarEquipaActivity" />
-        <activity android:name=".TorneiosActivity" />
-        <activity android:name=".RegistarTorneioActivity" />
-        <activity android:name=".RegistarActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".LoginRegistarActivity" />
+        <activity android:name=".views.JogosActivity" />
+        <activity android:name=".views.VerEquipaFiltradosActivity" />
+        <activity android:name=".views.EstatisticasActivity" />
+        <activity android:name=".views.MenuActivity" />
+        <activity android:name=".views.InformacaoJogadorActivity" />
+        <activity android:name=".views.InformacaoEquipaActivity" />
+        <activity android:name=".views.VerJogadorActivity" />
+        <activity android:name=".views.VerEquipaActivity" />
+        <activity android:name=".views.CriarJogadorActivity" />
+        <activity android:name=".views.CriarEquipaActivity" />
+        <activity android:name=".views.TorneiosActivity" />
+        <activity android:name=".views.RegistarTorneioActivity" />
+        <activity android:name=".views.RegistarActivity" />
+        <activity android:name=".views.LoginActivity" />
+        <activity android:name=".views.LoginRegistarActivity" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/SplashTheme">

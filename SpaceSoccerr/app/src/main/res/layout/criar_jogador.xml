@@ -4,34 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CriarJogadorActivity"
+    tools:context=".views.CriarJogadorActivity"
     android:background="@drawable/background_blue">
 
     <EditText
-        android:id="@+id/txtclube_criarjogador"
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/background_txt"
-        android:fontFamily="@font/roboto"
-        android:hint="Clube"
-        android:paddingLeft="15sp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtpeso_criarjogador" />
-
-    <EditText
-        android:id="@+id/txtnomejogador_criarjogadorr"
+        android:id="@+id/txtNomeJogador_criarJogadorr"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="92dp"
+        android:autofillHints=""
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
         android:hint="Nome"
+        android:inputType="textPersonName"
         android:paddingLeft="15sp"
         android:textColor="#000000"
         android:textColorHint="#000000"
@@ -42,81 +27,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtpeso_criarjogador"
+        android:id="@+id/txtEmail_criarJogador"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/background_txt"
-        android:fontFamily="@font/roboto"
-        android:hint="Peso"
-        android:paddingLeft="15sp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtaltura_criarjogador" />
-
-    <EditText
-        android:id="@+id/txtaltura_criarjogador"
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/background_txt"
-        android:fontFamily="@font/roboto"
-        android:hint="Altura"
-        android:paddingLeft="15sp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtposicao_criarjogador" />
-
-    <EditText
-        android:id="@+id/txtposicao_criarjogador"
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/background_txt"
-        android:fontFamily="@font/roboto"
-        android:hint="Posição"
-        android:paddingLeft="15sp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtnacionalidade_criarjogador" />
-
-    <EditText
-        android:id="@+id/txtnacionalidade_criarjogador"
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/background_txt"
-        android:fontFamily="@font/roboto"
-        android:hint="Nacionalidade"
-        android:paddingLeft="15sp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtidade_criarjogador" />
-
-    <EditText
-        android:id="@+id/txtemail_criarjogador"
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="24dp"
+        android:autofillHints=""
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
         android:hint="Email"
+        android:inputType="textEmailAddress"
         android:paddingLeft="15sp"
         android:textColor="#000000"
         android:textColorHint="#000000"
@@ -124,16 +43,112 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtnomejogador_criarjogadorr" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeJogador_criarJogadorr" />
 
     <EditText
-        android:id="@+id/txtidade_criarjogador"
+        android:id="@+id/txtIdade_criarJogador"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Idade"
+        android:inputType="number"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail_criarJogador" />
+
+    <EditText
+        android:id="@+id/txtNacionalidade_criarJogador"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Nacionalidade"
+        android:inputType="text"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtIdade_criarJogador" />
+
+    <EditText
+        android:id="@+id/txtPosicao_criarJogador"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Posição"
+        android:inputType="text"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNacionalidade_criarJogador" />
+
+    <EditText
+        android:id="@+id/txtAltura_criarJogador"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Altura"
+        android:inputType="number"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPosicao_criarJogador" />
+
+    <EditText
+        android:id="@+id/txtPeso_criarJogador"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="Peso"
+        android:inputType="numberDecimal"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAltura_criarJogador" />
+
+    <EditText
+        android:id="@+id/txtClube_criarJogador"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
-        android:hint="Idade"
+        android:hint="Clube"
+        android:inputType="text"
         android:paddingLeft="15sp"
         android:textColor="#000000"
         android:textColorHint="#000000"
@@ -141,10 +156,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtemail_criarjogador" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPeso_criarJogador"
+        android:autofillHints="" />
 
     <Button
-        android:id="@+id/btguardardados_criarjogador"
+        android:id="@+id/btGuardarDados_criarJogador"
         android:layout_width="163sp"
         android:layout_height="40sp"
         android:layout_marginStart="112sp"
@@ -157,6 +173,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.705"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtclube_criarjogador" />
+        app:layout_constraintTop_toBottomOf="@+id/txtClube_criarJogador" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

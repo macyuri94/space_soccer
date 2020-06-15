@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuActivity"
+    tools:context=".views.MenuActivity"
     android:background="@drawable/background_blue_orange_white">
 
     <ImageView
-        android:id="@+id/imgperfiluser_menu"
+        android:id="@+id/imgPerfilUser_menu"
         android:layout_width="55sp"
         android:layout_height="55sp"
         android:layout_marginStart="16dp"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/img_user" />
 
     <Button
-        android:id="@+id/bthome_menu"
+        android:id="@+id/btHome_menu"
         android:layout_width="55sp"
         android:layout_height="55sp"
         android:layout_marginTop="11dp"
@@ -27,66 +27,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <Button
-        android:id="@+id/btfotos_menu"
-        android:layout_width="145sp"
-        android:layout_height="145sp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/bt_fotos"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btjogadores_menu" />
-
-    <Button
-        android:id="@+id/btjogos_menu"
-        android:layout_width="145sp"
-        android:layout_height="145sp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/bt_jogos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btequipasmenu_menu" />
-
-    <Button
-        android:id="@+id/btstats_menu"
-        android:layout_width="145sp"
-        android:layout_height="145sp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/bt_stats"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btjogadores_menu"
-        android:layout_width="145sp"
-        android:layout_height="145sp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/bt_jogadores"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btstats_menu" />
-
-    <Button
-        android:id="@+id/btequipasmenu_menu"
-        android:layout_width="145sp"
-        android:layout_height="145sp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/bt_equipas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btinfotorneio_menu"
-        android:layout_width="145sp"
-        android:layout_height="145sp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/bt_infotorneio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btequipasmenu_menu"/>
 
     <TextView
         android:id="@+id/txtTituloTorneio_menu"
@@ -101,5 +41,65 @@
         app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btStats_menu"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/bt_stats"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btEquipasMenu_menu"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bt_equipas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btJogadores_menu"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/bt_jogadores"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btStats_menu" />
+
+    <Button
+        android:id="@+id/btJogos_menu"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bt_jogos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btEquipasMenu_menu" />
+
+    <Button
+        android:id="@+id/btFotos_menu"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/bt_fotos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btJogadores_menu" />
+
+    <Button
+        android:id="@+id/btInfoTorneio_menu"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bt_infotorneio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btEquipasMenu_menu"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

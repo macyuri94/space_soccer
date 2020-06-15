@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InformacaoEquipaActivity"
+    tools:context=".views.InformacaoEquipaActivity"
     android:background="@drawable/background_blue_orange_white">
 
     <ImageView
-        android:id="@+id/imgperfiluser_informacao_equipa"
+        android:id="@+id/imgPerfilUser_informacao_equipa"
         android:layout_width="55sp"
         android:layout_height="55sp"
         android:layout_marginStart="16dp"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/img_user" />
 
     <Button
-        android:id="@+id/bthome_informacao_equipa"
+        android:id="@+id/btHome_informacao_equipa"
         android:layout_width="55sp"
         android:layout_height="55sp"
         android:layout_marginTop="11dp"
@@ -26,6 +26,18 @@
         android:background="@drawable/bt_home_torneios"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLogoEquipa_informacao_equipa"
+        android:layout_width="120sp"
+        android:layout_height="120sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.808"
+        app:srcCompat="@drawable/img_logo_equipa" />
 
     <ImageView
         android:id="@+id/imageView_informacao_equipa"
@@ -72,7 +84,7 @@
         app:srcCompat="@drawable/img_painel_equipa_jogador" />
 
     <TextView
-        android:id="@+id/txttitulonomeequipa_informacao_equipa"
+        android:id="@+id/txtTituloNomeEquipa_informacao_equipaquipa_informacao_equipa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -86,7 +98,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
 
     <TextView
-        android:id="@+id/txttituloanofundacao_informacao_equipa"
+        android:id="@+id/txtTituloAnoFundacao_informacao_equipa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
@@ -100,7 +112,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
 
     <TextView
-        android:id="@+id/txttituloestadio_informacao_equipa"
+        android:id="@+id/txtTituloEstadio_informacao_equipa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="216dp"
@@ -114,7 +126,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
 
     <TextView
-        android:id="@+id/txttitulolocalizacao_informacao_equipa"
+        android:id="@+id/txtTituloLocalizacao_informacao_equipa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="320dp"
@@ -128,7 +140,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
 
     <TextView
-        android:id="@+id/txtnomequipa_informacao_equipa"
+        android:id="@+id/txtNomeEquipa_informacao_equipa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -141,7 +153,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
 
     <TextView
-        android:id="@+id/txtanofundacao_informacao_equipa"
+        android:id="@+id/txtAnoFundacao_informacao_equipa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="152dp"
@@ -154,7 +166,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
 
     <TextView
-        android:id="@+id/txtnomestadio_informacao_equipa"
+        android:id="@+id/txtNomeEstadio_informacao_equipa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="256dp"
@@ -167,7 +179,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
 
     <TextView
-        android:id="@+id/txtnomelocalizacao_informacao_equipa"
+        android:id="@+id/txtNomeLocalizacao_informacao_equipa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="360dp"
@@ -179,20 +191,8 @@
         app:layout_constraintStart_toStartOf="@+id/imageView_informacao_equipa"
         app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa"/>
 
-    <ImageView
-        android:id="@+id/imglogoequipa_informacao_equipa"
-        android:layout_width="120sp"
-        android:layout_height="120sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView_informacao_equipa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.808"
-        app:srcCompat="@drawable/img_logo_equipa" />
-
     <Button
-        android:id="@+id/bteditar_informacao_equipa"
+        android:id="@+id/btEditar_informacao_equipa"
         android:layout_width="30sp"
         android:layout_height="30sp"
         android:layout_marginTop="32dp"
@@ -202,7 +202,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
 
     <Button
-        android:id="@+id/bteditar2_informacao_equipa"
+        android:id="@+id/btEditar2_informacao_equipa"
         android:layout_width="30sp"
         android:layout_height="30sp"
         android:layout_marginTop="136dp"
@@ -212,7 +212,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
 
     <Button
-        android:id="@+id/bteditar3_informacao_equipa"
+        android:id="@+id/btEditar3_informacao_equipa"
         android:layout_width="30sp"
         android:layout_height="30sp"
         android:layout_marginTop="240dp"
@@ -222,7 +222,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
 
     <Button
-        android:id="@+id/bteditar4_informacao_equipa"
+        android:id="@+id/btEditar4_informacao_equipa"
         android:layout_width="30sp"
         android:layout_height="30sp"
         android:layout_marginTop="344dp"

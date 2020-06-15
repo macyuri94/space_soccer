@@ -1,37 +1,38 @@
-package aula5.example.spacesoccer
+package aula5.example.spacesoccer.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_space_soccer_menu.*
+import aula5.example.spacesoccer.R
+import kotlinx.android.synthetic.main.menu.*
 
 class MenuActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_space_soccer_menu)
+        setContentView(R.layout.menu)
 
-        bthome_menu.setOnClickListener {
+        btHome_menu.setOnClickListener {
             val intent = Intent(this, TorneiosActivity::class.java)
             startActivity(intent)
         }
 
-        btequipasmenu_menu.setOnClickListener {
+        btEquipasMenu_menu.setOnClickListener {
             val intent = Intent(this, VerEquipaActivity::class.java)
             startActivity(intent)
         }
 
-        btjogadores_menu.setOnClickListener {
+        btJogadores_menu.setOnClickListener {
             val intent = Intent(this, VerEquipaFiltradosActivity::class.java)
             startActivity(intent)
         }
 
-        imgperfiluser_menu.setOnClickListener {
+        imgPerfilUser_menu.setOnClickListener {
             val intent = Intent(this, InformacaoJogadorActivity::class.java)
             startActivity(intent)
         }
 
-        btstats_menu.setOnClickListener {
+        btStats_menu.setOnClickListener {
             val intent = Intent(this, JogosActivity::class.java)
             startActivity(intent)
         }

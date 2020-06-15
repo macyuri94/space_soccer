@@ -1,12 +1,13 @@
-package aula5.example.spacesoccer
+package aula5.example.spacesoccer.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import aula5.example.spacesoccer.R
 
-class CriarEquipaActivity : AppCompatActivity() {
+class RegistarTorneioActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_space_soccer_criar_equipa)
+        setContentView(R.layout.registar_torneio)
     }
 }
