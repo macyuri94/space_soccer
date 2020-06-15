@@ -2,7 +2,6 @@ package aula5.example.spacesoccer.views
 
 // << ---------------------------------------------------------------------------------------------------------------- >> //
 
-<<<<<<< HEAD
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,11 +10,6 @@ import android.widget.EditText
 import android.widget.Toast
 import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
-=======
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import aula5.example.spacesoccer.R
->>>>>>> aa29a41cfe72eed4f1986efeb88abd56ccf5c0ba
 
 // << ---------------------------------------------------------------------------------------------------------------- >> //
 
@@ -25,7 +19,6 @@ class CriarJogadorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.criar_jogador)
 
-<<<<<<< HEAD
         val numerocartaocidadao = findViewById<EditText>(R.id.txtNumeroCartaoCidadao_criarJogador)
         val name = findViewById<EditText>(R.id.txtNomeJogador_criarJogadorr)
         val number = findViewById<EditText>(R.id.txtNumero_criarJogador)
@@ -63,8 +56,5 @@ class CriarJogadorActivity : AppCompatActivity() {
                 }
             }
         }
-=======
-
->>>>>>> aa29a41cfe72eed4f1986efeb88abd56ccf5c0ba
     }
 }

@@ -76,13 +76,13 @@
         app:layout_constraintTop_toBottomOf="@+id/txtAnoFundacao_criarEquipa" />
 
     <EditText
-        android:id="@+id/txtEstadio_criarEquipa"
+        android:id="@+id/txtTreinador_criarEquipa"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
-        android:hint="Estádio"
+        android:hint="Treinador"
         android:paddingLeft="15sp"
         android:textColor="#000000"
         android:textColorHint="#000000"
@@ -97,16 +97,16 @@
         android:layout_width="163sp"
         android:layout_height="40sp"
         android:layout_marginStart="112sp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="119sp"
         android:background="@drawable/bt_registar_orange"
         android:fontFamily="@font/roboto"
         android:text="Guardar dados"
         android:textColor="#ffff"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.705"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEstadio_criarEquipa" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTreinador_criarEquipa" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
