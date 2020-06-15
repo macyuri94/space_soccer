@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.menu.*
 class MenuActivity : AppCompatActivity() {
 
     var idTorneio: Int? = null
+    var nomeTorneio: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +18,10 @@ class MenuActivity : AppCompatActivity() {
         val bundle = intent.extras
         bundle?.let {
             idTorneio = it.getInt("IdTorneio")
+            nomeTorneio = it.getString("Nome")
         }
+
+        txtTituloTorneio_menu.text = nomeTorneio
 
         btHome_menu.setOnClickListener {
             val intent = Intent(this, TorneiosActivity::class.java)

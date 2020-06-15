@@ -58,6 +58,7 @@ class TorneiosActivity : AppCompatActivity() {
             rowView.setOnClickListener{
                 val intent = Intent(this@TorneiosActivity, MenuActivity::class.java)
                 intent.putExtra("IdTorneio", listarTorneios[position].IdTorneio)
+                intent.putExtra("Nome", listarTorneios[position].Nome)
                 startActivity(intent)
             }
 
