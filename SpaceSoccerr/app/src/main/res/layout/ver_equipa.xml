@@ -11,15 +11,14 @@
         android:id="@+id/listViewEquipas"
         android:layout_width="384dp"
         android:layout_height="628dp"
+        android:divider="@color/colorWhite"
+        android:dividerHeight="7dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98"
-        android:dividerHeight="7dp"
-        android:divider="@color/colorWhite">
-    </ListView>
+        app:layout_constraintVertical_bias="0.844"></ListView>
 
     <ImageView
         android:id="@+id/imgPerfilUser_verEquipa"
