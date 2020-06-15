@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SpaceSoccerVerJogador"
+    tools:context=".VerJogadorActivity"
     android:background="@drawable/background_blue_orange_white">
 
     <Button
-        android:id="@+id/bthomeverjogadores"
+        android:id="@+id/bthome_verjogador"
         android:layout_width="55sp"
         android:layout_height="55sp"
         android:layout_marginTop="11dp"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imgperfiluserverjogador"
+        android:id="@+id/imgperfiluser_verjogador"
         android:layout_width="55sp"
         android:layout_height="55sp"
         android:layout_marginTop="11dp"
@@ -30,7 +30,7 @@
         />
 
     <ImageView
-        android:id="@+id/painel1verjogador"
+        android:id="@+id/painel1_verjogador"
         android:layout_width="383dp"
         android:layout_height="97dp"
         android:layout_marginTop="116dp"
@@ -41,7 +41,7 @@
         app:srcCompat="@drawable/img_painel_equipa_jogador" />
 
     <TextView
-        android:id="@+id/btnometorneio"
+        android:id="@+id/btnometorneio_verjogador"
         android:layout_width="198dp"
         android:layout_height="32dp"
         android:layout_marginStart="96dp"
@@ -50,35 +50,35 @@
         android:text="Nuno"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/painel1verjogador"
-        app:layout_constraintStart_toStartOf="@+id/painel1verjogador"
-        app:layout_constraintTop_toTopOf="@+id/painel1verjogador"
+        app:layout_constraintBottom_toBottomOf="@+id/painel1_verjogador"
+        app:layout_constraintStart_toStartOf="@+id/painel1_verjogador"
+        app:layout_constraintTop_toTopOf="@+id/painel1_verjogador"
         app:layout_constraintVertical_bias="0.377" />
 
     <Button
-        android:id="@+id/btapagar"
+        android:id="@+id/btapagar_verjogador"
         android:layout_width="35sp"
         android:layout_height="35sp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/bt_apagar"
-        app:layout_constraintBottom_toBottomOf="@+id/painel1verjogador"
-        app:layout_constraintEnd_toEndOf="@+id/painel1verjogador"
-        app:layout_constraintTop_toTopOf="@+id/painel1verjogador"
+        app:layout_constraintBottom_toBottomOf="@+id/painel1_verjogador"
+        app:layout_constraintEnd_toEndOf="@+id/painel1_verjogador"
+        app:layout_constraintTop_toTopOf="@+id/painel1_verjogador"
         app:layout_constraintVertical_bias="0.516" />
 
     <ImageView
-        android:id="@+id/imgequipafutebol"
+        android:id="@+id/imgequipafutebol_verjogador"
         android:layout_width="70sp"
         android:layout_height="70sp"
         android:layout_marginStart="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/painel1verjogador"
-        app:layout_constraintStart_toStartOf="@+id/painel1verjogador"
-        app:layout_constraintTop_toTopOf="@+id/painel1verjogador"
+        app:layout_constraintBottom_toBottomOf="@+id/painel1_verjogador"
+        app:layout_constraintStart_toStartOf="@+id/painel1_verjogador"
+        app:layout_constraintTop_toTopOf="@+id/painel1_verjogador"
         app:layout_constraintVertical_bias="0.555"
         app:srcCompat="@drawable/img_logo_jogador" />
 
     <Button
-        android:id="@+id/btcriarequipa"
+        android:id="@+id/btcriarjogador_verjogador"
         android:layout_width="50sp"
         android:layout_height="50sp"
         android:layout_marginEnd="16dp"

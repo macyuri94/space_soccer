@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SpaceSoccerRegistar"
+    tools:context=".RegistarActivity"
     android:background="@drawable/background_blue">
 
-    <TextView
-        android:id="@+id/textFirstNameRegister"
+    <EditText
+        android:id="@+id/textFirstNameRegister_registar"
         android:layout_width="260sp"
         android:layout_height="40sp"
         android:layout_marginStart="75sp"
@@ -24,8 +24,8 @@
         android:textColorHint="#000000"
         android:paddingLeft="15sp"/>
 
-    <TextView
-        android:id="@+id/textLastNameRegister"
+    <EditText
+        android:id="@+id/textLastNameRegister_registar"
         android:layout_width="260sp"
         android:layout_height="40sp"
         android:layout_marginStart="75sp"
@@ -36,13 +36,13 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFirstNameRegister"
+        app:layout_constraintTop_toBottomOf="@+id/textFirstNameRegister_registar"
         android:hint="Ultimo Nome"
         android:textColorHint="#000000"
         android:paddingLeft="15sp"/>
 
-    <TextView
-        android:id="@+id/textUserNameRegister"
+    <EditText
+        android:id="@+id/textUserNameRegister_registar"
         android:layout_width="260sp"
         android:layout_height="40sp"
         android:layout_marginStart="75sp"
@@ -53,13 +53,13 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLastNameRegister"
+        app:layout_constraintTop_toBottomOf="@+id/textLastNameRegister_registar"
         android:hint="Nome utilizador"
         android:textColorHint="#000000"
         android:paddingLeft="15sp"/>
 
-    <TextView
-        android:id="@+id/textEmailRegister"
+    <EditText
+        android:id="@+id/textEmailRegister_registar"
         android:layout_width="260sp"
         android:layout_height="40sp"
         android:layout_marginStart="75sp"
@@ -70,13 +70,13 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textUserNameRegister"
+        app:layout_constraintTop_toBottomOf="@+id/textUserNameRegister_registar"
         android:hint="Email"
         android:textColorHint="#000000"
         android:paddingLeft="15sp"/>
 
-    <TextView
-        android:id="@+id/textPasswordRegister"
+    <EditText
+        android:id="@+id/textPasswordRegister_registar"
         android:layout_width="260sp"
         android:layout_height="40sp"
         android:layout_marginStart="75sp"
@@ -87,13 +87,13 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEmailRegister"
+        app:layout_constraintTop_toBottomOf="@+id/textEmailRegister_registar"
         android:hint="Palavra-passe"
         android:textColorHint="#000000"
         android:paddingLeft="15sp"/>
 
-    <TextView
-        android:id="@+id/textConfirmPasswordRegister"
+    <EditText
+        android:id="@+id/textConfirmPasswordRegister_registar"
         android:layout_width="260sp"
         android:layout_height="40sp"
         android:layout_marginStart="75sp"
@@ -104,7 +104,7 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPasswordRegister"
+        app:layout_constraintTop_toBottomOf="@+id/textPasswordRegister_registar"
         android:hint="Confirmar palavra-passe"
         android:textColorHint="#000000"
         android:paddingLeft="15sp"/>
@@ -116,7 +116,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textConfirmPasswordRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/textConfirmPasswordRegister_registar" />
 
     <TextView
         android:id="@+id/textTermsOfUse"
@@ -131,10 +131,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/textConfirmPasswordRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/textConfirmPasswordRegister_registar" />
 
     <Button
-        android:id="@+id/buttonRegister"
+        android:id="@+id/buttonRegister_registar"
         android:layout_width="180sp"
         android:layout_height="50sp"
         android:layout_marginStart="112sp"

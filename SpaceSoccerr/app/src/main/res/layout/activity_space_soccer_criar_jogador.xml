@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SpaceSoccerCriarJogador"
+    tools:context=".CriarJogadorActivity"
     android:background="@drawable/background_blue">
 
-    <TextView
-        android:id="@+id/txtclube"
+    <EditText
+        android:id="@+id/txtclube_criarjogador"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
@@ -16,16 +16,16 @@
         android:fontFamily="@font/roboto"
         android:hint="Clube"
         android:paddingLeft="15sp"
-        android:textColor="#F4705B"
+        android:textColor="#000000"
         android:textColorHint="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtpeso" />
+        app:layout_constraintTop_toBottomOf="@+id/txtpeso_criarjogador" />
 
-    <TextView
-        android:id="@+id/txtnomejogador"
+    <EditText
+        android:id="@+id/txtnomejogador_criarjogadorr"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="92dp"
@@ -33,7 +33,7 @@
         android:fontFamily="@font/roboto"
         android:hint="Nome"
         android:paddingLeft="15sp"
-        android:textColor="#F4705B"
+        android:textColor="#000000"
         android:textColorHint="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,8 +41,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtpeso"
+    <EditText
+        android:id="@+id/txtpeso_criarjogador"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
@@ -50,16 +50,16 @@
         android:fontFamily="@font/roboto"
         android:hint="Peso"
         android:paddingLeft="15sp"
-        android:textColor="#F4705B"
+        android:textColor="#000000"
         android:textColorHint="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtaltura" />
+        app:layout_constraintTop_toBottomOf="@+id/txtaltura_criarjogador" />
 
-    <TextView
-        android:id="@+id/txtaltura"
+    <EditText
+        android:id="@+id/txtaltura_criarjogador"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
@@ -67,16 +67,16 @@
         android:fontFamily="@font/roboto"
         android:hint="Altura"
         android:paddingLeft="15sp"
-        android:textColor="#F4705B"
+        android:textColor="#000000"
         android:textColorHint="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtposicao" />
+        app:layout_constraintTop_toBottomOf="@+id/txtposicao_criarjogador" />
 
-    <TextView
-        android:id="@+id/txtposicao"
+    <EditText
+        android:id="@+id/txtposicao_criarjogador"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
@@ -84,16 +84,16 @@
         android:fontFamily="@font/roboto"
         android:hint="Posição"
         android:paddingLeft="15sp"
-        android:textColor="#F4705B"
+        android:textColor="#000000"
         android:textColorHint="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtnacionalidade" />
+        app:layout_constraintTop_toBottomOf="@+id/txtnacionalidade_criarjogador" />
 
-    <TextView
-        android:id="@+id/txtnacionalidade"
+    <EditText
+        android:id="@+id/txtnacionalidade_criarjogador"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
@@ -101,16 +101,16 @@
         android:fontFamily="@font/roboto"
         android:hint="Nacionalidade"
         android:paddingLeft="15sp"
-        android:textColor="#F4705B"
+        android:textColor="#000000"
         android:textColorHint="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtidade" />
+        app:layout_constraintTop_toBottomOf="@+id/txtidade_criarjogador" />
 
-    <TextView
-        android:id="@+id/txtemail"
+    <EditText
+        android:id="@+id/txtemail_criarjogador"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
@@ -118,16 +118,16 @@
         android:fontFamily="@font/roboto"
         android:hint="Email"
         android:paddingLeft="15sp"
-        android:textColor="#F4705B"
+        android:textColor="#000000"
         android:textColorHint="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtnomejogador" />
+        app:layout_constraintTop_toBottomOf="@+id/txtnomejogador_criarjogadorr" />
 
-    <TextView
-        android:id="@+id/txtidade"
+    <EditText
+        android:id="@+id/txtidade_criarjogador"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
@@ -135,16 +135,16 @@
         android:fontFamily="@font/roboto"
         android:hint="Idade"
         android:paddingLeft="15sp"
-        android:textColor="#F4705B"
+        android:textColor="#000000"
         android:textColorHint="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtemail" />
+        app:layout_constraintTop_toBottomOf="@+id/txtemail_criarjogador" />
 
     <Button
-        android:id="@+id/btguardardados"
+        android:id="@+id/btguardardados_criarjogador"
         android:layout_width="163sp"
         android:layout_height="40sp"
         android:layout_marginStart="112sp"
@@ -157,6 +157,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.705"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtclube" />
+        app:layout_constraintTop_toBottomOf="@+id/txtclube_criarjogador" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

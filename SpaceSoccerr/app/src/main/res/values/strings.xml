@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SpaceSoccer</string>
     <string name="toast_msg_login">Dados inválidos</string>
+    <string name="login_failed">Falha na Autenticação</string>
 </resources>

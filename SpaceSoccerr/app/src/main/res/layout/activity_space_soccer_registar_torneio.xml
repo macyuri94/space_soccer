@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SpaceSoccerRegistarTorneio"
+    tools:context=".RegistarTorneioActivity"
     android:background="@drawable/background_blue">
 
-    <TextView
-        android:id="@+id/textTournamentName"
+    <EditText
+        android:id="@+id/textTournamentName_registar_torneio"
         android:layout_width="260sp"
         android:layout_height="40sp"
         android:layout_marginStart="75sp"
@@ -24,8 +24,8 @@
         android:textColorHint="#000000"
         android:paddingLeft="15sp"/>
 
-    <TextView
-        android:id="@+id/textGameType"
+    <EditText
+        android:id="@+id/textGameType_registar_torneio"
         android:layout_width="260sp"
         android:layout_height="40sp"
         android:layout_marginStart="75sp"
@@ -36,13 +36,13 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTournamentName"
+        app:layout_constraintTop_toBottomOf="@+id/textTournamentName_registar_torneio"
         android:hint="Tipo Competição"
         android:textColorHint="#000000"
         android:paddingLeft="15sp"/>
 
-    <TextView
-        android:id="@+id/textStartDate"
+    <EditText
+        android:id="@+id/textStartDate_registar_torneio"
         android:layout_width="260sp"
         android:layout_height="40sp"
         android:layout_marginStart="75sp"
@@ -53,13 +53,13 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textGameType"
+        app:layout_constraintTop_toBottomOf="@+id/textGameType_registar_torneio"
         android:hint="Data Início"
         android:textColorHint="#000000"
         android:paddingLeft="15sp"/>
 
-    <TextView
-        android:id="@+id/textEndDate"
+    <EditText
+        android:id="@+id/textEndDate_registar_torneio"
         android:layout_width="260sp"
         android:layout_height="40sp"
         android:layout_marginStart="75sp"
@@ -70,13 +70,13 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textStartDate"
+        app:layout_constraintTop_toBottomOf="@+id/textStartDate_registar_torneio"
         android:hint="Data fim"
         android:textColorHint="#000000"
         android:paddingLeft="15sp"/>
 
-    <TextView
-        android:id="@+id/textNumberOfParticipants"
+    <EditText
+        android:id="@+id/textNumberOfParticipants_registar_torneio"
         android:layout_width="260sp"
         android:layout_height="40sp"
         android:layout_marginStart="75sp"
@@ -87,13 +87,13 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEndDate"
+        app:layout_constraintTop_toBottomOf="@+id/textEndDate_registar_torneio"
         android:hint="Nº de participantes"
         android:textColorHint="#000000"
         android:paddingLeft="15sp"/>
 
-    <TextView
-        android:id="@+id/textNumberOfGroups"
+    <EditText
+        android:id="@+id/textNumberOfGroups_registar_torneio"
         android:layout_width="260sp"
         android:layout_height="40sp"
         android:layout_marginStart="75sp"
@@ -104,13 +104,13 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNumberOfParticipants"
+        app:layout_constraintTop_toBottomOf="@+id/textNumberOfParticipants_registar_torneio"
         android:hint="Nº de grupos"
         android:textColorHint="#000000"
         android:paddingLeft="15sp"/>
 
     <Button
-        android:id="@+id/buttonSaveData"
+        android:id="@+id/buttonSaveData_registar_torneio"
         android:layout_width="180sp"
         android:layout_height="50sp"
         android:layout_marginTop="60sp"
@@ -123,6 +123,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNumberOfGroups" />
+        app:layout_constraintTop_toBottomOf="@+id/textNumberOfGroups_registar_torneio" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

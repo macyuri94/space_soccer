@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SpaceSoccerLoginRegistar"
+    tools:context=".LoginRegistarActivity"
     android:background="@drawable/background_blue_orange">
 
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/buttonLogin_login_registar"
         android:layout_width="180sp"
         android:layout_height="60sp"
         android:layout_marginStart="120sp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonRegister"
+        android:id="@+id/buttonRegister_login_registar"
         android:layout_width="180sp"
         android:layout_height="60sp"
         android:layout_marginStart="120dp"
@@ -32,10 +32,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin_login_registar" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView_login_registar"
         android:layout_width="150sp"
         android:layout_height="144sp"
         android:layout_marginStart="16sp"
