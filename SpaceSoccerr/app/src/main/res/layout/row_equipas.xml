@@ -8,7 +8,7 @@
     android:background="@drawable/img_painel_equipa_jogador">
 
     <ImageView
-        android:id="@+id/imgEquipaFutebol_verJogador"
+        android:id="@+id/imgEquipaFutebol_verEquipa"
         android:layout_width="70sp"
         android:layout_height="70sp"
         android:layout_marginStart="16dp"
@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/img_team_logo" />
 
     <TextView
-        android:id="@+id/txtNomeJogador_verJogador"
+        android:id="@+id/txtNomeJogador_verEquipa"
         android:layout_width="198dp"
         android:layout_height="32dp"
         android:layout_marginTop="15dp"
@@ -32,12 +32,12 @@
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btApagar_verJogador"
+        app:layout_constraintEnd_toStartOf="@+id/btApagar_verEquipa"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.447" />
 
     <Button
-        android:id="@+id/btApagar_verJogador"
+        android:id="@+id/btApagar_verEquipa"
         android:layout_width="35sp"
         android:layout_height="35sp"
         android:layout_marginTop="15dp"
