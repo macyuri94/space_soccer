@@ -20,7 +20,6 @@ import org.json.JSONObject
 class VerEquipaFiltradosActivity : AppCompatActivity() {
 
     var idTorneio: Int? = null
-    var idEquipa: Int? = null
     var listarEquipasFiltrado : MutableList<Equipas> = ArrayList()
     var equipasFiltradoAdapter : VerEquipaFiltradosActivity.EquipasFiltradoAdapter? = null
 
@@ -30,7 +29,6 @@ class VerEquipaFiltradosActivity : AppCompatActivity() {
 
         val bundle = intent.extras
         bundle?.let {
-            idEquipa = it.getInt("IdClube")
             idTorneio = it.getInt("IdTorneio")
         }
 

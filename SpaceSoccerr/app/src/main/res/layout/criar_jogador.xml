@@ -158,31 +158,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAltura_criarJogador" />
 
-    <EditText
-        android:id="@+id/txtClube_criarJogador"
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/background_txt"
-        android:fontFamily="@font/roboto"
-        android:hint="Clube"
-        android:inputType="text"
-        android:paddingLeft="15sp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPeso_criarJogador"
-        android:autofillHints="" />
-
     <Button
         android:id="@+id/btGuardarDados_criarJogador"
         android:layout_width="163sp"
         android:layout_height="40sp"
         android:layout_marginStart="112sp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="119sp"
         android:background="@drawable/bt_registar_orange"
         android:fontFamily="@font/roboto"
@@ -191,6 +172,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.705"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtClube_criarJogador" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPeso_criarJogador" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

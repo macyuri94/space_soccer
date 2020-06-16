@@ -137,7 +137,7 @@ class VolleyHelper {
                 queue = Volley.newRequestQueue(context)
 
                 val stringRequest = object : StringRequest( GET,
-                    "$BASE_API$PLAYERS/$id",
+                    BASE_API + PLAYERS_CLUBE + "/" + id,
                     Response.Listener<String>{
                         playersEvent.invoke(JSONArray(it))
                     }, Response.ErrorListener {
@@ -182,7 +182,7 @@ class VolleyHelper {
 
     // << ---------------------------------------------------------------------------------------------------------------- >> //
 
-        fun addPlayers(context: Context, NumeroCartaoCidadao: String, name: String, number: String, birthDate: String, nationality: String, position: String, height: String, weight: String, team: String, playersEvent : ((Boolean)->Unit)){
+        fun addPlayers(context: Context, NumeroCartaoCidadao: String, name: String, number: String, birthDate: String, nationality: String, position: String, height: String, weight: String, idclube: String, playersEvent : ((Boolean)->Unit)){
             doAsync {
                 queue = Volley.newRequestQueue(context)
 
@@ -195,7 +195,7 @@ class VolleyHelper {
                 jsonObject.put("position", position)
                 jsonObject.put("height", height)
                 jsonObject.put("weight", weight)
-                jsonObject.put("team", team)
+                jsonObject.put("idclube", idclube)
 
                 val jsonObjectRequest = object : JsonObjectRequest( POST,
                     BASE_API + PLAYERS ,
@@ -416,6 +416,7 @@ class VolleyHelper {
         const val  TEAMS          = "/api/clube"
         const val  TORNEIOS_CLUBE = "/api/torneioclube"
         const val  USERS          = "/authentication/list"
+        const val  PLAYERS_CLUBE  = "/api/playersclube"
 
         var   token         = ""
         const val tokenName = "x-access-token"

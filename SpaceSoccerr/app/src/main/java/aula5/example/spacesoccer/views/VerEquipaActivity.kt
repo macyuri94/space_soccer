@@ -17,7 +17,6 @@ import org.json.JSONObject
 class VerEquipaActivity : AppCompatActivity() {
 
     var idTorneio: Int? = null
-    var idEquipa: Int? = null
 
     var listarEquipas : MutableList<Equipas> = ArrayList()
     var equipasAdapter : VerEquipaActivity.EquipasAdapter? = null
@@ -29,7 +28,6 @@ class VerEquipaActivity : AppCompatActivity() {
         val bundle = intent.extras
         bundle?.let {
             idTorneio = it.getInt("IdTorneio")
-
         }
 
         btCriarEquipa_verEquipa.setOnClickListener {

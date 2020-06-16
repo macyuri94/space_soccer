@@ -15,9 +15,16 @@ import aula5.example.spacesoccer.helper.VolleyHelper
 
 class CriarJogadorActivity : AppCompatActivity() {
 
+    var idEquipa: Int? = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.criar_jogador)
+
+        val bundle = intent.extras
+        bundle?.let {
+            idEquipa = it.getInt("IdClube")
+        }
 
         val numerocartaocidadao = findViewById<EditText>(R.id.txtNumeroCartaoCidadao_criarJogador)
         val name = findViewById<EditText>(R.id.txtNomeJogador_criarJogadorr)
@@ -27,7 +34,6 @@ class CriarJogadorActivity : AppCompatActivity() {
         val position = findViewById<EditText>(R.id.txtPosicao_criarJogador)
         val height = findViewById<EditText>(R.id.txtAltura_criarJogador)
         val weight = findViewById<EditText>(R.id.txtPeso_criarJogador)
-        val team = findViewById<EditText>(R.id.txtClube_criarJogador)
 
         val btGuardarDados_criarJogador=findViewById<Button>(R.id.btGuardarDados_criarJogador)
 
@@ -42,7 +48,7 @@ class CriarJogadorActivity : AppCompatActivity() {
                 position.text.toString(),
                 height.text.toString(),
                 weight.text.toString(),
-                team.text.toString()
+                idEquipa.toString()
             ) {
                 if (it) {
                     //Mudar string

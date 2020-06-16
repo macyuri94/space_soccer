@@ -30,8 +30,12 @@ class RegistarTorneioActivity : AppCompatActivity() {
                 numberteams.text.toString()
             ) {
                 if (it) {
-                    val intent = Intent(this@RegistarTorneioActivity, TorneiosActivity::class.java)
-                    startActivity(intent)
+                    //Mudar string
+                    Toast.makeText(
+                        this@RegistarTorneioActivity,
+                        this@RegistarTorneioActivity.getString(R.string.creatTournament_failed),
+                        Toast.LENGTH_LONG
+                    ).show()
                 } else {
                     Toast.makeText(
                         this@RegistarTorneioActivity,
@@ -40,6 +44,8 @@ class RegistarTorneioActivity : AppCompatActivity() {
                     ).show()
                 }
             }
+            val intent = Intent(this@RegistarTorneioActivity, TorneiosActivity::class.java)
+            startActivity(intent)
         }
     }
 }

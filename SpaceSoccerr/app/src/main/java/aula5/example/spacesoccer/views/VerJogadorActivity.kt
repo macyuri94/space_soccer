@@ -17,7 +17,6 @@ import org.json.JSONObject
 class VerJogadorActivity : AppCompatActivity() {
 
     var idEquipa: Int? = null
-
     var listarJogadores : MutableList<Jogadores> = ArrayList()
     var jogadoresAdapter : JogadoresAdapter? = null
 
@@ -32,6 +31,7 @@ class VerJogadorActivity : AppCompatActivity() {
 
         btCriarJogador_verJogador.setOnClickListener {
             val intent = Intent(this, CriarJogadorActivity:: class.java)
+            intent.putExtra("IdClube", idEquipa!!.toInt())
             startActivity(intent)
         }
 
