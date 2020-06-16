@@ -58,6 +58,7 @@ class MenuActivity : AppCompatActivity() {
 
         btJogos_menu.setOnClickListener {
             val intent = Intent(this, JogosActivity::class.java)
+            intent.putExtra("IdTorneio", idTorneio!!.toInt())
             startActivity(intent)
         }
 

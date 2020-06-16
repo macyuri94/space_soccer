@@ -16,6 +16,8 @@ import org.json.JSONObject
 
 class JogosActivity : AppCompatActivity() {
 
+    var idTorneio: Int? = null
+
     var listarJogos : MutableList<Jogos> = ArrayList()
     var jogosAdapter : JogosActivity.JogosAdapter? = null
 
@@ -23,10 +25,15 @@ class JogosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.jogos)
 
+        val bundle = intent.extras
+        bundle?.let {
+            idTorneio = it.getInt("IdTorneio")
+        }
+
         jogosAdapter = JogosAdapter()
         listViewJogos.adapter = jogosAdapter
 
-        VolleyHelper.instance.getAllGames(this@JogosActivity) { response ->
+        VolleyHelper.instance.getTournamentsGamesById(this, idTorneio!!.toInt()) { response ->
             response?.let {
                 for (index in 0 until it.length()) {
                     val teamJSON : JSONObject = it[index] as JSONObject

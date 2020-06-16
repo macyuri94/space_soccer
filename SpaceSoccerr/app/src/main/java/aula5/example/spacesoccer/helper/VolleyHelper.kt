@@ -432,6 +432,29 @@ class VolleyHelper {
         }
     }
 
+    fun getTournamentsGamesById(context: Context, id: Int, playersEvent: ((JSONArray?)->Unit)){
+        doAsync {
+            queue = Volley.newRequestQueue(context)
+
+            val stringRequest = object : StringRequest( GET,
+                BASE_API + TORNEIOS_GAMES + "/" + id,
+                Response.Listener<String>{
+                    playersEvent.invoke(JSONArray(it))
+                }, Response.ErrorListener {
+                    Log.d("VolleyHelper", it.toString())
+                    playersEvent.invoke(null)
+                }
+            ){
+                override fun getHeaders(): MutableMap<String, String> {
+                    val map : MutableMap<String, String> = mutableMapOf<String, String>()
+                    map.put(tokenName, token)
+                    return map
+                }
+            }
+            queue!!.add(stringRequest)
+        }
+    }
+
 // << --------------------------------------------------FimJogos---------------------**----------------------------- >> //
 
 
@@ -449,6 +472,7 @@ class VolleyHelper {
         const val  USERS          = "/authentication/list"
         const val  PLAYERS_CLUBE  = "/api/playersclube"
         const val  GAMES          = "/api/jogo"
+        const val  TORNEIOS_GAMES = "/api/torneiojogo"
 
         var   token         = ""
         const val tokenName = "x-access-token"
