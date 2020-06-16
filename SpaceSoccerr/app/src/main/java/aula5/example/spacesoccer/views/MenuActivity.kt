@@ -14,6 +14,7 @@ class MenuActivity : AppCompatActivity() {
     var dtFim: String? = null
     var NumEquipas: Int? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.menu)

@@ -11,6 +11,7 @@ import android.widget.Toast
 import aula5.example.spacesoccer.models.Equipas
 import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
+import kotlinx.android.synthetic.main.row_equipas.*
 import kotlinx.android.synthetic.main.ver_equipa.*
 import org.json.JSONObject
 
@@ -44,6 +45,7 @@ class VerEquipaActivity : AppCompatActivity() {
             val intent = Intent(this, InformacaoJogadorActivity::class.java)
             startActivity(intent)
         }
+
 
         equipasAdapter = EquipasAdapter()
         listViewEquipas.adapter = equipasAdapter
@@ -79,6 +81,16 @@ class VerEquipaActivity : AppCompatActivity() {
                         ).show()
                     }
                 }
+                startActivity(intent)
+            }
+
+            rowView.setOnClickListener{
+                val intent = Intent(this@VerEquipaActivity, InformacaoEquipaActivity::class.java)
+                intent.putExtra("IdClube", listarEquipas[position].IdClube)
+                intent.putExtra("NomeClube", listarEquipas[position].NomeClube)
+                intent.putExtra("AnoFundacao", listarEquipas[position].AnoFundacao)
+                intent.putExtra("Treinador", listarEquipas[position].Treinador)
+                intent.putExtra("CidadeFundacao", listarEquipas[position].CidadeFundacao)
                 startActivity(intent)
             }
 
