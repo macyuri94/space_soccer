@@ -11,26 +11,22 @@
         android:id="@+id/textTournamentName_registar_torneio"
         android:layout_width="260sp"
         android:layout_height="40sp"
-        android:layout_marginStart="75sp"
         android:layout_marginTop="130sp"
-        android:layout_marginEnd="75sp"
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
+        android:hint="Nome torneio"
+        android:paddingLeft="15sp"
         android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:hint="Nome torneio"
-        android:textColorHint="#000000"
-        android:paddingLeft="15sp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/textStartDate_registar_torneio"
         android:layout_width="260sp"
         android:layout_height="40sp"
-        android:layout_marginStart="75sp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="75sp"
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
         android:hint="Data Início"
@@ -38,7 +34,6 @@
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTournamentName_registar_torneio" />
 
@@ -46,26 +41,22 @@
         android:id="@+id/textEndDate_registar_torneio"
         android:layout_width="260sp"
         android:layout_height="40sp"
-        android:layout_marginStart="75sp"
         android:layout_marginTop="30sp"
-        android:layout_marginEnd="75sp"
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
+        android:hint="Data fim"
+        android:paddingLeft="15sp"
         android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textStartDate_registar_torneio"
-        android:hint="Data fim"
-        android:textColorHint="#000000"
-        android:paddingLeft="15sp"/>
+        app:layout_constraintTop_toBottomOf="@+id/textStartDate_registar_torneio" />
 
     <EditText
         android:id="@+id/textNumberOfTeams_registar_torneio"
         android:layout_width="260sp"
         android:layout_height="40sp"
-        android:layout_marginStart="75sp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="75sp"
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
         android:hint="Nº de equipas"
@@ -73,7 +64,6 @@
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textEndDate_registar_torneio" />
 

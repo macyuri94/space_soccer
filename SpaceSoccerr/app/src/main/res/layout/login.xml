@@ -11,7 +11,6 @@
         android:id="@+id/txtEmail_login"
         android:layout_width="260dp"
         android:layout_height="40dp"
-        android:layout_marginStart="49dp"
         android:layout_marginTop="180dp"
         android:autofillHints=""
         android:background="@drawable/background_txt"
@@ -26,7 +25,6 @@
         android:textSize="20sp"
         app:autoSizeTextType="none"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.254"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,8 +32,8 @@
         android:id="@+id/txtPassword_login"
         android:layout_width="260dp"
         android:layout_height="40dp"
-        android:layout_marginStart="49dp"
         android:layout_marginTop="32dp"
+        android:autofillHints=""
         android:background="@drawable/background_txt"
         android:elegantTextHeight="false"
         android:fontFamily="@font/roboto"
@@ -48,10 +46,8 @@
         android:textSize="20sp"
         app:autoSizeTextType="none"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.254"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail_login"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail_login" />
 
     <Button
         android:id="@+id/btLogin_login"

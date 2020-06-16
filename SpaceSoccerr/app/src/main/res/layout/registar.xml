@@ -11,15 +11,12 @@
         android:id="@+id/buttonRegister_registar"
         android:layout_width="180sp"
         android:layout_height="50sp"
-        android:layout_marginStart="112sp"
-        android:layout_marginEnd="119sp"
         android:layout_marginBottom="52dp"
         android:background="@drawable/bt_registar_orange"
         android:fontFamily="@font/roboto"
         android:text="Registar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -50,18 +47,15 @@
         android:id="@+id/textConfirmPasswordRegister_registar"
         android:layout_width="260sp"
         android:layout_height="40sp"
-        android:layout_marginStart="75sp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="75sp"
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
         android:hint="Confirmar palavra-passe"
+        android:inputType="textPassword"
         android:paddingLeft="15sp"
         android:textColor="#000000"
         android:textColorHint="#000000"
-        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPasswordRegister_registar" />
 
@@ -69,18 +63,15 @@
         android:id="@+id/textPasswordRegister_registar"
         android:layout_width="260sp"
         android:layout_height="40sp"
-        android:layout_marginStart="75sp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="75sp"
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
         android:hint="Palavra-passe"
-        android:paddingLeft="15sp"
         android:inputType="textPassword"
+        android:paddingLeft="15sp"
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textEmailRegister_registar" />
 
@@ -88,9 +79,7 @@
         android:id="@+id/textEmailRegister_registar"
         android:layout_width="260sp"
         android:layout_height="40sp"
-        android:layout_marginStart="75sp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="75sp"
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
         android:hint="Email"
@@ -99,7 +88,6 @@
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textBirthDate_registar" />
 
@@ -107,9 +95,7 @@
         android:id="@+id/textBirthDate_registar"
         android:layout_width="260sp"
         android:layout_height="40sp"
-        android:layout_marginStart="75sp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="75sp"
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
         android:hint="Ano nascimento"
@@ -117,7 +103,6 @@
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textCCNumber_registar" />
 
@@ -125,9 +110,7 @@
         android:id="@+id/textLastNameRegister_registar"
         android:layout_width="260sp"
         android:layout_height="40sp"
-        android:layout_marginStart="75sp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="75sp"
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
         android:hint="Ultimo Nome"
@@ -135,7 +118,6 @@
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textFirstNameRegister_registar" />
 
@@ -143,9 +125,7 @@
         android:id="@+id/textFirstNameRegister_registar"
         android:layout_width="260sp"
         android:layout_height="40sp"
-        android:layout_marginStart="75sp"
         android:layout_marginTop="92dp"
-        android:layout_marginEnd="75sp"
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
         android:hint="Primeiro Nome"
@@ -153,7 +133,6 @@
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -161,9 +140,7 @@
         android:id="@+id/textCCNumber_registar"
         android:layout_width="260sp"
         android:layout_height="40sp"
-        android:layout_marginStart="75sp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="75sp"
         android:background="@drawable/background_txt"
         android:fontFamily="@font/roboto"
         android:hint="NIF"
@@ -171,7 +148,6 @@
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textLastNameRegister_registar" />
 
