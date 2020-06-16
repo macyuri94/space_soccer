@@ -21,6 +21,8 @@ import org.json.JSONObject
 class VerJogadorActivity : AppCompatActivity() {
 
     var idEquipa: Int? = null
+    var nomeEquipa: String? = null
+
     var listarJogadores: MutableList<Jogadores> = ArrayList()
     var jogadoresAdapter: JogadoresAdapter? = null
 
@@ -31,6 +33,7 @@ class VerJogadorActivity : AppCompatActivity() {
         val bundle = intent.extras
         bundle?.let {
             idEquipa = it.getInt("IdClube")
+            nomeEquipa = it.getString("NomeClube")
         }
 
         btCriarJogador_verJogador.setOnClickListener {
@@ -57,6 +60,16 @@ class VerJogadorActivity : AppCompatActivity() {
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
             val rowView = layoutInflater.inflate(R.layout.row_jogadores, parent, false)
             val nomeJogador = rowView.findViewById<TextView>(R.id.txtNomeJogador_verJogador)
+
+            rowView.setOnClickListener {
+                val intent = Intent(this@VerJogadorActivity, InformacaoJogadorActivity::class.java)
+                intent.putExtra("NomeClube", nomeEquipa)
+                intent.putExtra("IdJogador", listarJogadores[position].IdJogador)
+                intent.putExtra("Nome", listarJogadores[position].Nome)
+                intent.putExtra("Nacionalidade", listarJogadores[position].Nacionalidade)
+                intent.putExtra("DataNascimento", listarJogadores[position].DataNascimento)
+                startActivity(intent)
+            }
 
             nomeJogador.text = listarJogadores[position].Nome
 

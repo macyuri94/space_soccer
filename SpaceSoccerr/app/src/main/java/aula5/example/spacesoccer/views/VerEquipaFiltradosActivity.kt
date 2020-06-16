@@ -69,6 +69,7 @@ class VerEquipaFiltradosActivity : AppCompatActivity() {
             rowView.setOnClickListener {
                 val intent = Intent(this@VerEquipaFiltradosActivity, VerJogadorActivity::class.java)
                 intent.putExtra("IdClube", listarEquipasFiltrado[position].IdClube)
+                intent.putExtra("NomeClube", listarEquipasFiltrado[position].NomeClube)
                 startActivity(intent)
             }
 
