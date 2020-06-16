@@ -2,6 +2,7 @@ package aula5.example.spacesoccer.views
 
 // << ---------------------------------------------------------------------------------------- >> //
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -46,6 +47,12 @@ class JogosActivity : AppCompatActivity() {
                 jogosAdapter?.notifyDataSetChanged()
             }
         }
+
+        btCriarJogos_Jogos.setOnClickListener {
+            val intent = Intent(this, CriarJogoActivity::class.java)
+            intent.putExtra("IdTorneio", idTorneio!!.toInt())
+            startActivity(intent)
+        }
     }
 
     inner class JogosAdapter : BaseAdapter() {
@@ -53,9 +60,11 @@ class JogosActivity : AppCompatActivity() {
             val rowView = layoutInflater.inflate(R.layout.row_jogos, parent, false)
             val nomeEquipaA = rowView.findViewById<TextView>(R.id.text_NomeEquipaA_Jogos)
             val nomeEquipaB = rowView.findViewById<TextView>(R.id.text_NomeEquipaB_Jogos)
+            val dataJogo = rowView.findViewById<TextView>(R.id.text_DataJogo_Jogos)
 
             nomeEquipaA.text = listarJogos[position].EquipaCasa
             nomeEquipaB.text = listarJogos[position].EquipaConvidada
+            dataJogo.text = listarJogos[position].DataJogo
 
             return rowView
         }

@@ -455,6 +455,44 @@ class VolleyHelper {
 
 // << ----------------------------------- Inicio Jogos --------------------------------------- >> //
 
+    fun addGames(
+        context: Context,
+        equipacasa: String,
+        equipaconvidada: String,
+        arbitro: String,
+        datajogo: String,
+        idtorneio: String,
+        playersEvent: (Boolean) -> Unit
+    ) {
+        doAsync {
+            queue = Volley.newRequestQueue(context)
+
+            val jsonObject = JSONObject()
+            jsonObject.put("equipacasa", equipacasa)
+            jsonObject.put("equipaconvidada", equipaconvidada)
+            jsonObject.put("arbitro", arbitro)
+            jsonObject.put("datajogo", datajogo)
+            jsonObject.put("torneio", idtorneio)
+
+            val jsonObjectRequest = object : JsonObjectRequest(POST,
+                BASE_API + GAMES,
+                jsonObject,
+                Response.Listener {
+                    Log.d("VolleyHelper", it.toString())
+                }, Response.ErrorListener {
+                    Log.d("VolleyHelper", it.toString())
+                }
+            ) {
+                override fun getHeaders(): MutableMap<String, String> {
+                    val map: MutableMap<String, String> = mutableMapOf<String, String>()
+                    map.put(tokenName, token)
+                    return map
+                }
+            }
+            queue!!.add(jsonObjectRequest)
+        }
+    }
+
     fun getAllGames(context: Context, playersEvent: ((JSONArray?) -> Unit)) {
         doAsync {
             queue = Volley.newRequestQueue(context)
@@ -506,7 +544,7 @@ class VolleyHelper {
 
     companion object {
 
-        const val BASE_API = "http://192.168.1.80:3000"
+        const val BASE_API = "http://192.168.1.64:3000"
         const val USER_LOGIN = "/authentication/login"
         const val USER_REGISTER = "/authentication/register"
         const val PLAYERS = "/api/players"

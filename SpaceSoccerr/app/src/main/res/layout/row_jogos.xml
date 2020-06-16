@@ -10,11 +10,11 @@
 
     <ImageView
         android:id="@+id/img_EquipaA_Jogos"
-        android:layout_width="44dp"
-        android:layout_height="40dp"
+        android:layout_width="55dp"
+        android:layout_height="53dp"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/text_NomeEquipaB_Jogos"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,11 +23,11 @@
 
     <ImageView
         android:id="@+id/img_EquipaB_Jogos"
-        android:layout_width="44dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="12dp"
+        android:layout_width="55dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/text_NomeEquipaA_Jogos"
         app:layout_constraintTop_toTopOf="parent"
@@ -47,7 +47,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.047" />
+        app:layout_constraintVertical_bias="0.204" />
+
+    <TextView
+        android:id="@+id/text_DataJogo_Jogos"
+        android:layout_width="115dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/roboto"
+        android:text="2020-05-10 17:40:00"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/text_NomeEquipaB_Jogos"
@@ -64,14 +77,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.31" />
 
     <TextView
         android:id="@+id/txtVS_Jogos"
-        android:layout_width="32dp"
-        android:layout_height="36dp"
+        android:layout_width="28dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="25dp"
         android:fontFamily="@font/roboto"
         android:text="VS"
         android:textColor="#FFFFFF"
