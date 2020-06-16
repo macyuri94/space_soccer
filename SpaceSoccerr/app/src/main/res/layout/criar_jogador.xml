@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.CriarJogadorActivity"
-    android:background="@drawable/background_blue">
+    android:background="@drawable/background_blue"
+    tools:context=".views.CriarJogadorActivity">
 
     <EditText
         android:id="@+id/txtNomeJogador_criarJogadorr"

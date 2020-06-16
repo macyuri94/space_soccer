@@ -1,5 +1,7 @@
 package aula5.example.spacesoccer.views
 
+// << ---------------------------------------------------------------------------------------- >> //
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,11 +17,13 @@ import kotlinx.android.synthetic.main.row_equipas.*
 import kotlinx.android.synthetic.main.ver_equipa.*
 import org.json.JSONObject
 
+// << ---------------------------------------------------------------------------------------- >> //
+
 class VerEquipaActivity : AppCompatActivity() {
 
     var idTorneio: Int? = null
-    var listarEquipas : MutableList<Equipas> = ArrayList()
-    var equipasAdapter : VerEquipaActivity.EquipasAdapter? = null
+    var listarEquipas: MutableList<Equipas> = ArrayList()
+    var equipasAdapter: VerEquipaActivity.EquipasAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +35,7 @@ class VerEquipaActivity : AppCompatActivity() {
         }
 
         btCriarEquipa_verEquipa.setOnClickListener {
-            val intent = Intent(this, CriarEquipaActivity:: class.java)
+            val intent = Intent(this, CriarEquipaActivity::class.java)
             intent.putExtra("IdTorneio", idTorneio)
             startActivity(intent)
         }
@@ -46,14 +50,13 @@ class VerEquipaActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
         equipasAdapter = EquipasAdapter()
         listViewEquipas.adapter = equipasAdapter
 
         VolleyHelper.instance.getTournamentsClubById(this, idTorneio!!.toInt()) { response ->
             response?.let {
                 for (index in 0 until it.length()) {
-                    val teamJSON : JSONObject = it[index] as JSONObject
+                    val teamJSON: JSONObject = it[index] as JSONObject
                     listarEquipas.add(Equipas.parseJson(teamJSON))
                 }
                 equipasAdapter?.notifyDataSetChanged()
@@ -61,19 +64,22 @@ class VerEquipaActivity : AppCompatActivity() {
         }
     }
 
-    inner class EquipasAdapter : BaseAdapter(){
+    inner class EquipasAdapter : BaseAdapter() {
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-            val rowView = layoutInflater.inflate(R.layout.row_equipas,parent,false)
+            val rowView = layoutInflater.inflate(R.layout.row_equipas, parent, false)
             val nomeJogador = rowView.findViewById<TextView>(R.id.txtNomeJogador_verEquipa)
 
             val btApagar = rowView.findViewById<TextView>(R.id.btApagar_verEquipa)
 
             btApagar.setOnClickListener {
                 val intent = Intent(this@VerEquipaActivity, MenuActivity::class.java)
-                VolleyHelper.instance.deleteTeamsById(this@VerEquipaActivity, listarEquipas[position].IdClube!!) {response->
-                    if(response){
+                VolleyHelper.instance.deleteTeamsById(
+                    this@VerEquipaActivity,
+                    listarEquipas[position].IdClube!!
+                ) { response ->
+                    if (response) {
                         //COLOCAR ALGO
-                    } else{
+                    } else {
                         Toast.makeText(
                             this@VerEquipaActivity,
                             this@VerEquipaActivity.getString(R.string.deleteTeam_failed),
@@ -84,7 +90,7 @@ class VerEquipaActivity : AppCompatActivity() {
                 startActivity(intent)
             }
 
-            rowView.setOnClickListener{
+            rowView.setOnClickListener {
                 val intent = Intent(this@VerEquipaActivity, InformacaoEquipaActivity::class.java)
                 intent.putExtra("IdClube", listarEquipas[position].IdClube)
                 intent.putExtra("NomeClube", listarEquipas[position].NomeClube)
@@ -98,12 +104,15 @@ class VerEquipaActivity : AppCompatActivity() {
 
             return rowView
         }
+
         override fun getItem(position: Int): Any {
             return listarEquipas[position]
         }
+
         override fun getItemId(position: Int): Long {
             return 0
         }
+
         override fun getCount(): Int {
             return listarEquipas.size
         }

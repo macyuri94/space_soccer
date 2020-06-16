@@ -1,5 +1,7 @@
 package aula5.example.spacesoccer.views
 
+// << ---------------------------------------------------------------------------------------- >> //
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -14,12 +16,14 @@ import kotlinx.android.synthetic.main.jogos.*
 import kotlinx.android.synthetic.main.ver_jogador.*
 import org.json.JSONObject
 
+// << ---------------------------------------------------------------------------------------- >> //
+
 class JogosActivity : AppCompatActivity() {
 
     var idTorneio: Int? = null
 
-    var listarJogos : MutableList<Jogos> = ArrayList()
-    var jogosAdapter : JogosActivity.JogosAdapter? = null
+    var listarJogos: MutableList<Jogos> = ArrayList()
+    var jogosAdapter: JogosActivity.JogosAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +40,7 @@ class JogosActivity : AppCompatActivity() {
         VolleyHelper.instance.getTournamentsGamesById(this, idTorneio!!.toInt()) { response ->
             response?.let {
                 for (index in 0 until it.length()) {
-                    val teamJSON : JSONObject = it[index] as JSONObject
+                    val teamJSON: JSONObject = it[index] as JSONObject
                     listarJogos.add(Jogos.parseJson(teamJSON))
                 }
                 jogosAdapter?.notifyDataSetChanged()
@@ -44,9 +48,9 @@ class JogosActivity : AppCompatActivity() {
         }
     }
 
-    inner class JogosAdapter : BaseAdapter(){
+    inner class JogosAdapter : BaseAdapter() {
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-            val rowView = layoutInflater.inflate(R.layout.row_jogos,parent,false)
+            val rowView = layoutInflater.inflate(R.layout.row_jogos, parent, false)
             val nomeEquipaA = rowView.findViewById<TextView>(R.id.text_NomeEquipaA_Jogos)
             val nomeEquipaB = rowView.findViewById<TextView>(R.id.text_NomeEquipaB_Jogos)
 
@@ -55,12 +59,15 @@ class JogosActivity : AppCompatActivity() {
 
             return rowView
         }
+
         override fun getItem(position: Int): Any {
             return listarJogos[position]
         }
+
         override fun getItemId(position: Int): Long {
             return 0
         }
+
         override fun getCount(): Int {
             return listarJogos.size
         }

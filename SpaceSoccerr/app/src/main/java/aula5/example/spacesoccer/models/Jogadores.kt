@@ -4,19 +4,19 @@ import org.json.JSONObject
 import java.lang.NullPointerException
 
 class Jogadores {
-    var IdJogador : Int? = null
-    var NumeroCartaoCidadao : String? = null
-    var Nome : String? = null
-    var NumCamisola : Int? = null
-    var DataNascimento : String? = null
-    var Nacionalidade : String? = null
-    var Posicao : String? = null
-    var Altura : Int? = null
-    var Peso : Int? = null
-    var IdClube : Int? = null
+    var IdJogador: Int? = null
+    var NumeroCartaoCidadao: String? = null
+    var Nome: String? = null
+    var NumCamisola: Int? = null
+    var DataNascimento: String? = null
+    var Nacionalidade: String? = null
+    var Posicao: String? = null
+    var Altura: Int? = null
+    var Peso: Int? = null
+    var IdClube: Int? = null
 
     companion object {
-        fun parseJson(jsonArticle: JSONObject) : Jogadores {
+        fun parseJson(jsonArticle: JSONObject): Jogadores {
             val jogador = Jogadores()
 
             jogador.IdJogador = jsonArticle.getInt("IdJogador")

@@ -4,14 +4,14 @@ import org.json.JSONObject
 
 class Torneios {
     var IdTorneio: Int? = null
-    var Nome : String? = null
-    var dtInicio : String? = null
-    var dtFim : String? = null
-    var Campeao : String? = null
+    var Nome: String? = null
+    var dtInicio: String? = null
+    var dtFim: String? = null
+    var Campeao: String? = null
     var NumEquipas: Int? = null
 
     companion object {
-        fun parseJson(jsonArticle: JSONObject) : Torneios {
+        fun parseJson(jsonArticle: JSONObject): Torneios {
             val torneio = Torneios()
 
             torneio.IdTorneio = jsonArticle.getInt("IdTorneio")

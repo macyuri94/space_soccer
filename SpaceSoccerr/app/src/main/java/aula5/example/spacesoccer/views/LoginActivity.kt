@@ -1,6 +1,6 @@
 package aula5.example.spacesoccer.views
 
-// << ---------------------------------------------------------------------------------------------------------------- >> //
+// << ---------------------------------------------------------------------------------------- >> //
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -12,11 +12,11 @@ import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
 import aula5.example.spacesoccer.models.Utilizador
 
-// << ---------------------------------------------------------------------------------------------------------------- >> //
+// << ---------------------------------------------------------------------------------------- >> //
 
 class LoginActivity : AppCompatActivity() {
 
-    var listarUtilizador : MutableList<Utilizador> = ArrayList()
+    var listarUtilizador: MutableList<Utilizador> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,10 +30,10 @@ class LoginActivity : AppCompatActivity() {
         password.setText("nuno")
 
         loginButton.setOnClickListener {
-            if(username.text.toString() == "nuno@gmail.com" && password.text.toString() == "nuno") {
+            if (username.text.toString() == "nuno@gmail.com" && password.text.toString() == "nuno") {
                 val intent = Intent(this@LoginActivity, TorneiosActivity::class.java)
                 startActivity(intent)
-            }else{
+            } else {
                 Toast.makeText(
                     this@LoginActivity,
                     this@LoginActivity.getString(R.string.login_failed),

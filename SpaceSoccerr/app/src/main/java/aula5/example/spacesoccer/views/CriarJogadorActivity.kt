@@ -1,6 +1,6 @@
 package aula5.example.spacesoccer.views
 
-// << ---------------------------------------------------------------------------------------------------------------- >> //
+// << ---------------------------------------------------------------------------------------- >> //
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +11,7 @@ import android.widget.Toast
 import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
 
-// << ---------------------------------------------------------------------------------------------------------------- >> //
+// << ---------------------------------------------------------------------------------------- >> //
 
 class CriarJogadorActivity : AppCompatActivity() {
 
@@ -35,7 +35,7 @@ class CriarJogadorActivity : AppCompatActivity() {
         val height = findViewById<EditText>(R.id.txtAltura_criarJogador)
         val weight = findViewById<EditText>(R.id.txtPeso_criarJogador)
 
-        val btGuardarDados_criarJogador=findViewById<Button>(R.id.btGuardarDados_criarJogador)
+        val btGuardarDados_criarJogador = findViewById<Button>(R.id.btGuardarDados_criarJogador)
 
         btGuardarDados_criarJogador.setOnClickListener {
             VolleyHelper.instance.addPlayers(

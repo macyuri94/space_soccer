@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.CriarEquipaActivity"
-    android:background="@drawable/background_blue">
+    android:background="@drawable/background_blue"
+    tools:context=".views.CriarEquipaActivity">
 
     <EditText
         android:id="@+id/txtNomeEquipa_criarEquipa"

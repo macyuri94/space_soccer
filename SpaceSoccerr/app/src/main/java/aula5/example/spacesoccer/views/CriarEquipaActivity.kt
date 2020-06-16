@@ -1,6 +1,6 @@
 package aula5.example.spacesoccer.views
 
-// << ---------------------------------------------------------------------------------------------------------------- >> //
+// << ---------------------------------------------------------------------------------------- >> //
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +11,7 @@ import android.widget.Toast
 import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
 
-// << ---------------------------------------------------------------------------------------------------------------- >> //
+// << ---------------------------------------------------------------------------------------- >> //
 
 class CriarEquipaActivity : AppCompatActivity() {
 

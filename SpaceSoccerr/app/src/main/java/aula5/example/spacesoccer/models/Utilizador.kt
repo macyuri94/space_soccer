@@ -3,16 +3,16 @@ package aula5.example.spacesoccer.models
 import org.json.JSONObject
 
 class Utilizador {
-    var IdUtilizador : Int? = null
-    var NumeroCartaoCidadao : Int? = null
-    var PrimeiroNome : String? = null
-    var UltimoNome : String? = null
-    var DataNascimento : String? = null
-    var Email : String? = null
-    var Password : String? = null
+    var IdUtilizador: Int? = null
+    var NumeroCartaoCidadao: Int? = null
+    var PrimeiroNome: String? = null
+    var UltimoNome: String? = null
+    var DataNascimento: String? = null
+    var Email: String? = null
+    var Password: String? = null
 
     companion object {
-        fun parseJson(jsonArticle: JSONObject) : Utilizador {
+        fun parseJson(jsonArticle: JSONObject): Utilizador {
             val utilizador = Utilizador()
 
             utilizador.IdUtilizador = jsonArticle.getInt("IdUtilizador")

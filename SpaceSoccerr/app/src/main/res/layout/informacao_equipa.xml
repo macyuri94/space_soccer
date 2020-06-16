@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.InformacaoEquipaActivity"
-    android:background="@drawable/background_blue_orange_white">
+    android:background="@drawable/background_blue_orange_white"
+    tools:context=".views.InformacaoEquipaActivity">
 
     <ImageView
         android:id="@+id/imgPerfilUser_informacao_equipa"
@@ -189,7 +189,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView_informacao_equipa"
         app:layout_constraintHorizontal_bias="0.19"
         app:layout_constraintStart_toStartOf="@+id/imageView_informacao_equipa"
-        app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa"/>
+        app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
 
     <Button
         android:id="@+id/btEditar_informacao_equipa"

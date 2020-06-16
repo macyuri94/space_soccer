@@ -1,5 +1,7 @@
 package aula5.example.spacesoccer.views
 
+// << ---------------------------------------------------------------------------------------- >> //
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,12 +19,14 @@ import kotlinx.android.synthetic.main.ver_equipa.*
 import kotlinx.android.synthetic.main.ver_equipa_filtrados.*
 import org.json.JSONObject
 
+// << ---------------------------------------------------------------------------------------- >> //
+
 class VerEquipaFiltradosActivity : AppCompatActivity() {
 
     var idTorneio: Int? = null
 
-    var listarEquipasFiltrado : MutableList<Equipas> = ArrayList()
-    var equipasFiltradoAdapter : VerEquipaFiltradosActivity.EquipasFiltradoAdapter? = null
+    var listarEquipasFiltrado: MutableList<Equipas> = ArrayList()
+    var equipasFiltradoAdapter: VerEquipaFiltradosActivity.EquipasFiltradoAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +43,7 @@ class VerEquipaFiltradosActivity : AppCompatActivity() {
         VolleyHelper.instance.getTournamentsClubById(this, idTorneio!!.toInt()) { response ->
             response?.let {
                 for (index in 0 until it.length()) {
-                    val teamJSON : JSONObject = it[index] as JSONObject
+                    val teamJSON: JSONObject = it[index] as JSONObject
                     listarEquipasFiltrado.add(Equipas.parseJson(teamJSON))
                 }
                 equipasFiltradoAdapter?.notifyDataSetChanged()
@@ -57,12 +61,12 @@ class VerEquipaFiltradosActivity : AppCompatActivity() {
         }
     }
 
-    inner class EquipasFiltradoAdapter : BaseAdapter(){
+    inner class EquipasFiltradoAdapter : BaseAdapter() {
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-            val rowView = layoutInflater.inflate(R.layout.row_equipa_filtrado,parent,false)
+            val rowView = layoutInflater.inflate(R.layout.row_equipa_filtrado, parent, false)
             val nomeEquipa = rowView.findViewById<TextView>(R.id.txtNomeEquipa_verEquipaFiltrado)
 
-            rowView.setOnClickListener{
+            rowView.setOnClickListener {
                 val intent = Intent(this@VerEquipaFiltradosActivity, VerJogadorActivity::class.java)
                 intent.putExtra("IdClube", listarEquipasFiltrado[position].IdClube)
                 startActivity(intent)
@@ -72,15 +76,17 @@ class VerEquipaFiltradosActivity : AppCompatActivity() {
 
             return rowView
         }
+
         override fun getItem(position: Int): Any {
             return listarEquipasFiltrado[position]
         }
+
         override fun getItemId(position: Int): Long {
             return 0
         }
+
         override fun getCount(): Int {
             return listarEquipasFiltrado.size
         }
-
     }
 }

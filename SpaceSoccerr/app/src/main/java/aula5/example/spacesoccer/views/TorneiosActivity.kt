@@ -1,5 +1,7 @@
 package aula5.example.spacesoccer.views
 
+// << ---------------------------------------------------------------------------------------- >> //
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,10 +20,12 @@ import kotlinx.android.synthetic.main.torneios.imgPerfilUserTorneios_torneios
 import kotlinx.android.synthetic.main.torneios_provisorio.*
 import org.json.JSONObject
 
+// << ---------------------------------------------------------------------------------------- >> //
+
 class TorneiosActivity : AppCompatActivity() {
 
-    var listarTorneios : MutableList<Torneios> = ArrayList()
-    var torneiosAdapter : TorneiosActivity.TorneiosAdapter? = null
+    var listarTorneios: MutableList<Torneios> = ArrayList()
+    var torneiosAdapter: TorneiosActivity.TorneiosAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,9 +34,9 @@ class TorneiosActivity : AppCompatActivity() {
         torneiosAdapter = TorneiosAdapter()
         listViewTorneios.adapter = torneiosAdapter
 
-        VolleyHelper.instance.getAllTournaments(this ){ response ->
+        VolleyHelper.instance.getAllTournaments(this) { response ->
             response?.let {
-                for(index in 0 until it.length()){
+                for (index in 0 until it.length()) {
                     val jsonPlayer = it[index] as JSONObject
                     listarTorneios.add(Torneios.parseJson(jsonPlayer))
                 }
@@ -51,12 +55,12 @@ class TorneiosActivity : AppCompatActivity() {
         }
     }
 
-    inner class TorneiosAdapter : BaseAdapter(){
+    inner class TorneiosAdapter : BaseAdapter() {
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-            val rowView = layoutInflater.inflate(R.layout.row_torneios,parent,false)
-            val nomeTorneio= rowView.findViewById<TextView>(R.id.txtNomeTorneio_torneios)
+            val rowView = layoutInflater.inflate(R.layout.row_torneios, parent, false)
+            val nomeTorneio = rowView.findViewById<TextView>(R.id.txtNomeTorneio_torneios)
 
-            rowView.setOnClickListener{
+            rowView.setOnClickListener {
                 val intent = Intent(this@TorneiosActivity, MenuActivity::class.java)
                 intent.putExtra("IdTorneio", listarTorneios[position].IdTorneio)
                 intent.putExtra("Nome", listarTorneios[position].Nome)
@@ -70,15 +74,17 @@ class TorneiosActivity : AppCompatActivity() {
 
             return rowView
         }
+
         override fun getItem(position: Int): Any {
             return listarTorneios[position]
         }
+
         override fun getItemId(position: Int): Long {
             return 0
         }
+
         override fun getCount(): Int {
             return listarTorneios.size
         }
-
     }
 }
