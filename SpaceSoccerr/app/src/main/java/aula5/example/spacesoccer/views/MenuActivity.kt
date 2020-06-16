@@ -51,7 +51,12 @@ class MenuActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btStats_menu.setOnClickListener {
+        /*btStats_menu.setOnClickListener {
+            val intent = Intent(this, JogosActivity::class.java)
+            startActivity(intent)
+        }*/
+
+        btJogos_menu.setOnClickListener {
             val intent = Intent(this, JogosActivity::class.java)
             startActivity(intent)
         }

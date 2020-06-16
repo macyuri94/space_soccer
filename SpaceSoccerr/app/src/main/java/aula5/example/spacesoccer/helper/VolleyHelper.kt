@@ -403,7 +403,38 @@ class VolleyHelper {
             queue!!.add(stringRequest)
         }
     }
+
 // << --------------------------------------------------FimEquipas---------------------**----------------------------- >> //
+
+
+// << -----------------------------------------------InicioJogos---------------------------------------------------- >> //
+
+    fun getAllGames(context: Context, playersEvent : ((JSONArray?)->Unit)){
+        doAsync {
+            queue = Volley.newRequestQueue(context)
+
+            val stringRequest = object : StringRequest( GET,
+                BASE_API + GAMES,
+                Response.Listener<String>{
+                    playersEvent.invoke(JSONArray(it))
+                }, Response.ErrorListener {
+                    Log.d("VolleyHelper", it.toString())
+                    playersEvent.invoke(null)
+                }
+            ) {
+                override fun getHeaders(): MutableMap<String, String> {
+                    val map : MutableMap<String, String> = mutableMapOf<String, String>()
+                    map.put(tokenName, token)
+                    return map
+                }
+            }
+            queue!!.add(stringRequest)
+        }
+    }
+
+// << --------------------------------------------------FimJogos---------------------**----------------------------- >> //
+
+
 
 
     companion object {
@@ -417,6 +448,7 @@ class VolleyHelper {
         const val  TORNEIOS_CLUBE = "/api/torneioclube"
         const val  USERS          = "/authentication/list"
         const val  PLAYERS_CLUBE  = "/api/playersclube"
+        const val  GAMES          = "/api/jogo"
 
         var   token         = ""
         const val tokenName = "x-access-token"

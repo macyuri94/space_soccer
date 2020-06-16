@@ -17,7 +17,6 @@ import org.json.JSONObject
 class VerEquipaActivity : AppCompatActivity() {
 
     var idTorneio: Int? = null
-
     var listarEquipas : MutableList<Equipas> = ArrayList()
     var equipasAdapter : VerEquipaActivity.EquipasAdapter? = null
 
