@@ -542,9 +542,37 @@ class VolleyHelper {
 // << ------------------------------------- Fim Jogos ---------------------------------------- >> //
 
 
+// << ----------------------------------- Inicio Estatistica --------------------------------------- >> //
+
+    fun getEstatisticaGamesById(context: Context, id: Int, playersEvent: ((JSONArray?) -> Unit)) {
+        doAsync {
+            queue = Volley.newRequestQueue(context)
+
+            val stringRequest = object : StringRequest(GET,
+                BASE_API + STATISTIC_TEAM + "/" + id,
+                Response.Listener<String> {
+                    playersEvent.invoke(JSONArray(it))
+                }, Response.ErrorListener {
+                    Log.d("VolleyHelper", it.toString())
+                    playersEvent.invoke(null)
+                }
+            ) {
+                override fun getHeaders(): MutableMap<String, String> {
+                    val map: MutableMap<String, String> = mutableMapOf<String, String>()
+                    map.put(tokenName, token)
+                    return map
+                }
+            }
+            queue!!.add(stringRequest)
+        }
+    }
+
+// << ------------------------------------- Fim Jogos ---------------------------------------- >> //
+
+
     companion object {
 
-        const val BASE_API = "http://192.168.1.72:3000"
+        const val BASE_API = "http://192.168.1.64:3000"
         const val USER_LOGIN = "/authentication/login"
         const val USER_REGISTER = "/authentication/register"
         const val PLAYERS = "/api/players"
@@ -555,6 +583,7 @@ class VolleyHelper {
         const val PLAYERS_CLUBE = "/api/playersclube"
         const val GAMES = "/api/jogo"
         const val TORNEIOS_GAMES = "/api/torneiojogo"
+        const val STATISTIC_TEAM = "/api/estatisticaclube"
 
         var token = ""
         const val tokenName = "x-access-token"

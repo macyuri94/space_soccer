@@ -11,6 +11,7 @@ import android.widget.BaseAdapter
 import android.widget.TextView
 import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
+import aula5.example.spacesoccer.models.Estatisticas
 import aula5.example.spacesoccer.models.Jogadores
 import aula5.example.spacesoccer.models.Jogos
 import kotlinx.android.synthetic.main.jogos.*
@@ -19,20 +20,22 @@ import org.json.JSONObject
 
 // << ---------------------------------------------------------------------------------------- >> //
 
-class JogosActivity : AppCompatActivity() {
+class JogosFiltradosActivity : AppCompatActivity() {
 
     var idTorneio: Int? = null
+    var nomeTorneio: String? = null
 
     var listarJogos: MutableList<Jogos> = ArrayList()
-    var jogosAdapter: JogosActivity.JogosAdapter? = null
+    var jogosAdapter: JogosFiltradosActivity.JogosAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.jogos)
+        setContentView(R.layout.jogos_filtrados)
 
         val bundle = intent.extras
         bundle?.let {
             idTorneio = it.getInt("IdTorneio")
+            nomeTorneio = it.getString("Nome")
         }
 
         jogosAdapter = JogosAdapter()
@@ -48,11 +51,6 @@ class JogosActivity : AppCompatActivity() {
             }
         }
 
-        btCriarJogos_Jogos.setOnClickListener {
-            val intent = Intent(this, CriarJogoActivity::class.java)
-            intent.putExtra("IdTorneio", idTorneio!!.toInt())
-            startActivity(intent)
-        }
     }
 
     inner class JogosAdapter : BaseAdapter() {
@@ -63,7 +61,12 @@ class JogosActivity : AppCompatActivity() {
             val dataJogo = rowView.findViewById<TextView>(R.id.text_DataJogo_Jogos)
 
             rowView.setOnClickListener {
-                val intent = Intent(this@JogosActivity, CriarIncidenciaActivity::class.java)
+                val intent = Intent(this@JogosFiltradosActivity, EstatisticasActivity::class.java)
+                intent.putExtra("IdJogo", listarJogos[position].IdJogo)
+                intent.putExtra("EquipaCasa", listarJogos[position].EquipaCasa)
+                intent.putExtra("EquipaConvidada", listarJogos[position].EquipaConvidada)
+                intent.putExtra("DataJogo", listarJogos[position].DataJogo)
+                intent.putExtra("Nome", nomeTorneio)
                 startActivity(intent)
             }
 

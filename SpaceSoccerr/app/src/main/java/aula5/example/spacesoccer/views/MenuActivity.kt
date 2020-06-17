@@ -57,7 +57,9 @@ class MenuActivity : AppCompatActivity() {
         }
 
         btStats_menu.setOnClickListener {
-            val intent = Intent(this, EstatisticasActivity::class.java)
+            val intent = Intent(this, JogosFiltradosActivity::class.java)
+            intent.putExtra("IdTorneio", idTorneio!!.toInt())
+            intent.putExtra("Nome", nomeTorneio)
             startActivity(intent)
         }
 

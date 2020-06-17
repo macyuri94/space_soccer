@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/painel_estatisticas2">
+
+    <TextView
+        android:id="@+id/txtnomequipa1_estatisticas"
+        android:layout_width="126dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnometorneio_estatisticas"
+        tools:text="Benfica" />
+
+    <TextView
+        android:id="@+id/txtnomequipa2_estatisticas"
+        android:layout_width="126dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnomequipa1_estatisticas"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="Sporting" />
+
+    <TextView
+        android:id="@+id/txtresultadoequipa2_estatisticas"
+        android:layout_width="14dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="5" />
+
+    <TextView
+        android:id="@+id/txtresultadoequipa1_estatisticas"
+        android:layout_width="14dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="92dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtresultadoequipa2_estatisticas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="2" />
+
+    <TextView
+        android:id="@+id/txttempofinal_estatisticas"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnometorneio_estatisticas"
+        tools:text="FT" />
+
+    <TextView
+        android:id="@+id/txtnometorneio_estatisticas"
+        android:layout_width="177dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Liga Portuguesa" />
+
+    <TextView
+        android:id="@+id/txtdatajogo_estatisticas"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtresultadoequipa1_estatisticas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toEndOf="@+id/txtnometorneio_estatisticas"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.888"
+        tools:text="2020-05-02" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
