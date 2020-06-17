@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">SpaceSoccer</string>
+
+    //StringsFailed
     <string name="toast_msg_login">Dados inválidos</string>
     <string name="login_failed">Falha na Autenticação</string>
     <string name="creatPlayer_failed">Falha na criação do jogador</string>
@@ -9,6 +11,15 @@
     <string name="createGame_failed">Falha na cração de jogo</string>
     <string name="createStatistic_failed">Falha na cração de estatistica</string>
 
+    //StringsSuccess
+    <string name="creatPlayer_success">Jogador criado com sucesso</string>
+    <string name="creatTournament_success">Torneio criado com sucesso</string>
+    <string name="creatTeam_success">Equipa criada com sucesso</string>
+    <string name="deleteTeam_success">Equipa apagada com sucesso</string>
+    <string name="createGame_success">Jogo criado com sucesso</string>
+    <string name="createStatistic_success">Estatistica criada com sucesso</string>
+
+    //TermsConditions
     <string name="termsconditions">
         \nCláusula 1.ª : Designação
         \nOs presentes termos e condições gerais são destinados a utilizadores que utilizem em ocasiões regulares o acesso e a utilização da aplicação SpaceSoccer, criado pela empresa denominada SpaceProgrammers e prestado ao utilizador em serviço da empresa SpaceProgrammers.
@@ -34,7 +45,5 @@
         \n\nCláusula 6.ª : Dados pessoais\n
         \n1.  A entidade SpaceProgrammers é responsável pelo tratamento de dados pessoais recolhidos e gerados pelos utilizadores no uso da aplicação SpaceSoccer , bem como o armazenamento dos mesmos.
     </string>
-
-
 
 </resources>

@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.txtPassword_login)
         val loginButton = findViewById<Button>(R.id.btLogin_login)
 
-        username.setText("nuno@gmail.com")
+        /*username.setText("nuno@gmail.com")
         password.setText("nuno")
 
         loginButton.setOnClickListener {
@@ -40,9 +40,9 @@ class LoginActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-        }
+        }*/
 
-        /*loginButton.setOnClickListener {
+        loginButton.setOnClickListener {
             VolleyHelper.instance.userLogin ( this@LoginActivity,
                 username.text.toString(),
                 password.text.toString()
@@ -58,6 +58,6 @@ class LoginActivity : AppCompatActivity() {
                     ).show()
                 }
             }
-        }*/
+        }
     }
 }

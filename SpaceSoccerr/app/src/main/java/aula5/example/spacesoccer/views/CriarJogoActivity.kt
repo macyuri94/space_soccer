@@ -42,7 +42,7 @@ class CriarJogoActivity : AppCompatActivity() {
                     //Mudar string
                     Toast.makeText(
                         this@CriarJogoActivity,
-                        this@CriarJogoActivity.getString(R.string.createGame_failed),
+                        this@CriarJogoActivity.getString(R.string.createGame_success),
                         Toast.LENGTH_LONG
                     ).show()
                 } else {

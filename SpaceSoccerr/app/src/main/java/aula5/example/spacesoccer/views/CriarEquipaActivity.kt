@@ -48,7 +48,7 @@ class CriarEquipaActivity : AppCompatActivity() {
                     //Mudar string
                     Toast.makeText(
                         this@CriarEquipaActivity,
-                        this@CriarEquipaActivity.getString(R.string.creatTeam_failed),
+                        this@CriarEquipaActivity.getString(R.string.creatTeam_success),
                         Toast.LENGTH_LONG
                     ).show()
                 } else {

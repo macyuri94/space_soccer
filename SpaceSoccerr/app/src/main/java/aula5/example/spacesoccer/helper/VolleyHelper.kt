@@ -31,7 +31,7 @@ class VolleyHelper {
 
             val jsonObject = JSONObject()
             jsonObject.put("username", username)
-            jsonObject.put("password", password)
+            jsonObject.put("Password", password)
 
             val jsonObjectRequest = JsonObjectRequest(POST,
                 BASE_API + USER_LOGIN, jsonObject,

@@ -59,7 +59,7 @@ class CriarIncidenciaActivity : AppCompatActivity() {
                     //Mudar string
                     Toast.makeText(
                         this@CriarIncidenciaActivity,
-                        this@CriarIncidenciaActivity.getString(R.string.createStatistic_failed),
+                        this@CriarIncidenciaActivity.getString(R.string.createStatistic_success),
                         Toast.LENGTH_LONG
                     ).show()
                 } else {
