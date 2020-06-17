@@ -37,7 +37,7 @@ class RegistarTorneioActivity : AppCompatActivity() {
                     //Mudar string
                     Toast.makeText(
                         this@RegistarTorneioActivity,
-                        this@RegistarTorneioActivity.getString(R.string.creatTournament_failed),
+                        this@RegistarTorneioActivity.getString(R.string.creatTournament_success),
                         Toast.LENGTH_LONG
                     ).show()
                 } else {

@@ -79,6 +79,11 @@ class VerEquipaActivity : AppCompatActivity() {
                 ) { response ->
                     if (response) {
                         //COLOCAR ALGO
+                        Toast.makeText(
+                            this@VerEquipaActivity,
+                            this@VerEquipaActivity.getString(R.string.deleteTeam_success),
+                            Toast.LENGTH_LONG
+                        ).show()
                     } else {
                         Toast.makeText(
                             this@VerEquipaActivity,
