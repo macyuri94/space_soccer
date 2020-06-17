@@ -642,7 +642,7 @@ class VolleyHelper {
         const val STATISTICS        = "/api/estatistica"
 
         var token = ""
-        const val tokenName = "x-access-token"
+        const val tokenName         = "x-access-token"
 
         private var mInstance: VolleyHelper? = VolleyHelper()
 

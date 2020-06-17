@@ -26,11 +26,11 @@ class CriarEquipaActivity : AppCompatActivity() {
             idtorneio = it.getInt("IdTorneio")
         }
 
-        val nome = findViewById<EditText>(R.id.txtNomeEquipa_criarEquipa)
-        val president = findViewById<EditText>(R.id.txtPresidente_criarEquipa)
-        val coach = findViewById<EditText>(R.id.txtTreinador_criarEquipa)
-        val yearfundation = findViewById<EditText>(R.id.txtAnoFundacao_criarEquipa)
-        val cityfundation = findViewById<EditText>(R.id.txtCidadeFundacao_criarEquipa)
+        val nome            = findViewById<EditText>(R.id.txtNomeEquipa_criarEquipa)
+        val president       = findViewById<EditText>(R.id.txtPresidente_criarEquipa)
+        val coach           = findViewById<EditText>(R.id.txtTreinador_criarEquipa)
+        val yearfundation   = findViewById<EditText>(R.id.txtAnoFundacao_criarEquipa)
+        val cityfundation   = findViewById<EditText>(R.id.txtCidadeFundacao_criarEquipa)
 
         val btGuardDado = findViewById<Button>(R.id.btGuardarDados_criarEquipa)
 
