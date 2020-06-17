@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".views.JogosFiltradosActivity"></activity>
+        <activity android:name=".views.TermosECondicoes"></activity>
+        <activity android:name=".views.JogosFiltradosActivity" />
         <activity android:name=".views.CriarIncidenciaActivity" />
         <activity android:name=".views.CriarJogoActivity" />
         <activity android:name=".views.InformacaoTorneioActivity" />

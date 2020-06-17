@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.Toast
 import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
+import kotlinx.android.synthetic.main.registar.*
 
 // << ---------------------------------------------------------------------------------------- >> //
 
@@ -58,6 +59,11 @@ class RegistarActivity : AppCompatActivity() {
                 this@RegistarActivity.getString(R.string.login_failed),
                 Toast.LENGTH_LONG
             ).show()
+        }
+
+        textTermsOfUse.setOnClickListener {
+            val intent = Intent(this, TermosECondicoes::class.java)
+            startActivity(intent)
         }
     }
 }
