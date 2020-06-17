@@ -22,6 +22,7 @@ import org.json.JSONObject
 class JogosActivity : AppCompatActivity() {
 
     var idTorneio: Int? = null
+    var nomeTorneio : String? = null
 
     var listarJogos: MutableList<Jogos> = ArrayList()
     var jogosAdapter: JogosActivity.JogosAdapter? = null
@@ -33,6 +34,7 @@ class JogosActivity : AppCompatActivity() {
         val bundle = intent.extras
         bundle?.let {
             idTorneio = it.getInt("IdTorneio")
+            nomeTorneio = it.getString("Nome")
         }
 
         jogosAdapter = JogosAdapter()
@@ -51,6 +53,7 @@ class JogosActivity : AppCompatActivity() {
         btCriarJogos_Jogos.setOnClickListener {
             val intent = Intent(this, CriarJogoActivity::class.java)
             intent.putExtra("IdTorneio", idTorneio!!.toInt())
+            intent.putExtra("Nome", nomeTorneio.toString())
             startActivity(intent)
         }
     }
@@ -65,6 +68,7 @@ class JogosActivity : AppCompatActivity() {
             rowView.setOnClickListener {
                 val intent = Intent(this@JogosActivity, CriarIncidenciaActivity::class.java)
                 intent.putExtra("IdJogo", listarJogos[position].IdJogo)
+                intent.putExtra("Nome", nomeTorneio.toString())
                 startActivity(intent)
             }
 

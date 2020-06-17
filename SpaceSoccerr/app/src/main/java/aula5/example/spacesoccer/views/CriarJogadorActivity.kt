@@ -57,6 +57,10 @@ class CriarJogadorActivity : AppCompatActivity() {
                         this@CriarJogadorActivity.getString(R.string.creatPlayer_success),
                         Toast.LENGTH_LONG
                     ).show()
+
+                    val intent = Intent(this@CriarJogadorActivity, VerJogadorActivity::class.java)
+                    startActivity(intent)
+
                 } else {
                     Toast.makeText(
                         this@CriarJogadorActivity,
@@ -65,8 +69,6 @@ class CriarJogadorActivity : AppCompatActivity() {
                     ).show()
                 }
             }
-            val intent = Intent(this@CriarJogadorActivity, VerJogadorActivity::class.java)
-            startActivity(intent)
         }
     }
 }

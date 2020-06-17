@@ -232,8 +232,10 @@ class VolleyHelper {
                 jsonObject,
                 Response.Listener {
                     Log.d("VolleyHelper", it.toString())
+                    playersEvent.invoke(true)
                 }, Response.ErrorListener {
                     Log.d("VolleyHelper", it.toString())
+                    playersEvent.invoke(false)
                 }
             ) {
                 override fun getHeaders(): MutableMap<String, String> {
@@ -372,7 +374,7 @@ class VolleyHelper {
         coach: String,
         yearfundation: String,
         cityfundation: String,
-        playersEvent: (Boolean) -> Unit
+        teamsEvent: (Boolean) -> Unit
     ) {
         doAsync {
             queue = Volley.newRequestQueue(context)
@@ -390,8 +392,10 @@ class VolleyHelper {
                 jsonObject,
                 Response.Listener {
                     Log.d("VolleyHelper", it.toString())
+                    teamsEvent.invoke(true)
                 }, Response.ErrorListener {
                     Log.d("VolleyHelper", it.toString())
+                    teamsEvent.invoke(false)
                 }
             ) {
                 override fun getHeaders(): MutableMap<String, String> {
@@ -462,7 +466,7 @@ class VolleyHelper {
         arbitro: String,
         datajogo: String,
         idtorneio: String,
-        playersEvent: (Boolean) -> Unit
+        gameEvent: (Boolean) -> Unit
     ) {
         doAsync {
             queue = Volley.newRequestQueue(context)
@@ -479,8 +483,10 @@ class VolleyHelper {
                 jsonObject,
                 Response.Listener {
                     Log.d("VolleyHelper", it.toString())
+                    gameEvent.invoke(true)
                 }, Response.ErrorListener {
                     Log.d("VolleyHelper", it.toString())
+                    gameEvent.invoke(false)
                 }
             ) {
                 override fun getHeaders(): MutableMap<String, String> {
@@ -559,7 +565,7 @@ class VolleyHelper {
         golosB:             Int?,
         foradejogoA:        Int?,
         foradejogoB:        Int?,
-        playersEvent: (Boolean) -> Unit
+        statisticsEvent: (Boolean) -> Unit
     ) {
         doAsync {
             queue = Volley.newRequestQueue(context)
@@ -584,8 +590,10 @@ class VolleyHelper {
                 jsonObject,
                 Response.Listener {
                     Log.d("VolleyHelper", it.toString())
+                    statisticsEvent.invoke(true)
                 }, Response.ErrorListener {
                     Log.d("VolleyHelper", it.toString())
+                    statisticsEvent.invoke(false)
                 }
             ) {
                 override fun getHeaders(): MutableMap<String, String> {

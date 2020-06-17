@@ -13,6 +13,7 @@ import aula5.example.spacesoccer.models.Jogos
 class CriarIncidenciaActivity : AppCompatActivity() {
 
     var idJogo: Int? = 0
+    var nomeTorneio: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +22,7 @@ class CriarIncidenciaActivity : AppCompatActivity() {
         val bundle = intent.extras
         bundle?.let {
             idJogo = it.getInt("IdJogo")
+            nomeTorneio = it.getString("Nome")
         }
 
         val possebolaA      = findViewById<EditText>(R.id.txtTotalPosseDeBolaEquipaCasa_criarincidencia)
@@ -56,12 +58,8 @@ class CriarIncidenciaActivity : AppCompatActivity() {
                 foradejogoB.text.toString().toInt()
             ) {
                 if (it) {
-                    //Mudar string
-                    Toast.makeText(
-                        this@CriarIncidenciaActivity,
-                        this@CriarIncidenciaActivity.getString(R.string.createStatistic_success),
-                        Toast.LENGTH_LONG
-                    ).show()
+                    val intent = Intent(this@CriarIncidenciaActivity, JogosActivity::class.java)
+                    startActivity(intent)
                 } else {
                     Toast.makeText(
                         this@CriarIncidenciaActivity,
@@ -70,8 +68,6 @@ class CriarIncidenciaActivity : AppCompatActivity() {
                     ).show()
                 }
             }
-            val intent = Intent(this@CriarIncidenciaActivity, TorneiosActivity::class.java)
-            startActivity(intent)
         }
     }
 }

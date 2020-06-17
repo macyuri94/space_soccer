@@ -2,6 +2,7 @@ package aula5.example.spacesoccer.views
 
 // << ---------------------------------------------------------------------------------------- >> //
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -45,12 +46,8 @@ class CriarEquipaActivity : AppCompatActivity() {
                 cityfundation.text.toString()
             ) {
                 if (it) {
-                    //Mudar string
-                    Toast.makeText(
-                        this@CriarEquipaActivity,
-                        this@CriarEquipaActivity.getString(R.string.creatTeam_success),
-                        Toast.LENGTH_LONG
-                    ).show()
+                    val intent = Intent(this@CriarEquipaActivity, VerEquipaActivity::class.java)
+                    startActivity(intent)
                 } else {
                     Toast.makeText(
                         this@CriarEquipaActivity,
@@ -59,8 +56,6 @@ class CriarEquipaActivity : AppCompatActivity() {
                     ).show()
                 }
             }
-            val intent = Intent(this@CriarEquipaActivity, VerEquipaActivity::class.java)
-            startActivity(intent)
         }
     }
 }

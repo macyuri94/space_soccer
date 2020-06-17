@@ -12,6 +12,7 @@ import aula5.example.spacesoccer.helper.VolleyHelper
 class CriarJogoActivity : AppCompatActivity() {
 
     var idTorneio: Int? = 0
+    var nomeTorneio : String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +21,7 @@ class CriarJogoActivity : AppCompatActivity() {
         val bundle = intent.extras
         bundle?.let {
             idTorneio = it.getInt("IdTorneio")
+            nomeTorneio = it.getString("Nome")
         }
 
         val nomeEquipaCasa = findViewById<EditText>(R.id.txtNomeEquipaCasa_criarJogo)
@@ -39,12 +41,8 @@ class CriarJogoActivity : AppCompatActivity() {
                 idTorneio.toString()
             ) {
                 if (it) {
-                    //Mudar string
-                    Toast.makeText(
-                        this@CriarJogoActivity,
-                        this@CriarJogoActivity.getString(R.string.createGame_success),
-                        Toast.LENGTH_LONG
-                    ).show()
+                    val intent = Intent(this@CriarJogoActivity, JogosActivity::class.java)
+                    startActivity(intent)
                 } else {
                     Toast.makeText(
                         this@CriarJogoActivity,
@@ -53,8 +51,6 @@ class CriarJogoActivity : AppCompatActivity() {
                     ).show()
                 }
             }
-            val intent = Intent(this@CriarJogoActivity, MenuActivity::class.java)
-            startActivity(intent)
         }
     }
 }
