@@ -3,6 +3,7 @@ package aula5.example.spacesoccer.models
 import org.json.JSONObject
 
 class Estatisticas {
+
     var IdEstatistica: Int? = null
     var IdJogo: Int? = null
     var PosseBolaA: Int? = null

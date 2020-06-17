@@ -64,6 +64,7 @@ class JogosActivity : AppCompatActivity() {
 
             rowView.setOnClickListener {
                 val intent = Intent(this@JogosActivity, CriarIncidenciaActivity::class.java)
+                intent.putExtra("IdJogo", listarJogos[position].IdJogo)
                 startActivity(intent)
             }
 

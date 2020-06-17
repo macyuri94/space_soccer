@@ -544,6 +544,61 @@ class VolleyHelper {
 
 // << ----------------------------------- Inicio Estatistica --------------------------------------- >> //
 
+    fun addEstatistica(
+        context: Context,
+        idjogo:             Int?,
+        possebolaA:         Int?,
+        possebolaB:         Int?,
+        rematesbalizaA:     Int?,
+        rematestotaisA:     Int?,
+        rematesbalizaB:     Int?,
+        rematestotaisB:     Int?,
+        numincidenciasA:    Int?,
+        numincidenciasB:    Int?,
+        golosA:             Int?,
+        golosB:             Int?,
+        foradejogoA:        Int?,
+        foradejogoB:        Int?,
+        playersEvent: (Boolean) -> Unit
+    ) {
+        doAsync {
+            queue = Volley.newRequestQueue(context)
+
+            val jsonObject = JSONObject()
+            jsonObject.put("idjogo", idjogo)
+            jsonObject.put("possebolaA", possebolaA)
+            jsonObject.put("possebolaB", possebolaB)
+            jsonObject.put("rematesbalizaA", rematesbalizaA)
+            jsonObject.put("rematestotaisA", rematestotaisA)
+            jsonObject.put("rematesbalizaB", rematesbalizaB)
+            jsonObject.put("rematestotaisB", rematestotaisB)
+            jsonObject.put("numincidenciasA", numincidenciasA)
+            jsonObject.put("numincidenciasB", numincidenciasB)
+            jsonObject.put("golosA", golosA)
+            jsonObject.put("golosB", golosB)
+            jsonObject.put("foradejogoA", foradejogoA)
+            jsonObject.put("foradejogoB", foradejogoB)
+
+            val jsonObjectRequest = object : JsonObjectRequest(POST,
+                BASE_API + STATISTICS,
+                jsonObject,
+                Response.Listener {
+                    Log.d("VolleyHelper", it.toString())
+                }, Response.ErrorListener {
+                    Log.d("VolleyHelper", it.toString())
+                }
+            ) {
+                override fun getHeaders(): MutableMap<String, String> {
+                    val map: MutableMap<String, String> = mutableMapOf<String, String>()
+                    map.put(tokenName, token)
+                    return map
+                }
+            }
+            queue!!.add(jsonObjectRequest)
+        }
+    }
+
+
     fun getEstatisticaGamesById(context: Context, id: Int, playersEvent: ((JSONArray?) -> Unit)) {
         doAsync {
             queue = Volley.newRequestQueue(context)
@@ -572,18 +627,19 @@ class VolleyHelper {
 
     companion object {
 
-        const val BASE_API = "http://192.168.1.64:3000"
-        const val USER_LOGIN = "/authentication/login"
-        const val USER_REGISTER = "/authentication/register"
-        const val PLAYERS = "/api/players"
-        const val TORNEIOS = "/api/torneio"
-        const val TEAMS = "/api/clube"
-        const val TORNEIOS_CLUBE = "/api/torneioclube"
-        const val USERS = "/authentication/list"
-        const val PLAYERS_CLUBE = "/api/playersclube"
-        const val GAMES = "/api/jogo"
-        const val TORNEIOS_GAMES = "/api/torneiojogo"
-        const val STATISTIC_TEAM = "/api/estatisticaclube"
+        const val BASE_API          = "http://192.168.1.64:3000"
+        const val USER_LOGIN        = "/authentication/login"
+        const val USER_REGISTER     = "/authentication/register"
+        const val PLAYERS           = "/api/players"
+        const val TORNEIOS          = "/api/torneio"
+        const val TEAMS             = "/api/clube"
+        const val TORNEIOS_CLUBE    = "/api/torneioclube"
+        const val USERS             = "/authentication/list"
+        const val PLAYERS_CLUBE     = "/api/playersclube"
+        const val GAMES             = "/api/jogo"
+        const val TORNEIOS_GAMES    = "/api/torneiojogo"
+        const val STATISTIC_TEAM    = "/api/estatisticaclube"
+        const val STATISTICS        = "/api/estatistica"
 
         var token = ""
         const val tokenName = "x-access-token"

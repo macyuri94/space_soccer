@@ -26,7 +26,7 @@ class CriarJogadorActivity : AppCompatActivity() {
             idEquipa = it.getInt("IdClube")
         }
 
-        val numerocartaocidadao = findViewById<EditText>(R.id.txtNumeroCartaoCidadao_criarJogador)
+        val numberCc = findViewById<EditText>(R.id.txtNumeroCartaoCidadao_criarJogador)
         val name = findViewById<EditText>(R.id.txtNomeJogador_criarJogadorr)
         val number = findViewById<EditText>(R.id.txtNumero_criarJogador)
         val birthDate = findViewById<EditText>(R.id.txtDataNascimento_criarJogador)
@@ -40,7 +40,7 @@ class CriarJogadorActivity : AppCompatActivity() {
         btGuardarDados_criarJogador.setOnClickListener {
             VolleyHelper.instance.addPlayers(
                 this@CriarJogadorActivity,
-                numerocartaocidadao.text.toString(),
+                numberCc.text.toString(),
                 name.text.toString(),
                 number.text.toString(),
                 birthDate.text.toString(),
