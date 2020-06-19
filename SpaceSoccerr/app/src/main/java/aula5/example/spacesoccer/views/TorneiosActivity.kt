@@ -72,6 +72,7 @@ class TorneiosActivity : AppCompatActivity() {
 
         btCriarTorneio_Torneio.setOnClickListener {
             val intent = Intent(this, RegistarTorneioActivity::class.java)
+            intent.putExtra("Email", email.toString())
             startActivity(intent)
         }
     }

@@ -25,7 +25,6 @@ class PerfilUtilizador : AppCompatActivity() {
             email = it.getString("Email")
         }
 
-
         VolleyHelper.instance.getUsersById(this, email.toString()) { response ->
             response?.let {
                 for (index in 0 until it.length()) {

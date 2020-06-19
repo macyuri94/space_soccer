@@ -46,7 +46,7 @@
         android:id="@+id/btStats_menu"
         android:layout_width="145sp"
         android:layout_height="145sp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="200dp"
         android:background="@drawable/bt_stats"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +57,7 @@
         android:layout_width="145sp"
         android:layout_height="145sp"
         android:layout_marginTop="200dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/bt_equipas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -66,7 +66,7 @@
         android:id="@+id/btJogadores_menu"
         android:layout_width="145sp"
         android:layout_height="145sp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/bt_jogadores"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,7 +77,7 @@
         android:layout_width="145sp"
         android:layout_height="145sp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/bt_jogos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btEquipasMenu_menu" />
@@ -86,7 +86,7 @@
         android:id="@+id/btTorneio_menu"
         android:layout_width="145sp"
         android:layout_height="145sp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/img_torneio"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,10 +97,10 @@
         android:layout_width="145sp"
         android:layout_height="145sp"
         android:layout_marginTop="200dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/bt_infotorneio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btEquipasMenu_menu"/>
+        app:layout_constraintTop_toBottomOf="@+id/btEquipasMenu_menu" />
 
     <TextView
         android:id="@+id/txtNomeUtilizador_menu"

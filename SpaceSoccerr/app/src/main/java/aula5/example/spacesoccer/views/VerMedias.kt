@@ -18,14 +18,14 @@ import org.json.JSONObject
 
 class VerMedias : AppCompatActivity() {
 
-    var idTorneio:      Int? = null
-    var nomeTorneio:    String? = null
-    var email:          String? = null
+    var idTorneio       : Int? = null
+    var nomeTorneio     : String? = null
+    var email           : String? = null
 
-    var listarTodasEquipas : MutableList<Equipas> = ArrayList()
-    var listarTodosJogos : MutableList<Jogos> = ArrayList()
+    var listarTodasEquipas      : MutableList<Equipas> = ArrayList()
+    var listarTodosJogos        : MutableList<Jogos> = ArrayList()
     var listarTodasEstatisticas : MutableList<Estatisticas> = ArrayList()
-    var listarUtilizador: MutableList<Utilizador> = ArrayList()
+    var listarUtilizador        : MutableList<Utilizador> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +35,7 @@ class VerMedias : AppCompatActivity() {
         bundle?.let {
             idTorneio   = it.getInt("IdTorneio")
             nomeTorneio = it.getString("Nome")
-            email = it.getString("Email")
+            email       = it.getString("Email")
         }
 
         txtTituloTorneio_verMedias.text = nomeTorneio
@@ -52,6 +52,7 @@ class VerMedias : AppCompatActivity() {
 
         var mediaRematesTotais:         Float = 0.2F
         var mediaFaltasTotais:          Float = 0.2F
+        var mediaGolos:                 Float = 0.2F
 
         VolleyHelper.instance.getTournamentsClubById(this, idTorneio!!.toInt()) { response ->
             response?.let {
@@ -81,14 +82,15 @@ class VerMedias : AppCompatActivity() {
                     val gameJSON: JSONObject = it[index] as JSONObject
                     listarTodasEstatisticas.add(Estatisticas.parseJson(gameJSON))
 
-                    numeroGolos += listarTodasEstatisticas[index].GolosA!! + listarTodasEstatisticas[index].GolosB!!
+                    numeroGolos         += listarTodasEstatisticas[index].GolosA!! + listarTodasEstatisticas[index].GolosB!!
                     numeroRematesTotais += listarTodasEstatisticas[index].RematesTotaisA!! + listarTodasEstatisticas[index].RematesTotaisB!!
-                    numeroFaltasTotais += listarTodasEstatisticas[index].NumIncidenciasA!! + listarTodasEstatisticas[index].NumIncidenciasB!!
+                    numeroFaltasTotais  += listarTodasEstatisticas[index].NumIncidenciasA!! + listarTodasEstatisticas[index].NumIncidenciasB!!
 
                     mediaRematesTotais  = numeroRematesTotais.toFloat() / listarTodosJogos.size
                     mediaFaltasTotais   = numeroFaltasTotais.toFloat() / listarTodosJogos.size
+                    mediaGolos          = numeroGolos.toFloat() / listarTodasEstatisticas.size
 
-                    txtNumeroGolos.text     = numeroGolos.toString()
+                    txtNumeroGolos.text     = mediaGolos.toString()
                     txtMediaRemates.text    = mediaRematesTotais.toString()
                     txtMediaFaltas.text     = mediaFaltasTotais.toString()
                 }
@@ -109,6 +111,7 @@ class VerMedias : AppCompatActivity() {
         btHome_verMedias.setOnClickListener{
             val intent = Intent(this, MenuActivity::class.java)
             intent.putExtra("IdTorneio", idTorneio!!.toInt())
+            intent.putExtra("Nome", nomeTorneio)
             intent.putExtra("Email", email)
             startActivity(intent)
         }

@@ -324,8 +324,10 @@ class VolleyHelper {
                 jsonObject,
                 Response.Listener {
                     Log.d("VolleyHelper", it.toString())
+                    playersEvent.invoke(true)
                 }, Response.ErrorListener {
                     Log.d("VolleyHelper", it.toString())
+                    playersEvent.invoke(false)
                 }
             ) {
                 override fun getHeaders(): MutableMap<String, String> {

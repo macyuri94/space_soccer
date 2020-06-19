@@ -16,9 +16,17 @@ import kotlinx.android.synthetic.main.registar_torneio.*
 
 class RegistarTorneioActivity : AppCompatActivity() {
 
+    var email: String? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.registar_torneio)
+
+        val bundle = intent.extras
+        bundle?.let {
+            email = it.getString("Email")
+        }
 
         val name = findViewById<EditText>(R.id.textTournamentName_registar_torneio)
         val dtstart = findViewById<EditText>(R.id.textStartDate_registar_torneio)
@@ -34,12 +42,9 @@ class RegistarTorneioActivity : AppCompatActivity() {
                 numberteams.text.toString()
             ) {
                 if (it) {
-                    //Mudar string
-                    Toast.makeText(
-                        this@RegistarTorneioActivity,
-                        this@RegistarTorneioActivity.getString(R.string.creatTournament_success),
-                        Toast.LENGTH_LONG
-                    ).show()
+                    val intent = Intent(this@RegistarTorneioActivity, TorneiosActivity::class.java)
+                    intent.putExtra("Email", email.toString())
+                    startActivity(intent)
                 } else {
                     Toast.makeText(
                         this@RegistarTorneioActivity,
@@ -48,8 +53,6 @@ class RegistarTorneioActivity : AppCompatActivity() {
                     ).show()
                 }
             }
-            val intent = Intent(this@RegistarTorneioActivity, TorneiosActivity::class.java)
-            startActivity(intent)
         }
     }
 }

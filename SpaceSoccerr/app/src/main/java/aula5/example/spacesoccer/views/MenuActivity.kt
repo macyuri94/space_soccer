@@ -55,6 +55,7 @@ class MenuActivity : AppCompatActivity() {
 
         btHome_menu.setOnClickListener {
             val intent = Intent(this, TorneiosActivity::class.java)
+            intent.putExtra("Email", email)
             startActivity(intent)
         }
 
