@@ -76,11 +76,6 @@ class VerEquipaFiltradosActivity : AppCompatActivity() {
             intent.putExtra("Nome", nomeTorneio)
             startActivity(intent)
         }
-
-        imgPerfilUser_verEquipaFiltrado.setOnClickListener {
-            val intent = Intent(this, InformacaoJogadorActivity::class.java)
-            startActivity(intent)
-        }
     }
 
     inner class EquipasFiltradoAdapter : BaseAdapter() {

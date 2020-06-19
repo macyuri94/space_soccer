@@ -58,11 +58,6 @@ class VerEquipaActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        imgPerfilUser_verEquipa.setOnClickListener {
-            val intent = Intent(this, InformacaoJogadorActivity::class.java)
-            startActivity(intent)
-        }
-
         equipasAdapter = EquipasAdapter()
         listViewEquipas.adapter = equipasAdapter
 
@@ -96,7 +91,6 @@ class VerEquipaActivity : AppCompatActivity() {
             val btApagar = rowView.findViewById<TextView>(R.id.btApagar_verEquipa)
 
             btApagar.setOnClickListener {
-                val intent = Intent(this@VerEquipaActivity, MenuActivity::class.java)
                 VolleyHelper.instance.deleteTeamsById(
                     this@VerEquipaActivity,
                     listarEquipas[position].IdClube!!
@@ -108,6 +102,11 @@ class VerEquipaActivity : AppCompatActivity() {
                             this@VerEquipaActivity.getString(R.string.deleteTeam_success),
                             Toast.LENGTH_LONG
                         ).show()
+                        val intent = Intent(this@VerEquipaActivity, MenuActivity::class.java)
+                        intent.putExtra("IdTorneio", idTorneio)
+                        intent.putExtra("Email", email)
+                        intent.putExtra("Nome", nomeTorneio)
+                        startActivity(intent)
                     } else {
                         Toast.makeText(
                             this@VerEquipaActivity,

@@ -52,11 +52,6 @@ class InformacaoEquipaActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        imgPerfilUser_informacao_equipa.setOnClickListener {
-            val intent = Intent(this, InformacaoJogadorActivity::class.java)
-            startActivity(intent)
-        }
-
         txtNomeEquipa_informacao_equipa.text = NomeClube
         txtAnoFundacao_informacao_equipa.text = AnoFundacao
         txtNomeEstadio_informacao_equipa.text = Treinador

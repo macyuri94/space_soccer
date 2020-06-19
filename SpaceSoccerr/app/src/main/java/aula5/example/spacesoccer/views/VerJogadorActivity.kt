@@ -53,6 +53,7 @@ class VerJogadorActivity : AppCompatActivity() {
             intent.putExtra("Email", email)
             intent.putExtra("IdTorneio", idTorneio)
             intent.putExtra("Nome", nomeTorneio)
+            intent.putExtra("NomeClube", nomeEquipa)
             startActivity(intent)
         }
 
@@ -105,6 +106,7 @@ class VerJogadorActivity : AppCompatActivity() {
                 intent.putExtra("Email", email)
                 intent.putExtra("IdTorneio", idTorneio!!.toInt())
                 intent.putExtra("Nome", nomeTorneio)
+                intent.putExtra("IdClube", idEquipa!!.toInt())
                 startActivity(intent)
             }
 

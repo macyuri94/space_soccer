@@ -19,6 +19,7 @@ class CriarJogadorActivity : AppCompatActivity() {
     var email: String? = null
     var nomeTorneio: String? = null
     var idTorneio: Int? = null
+    var nomeEquipa: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +31,7 @@ class CriarJogadorActivity : AppCompatActivity() {
             idTorneio = it.getInt("IdTorneio")
             email = it.getString("Email")
             nomeTorneio = it.getString("Nome")
+            nomeEquipa = it.getString("NomeClube")
         }
 
         val numberCc = findViewById<EditText>(R.id.txtNumeroCartaoCidadao_criarJogador)
@@ -69,6 +71,7 @@ class CriarJogadorActivity : AppCompatActivity() {
                     intent.putExtra("Email", email)
                     intent.putExtra("IdTorneio", idTorneio)
                     intent.putExtra("Nome", nomeTorneio)
+                    intent.putExtra("NomeClube", nomeEquipa)
                     startActivity(intent)
 
                 } else {
