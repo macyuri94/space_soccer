@@ -33,7 +33,7 @@
         android:layout_width="410dp"
         android:layout_height="57dp"
         android:layout_marginTop="92dp"
-        android:text="Termos e condições"
+        android:text="@string/termos_e_condi_es"
         android:textAlignment="center"
         android:textColor="@color/colorWhite"
         android:textSize="35sp"

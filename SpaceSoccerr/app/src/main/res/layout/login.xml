@@ -37,7 +37,7 @@
         android:background="@drawable/background_txt"
         android:elegantTextHeight="false"
         android:fontFamily="@font/roboto"
-        android:hint="Palavra-passe"
+        android:hint="@string/palavra_passe"
         android:inputType="textPassword"
         android:paddingLeft="15sp"
         android:textAllCaps="false"
