@@ -14,7 +14,11 @@ import aula5.example.spacesoccer.helper.VolleyHelper
 import aula5.example.spacesoccer.models.Estatisticas
 import aula5.example.spacesoccer.models.Jogadores
 import aula5.example.spacesoccer.models.Jogos
+import aula5.example.spacesoccer.models.Utilizador
+import kotlinx.android.synthetic.main.estatisticas.*
 import kotlinx.android.synthetic.main.jogos.*
+import kotlinx.android.synthetic.main.jogos.listViewJogos
+import kotlinx.android.synthetic.main.jogos_filtrados.*
 import kotlinx.android.synthetic.main.ver_jogador.*
 import org.json.JSONObject
 
@@ -22,11 +26,14 @@ import org.json.JSONObject
 
 class JogosFiltradosActivity : AppCompatActivity() {
 
-    var idTorneio: Int? = null
-    var nomeTorneio: String? = null
+    var idTorneio:      Int? = null
+    var nomeTorneio:    String? = null
 
-    var listarJogos: MutableList<Jogos> = ArrayList()
-    var jogosAdapter: JogosFiltradosActivity.JogosAdapter? = null
+    var email:          String? = null
+
+    var listarJogos:        MutableList<Jogos> = ArrayList()
+    var jogosAdapter:       JogosFiltradosActivity.JogosAdapter? = null
+    var listarUtilizador:   MutableList<Utilizador> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,12 +41,21 @@ class JogosFiltradosActivity : AppCompatActivity() {
 
         val bundle = intent.extras
         bundle?.let {
-            idTorneio = it.getInt("IdTorneio")
+            idTorneio   = it.getInt("IdTorneio")
             nomeTorneio = it.getString("Nome")
+            email       = it.getString("Email")
         }
 
         jogosAdapter = JogosAdapter()
         listViewJogos.adapter = jogosAdapter
+
+        btHome_JogosFiltrados.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            intent.putExtra("IdTorneio", idTorneio)
+            intent.putExtra("Email", email)
+            intent.putExtra("Nome", nomeTorneio)
+            startActivity(intent)
+        }
 
         VolleyHelper.instance.getTournamentsGamesById(this, idTorneio!!.toInt()) { response ->
             response?.let {
@@ -51,6 +67,16 @@ class JogosFiltradosActivity : AppCompatActivity() {
             }
         }
 
+        VolleyHelper.instance.getUsersById(this, email.toString()) { response ->
+            response?.let {
+                for (index in 0 until it.length()) {
+                    val jsonPlayer = it[index] as JSONObject
+                    listarUtilizador.add(Utilizador.parseJson(jsonPlayer))
+
+                    txtNomeUtilizador_Jogos.text = listarUtilizador[index].PrimeiroNome
+                }
+            }
+        }
     }
 
     inner class JogosAdapter : BaseAdapter() {
@@ -66,6 +92,9 @@ class JogosFiltradosActivity : AppCompatActivity() {
                 intent.putExtra("EquipaCasa", listarJogos[position].EquipaCasa)
                 intent.putExtra("EquipaConvidada", listarJogos[position].EquipaConvidada)
                 intent.putExtra("DataJogo", listarJogos[position].DataJogo)
+                intent.putExtra("Nome", nomeTorneio)
+                intent.putExtra("Email", email)
+                intent.putExtra("IdTorneio", idTorneio)
                 intent.putExtra("Nome", nomeTorneio)
                 startActivity(intent)
             }

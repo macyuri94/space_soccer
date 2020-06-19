@@ -13,6 +13,9 @@ import aula5.example.spacesoccer.models.Jogadores
 import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
 import aula5.example.spacesoccer.models.Equipas
+import aula5.example.spacesoccer.models.Utilizador
+import kotlinx.android.synthetic.main.ver_equipa.*
+import kotlinx.android.synthetic.main.ver_equipa_filtrados.*
 import kotlinx.android.synthetic.main.ver_jogador.*
 import org.json.JSONObject
 
@@ -20,11 +23,15 @@ import org.json.JSONObject
 
 class VerJogadorActivity : AppCompatActivity() {
 
+    var idTorneio: Int? = null
     var idEquipa: Int? = null
     var nomeEquipa: String? = null
+    var email : String? = null
+    var nomeTorneio: String? = null
 
     var listarJogadores: MutableList<Jogadores> = ArrayList()
     var jogadoresAdapter: JogadoresAdapter? = null
+    var listarUtilizador: MutableList<Utilizador> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,15 +39,23 @@ class VerJogadorActivity : AppCompatActivity() {
 
         val bundle = intent.extras
         bundle?.let {
+            idTorneio = it.getInt("IdTorneio")
             idEquipa = it.getInt("IdClube")
             nomeEquipa = it.getString("NomeClube")
+            email = it.getString("Email")
+            nomeTorneio = it.getString("Nome")
+
         }
 
         btCriarJogador_verJogador.setOnClickListener {
             val intent = Intent(this, CriarJogadorActivity::class.java)
             intent.putExtra("IdClube", idEquipa!!.toInt())
+            intent.putExtra("Email", email)
+            intent.putExtra("IdTorneio", idTorneio)
+            intent.putExtra("Nome", nomeTorneio)
             startActivity(intent)
         }
+
 
         jogadoresAdapter = JogadoresAdapter()
         listViewJogadores.adapter = jogadoresAdapter
@@ -53,6 +68,25 @@ class VerJogadorActivity : AppCompatActivity() {
                 }
                 jogadoresAdapter?.notifyDataSetChanged()
             }
+        }
+
+        VolleyHelper.instance.getUsersById(this, email.toString()) { response ->
+            response?.let {
+                for (index in 0 until it.length()) {
+                    val jsonPlayer = it[index] as JSONObject
+                    listarUtilizador.add(Utilizador.parseJson(jsonPlayer))
+
+                    txtNomeUtilizador_verJogador.text = listarUtilizador[index].PrimeiroNome
+                }
+            }
+        }
+
+        btHome_verJogador.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            intent.putExtra("IdTorneio", idTorneio)
+            intent.putExtra("Email", email)
+            intent.putExtra("Nome", nomeTorneio)
+            startActivity(intent)
         }
     }
 
@@ -68,6 +102,9 @@ class VerJogadorActivity : AppCompatActivity() {
                 intent.putExtra("Nome", listarJogadores[position].Nome)
                 intent.putExtra("Nacionalidade", listarJogadores[position].Nacionalidade)
                 intent.putExtra("DataNascimento", listarJogadores[position].DataNascimento)
+                intent.putExtra("Email", email)
+                intent.putExtra("IdTorneio", idTorneio!!.toInt())
+                intent.putExtra("Nome", nomeTorneio)
                 startActivity(intent)
             }
 

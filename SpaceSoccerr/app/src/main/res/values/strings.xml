@@ -10,6 +10,7 @@
     <string name="deleteTeam_failed">Falha ao apagar equipa</string>
     <string name="createGame_failed">Falha na cração de jogo</string>
     <string name="createStatistic_failed">Falha na cração de estatistica</string>
+    <string name="checkBox_failed">CheckBox não está CHECK</string>
 
     //StringsSuccess
     <string name="creatPlayer_success">Jogador criado com sucesso</string>
@@ -45,5 +46,6 @@
         \n\nCláusula 6.ª : Dados pessoais\n
         \n1.  A entidade SpaceProgrammers é responsável pelo tratamento de dados pessoais recolhidos e gerados pelos utilizadores no uso da aplicação SpaceSoccer , bem como o armazenamento dos mesmos.
     </string>
+    <string name="nome_da_equipa">Nome da Equipa:</string>
 
 </resources>

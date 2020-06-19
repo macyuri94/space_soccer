@@ -83,12 +83,12 @@
         app:layout_constraintTop_toBottomOf="@+id/btEquipasMenu_menu" />
 
     <Button
-        android:id="@+id/btFotos_menu"
+        android:id="@+id/btTorneio_menu"
         android:layout_width="145sp"
         android:layout_height="145sp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="28dp"
-        android:background="@drawable/bt_fotos"
+        android:background="@drawable/img_torneio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btJogadores_menu" />
 
@@ -101,5 +101,19 @@
         android:background="@drawable/bt_infotorneio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btEquipasMenu_menu"/>
+
+    <TextView
+        android:id="@+id/txtNomeUtilizador_menu"
+        android:layout_width="228dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:text="Admin"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgPerfilUser_menu"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

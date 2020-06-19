@@ -89,7 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto"
-        android:text="Nome da Equipa: "
+        android:text="@string/nome_da_equipa"
         android:textColor="#F4705B"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView_informacao_equipa"
@@ -230,5 +230,20 @@
         android:background="@drawable/bt_editar"
         app:layout_constraintEnd_toEndOf="@+id/imageView_informacao_equipa"
         app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
+
+    <TextView
+        android:id="@+id/txtNomeUtilizador_informacaoEquipa"
+        android:layout_width="228dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:text="Admin"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgPerfilUser_informacao_equipa"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

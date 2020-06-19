@@ -5,7 +5,9 @@ package aula5.example.spacesoccer.views
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
 import aula5.example.spacesoccer.R
@@ -30,37 +32,47 @@ class RegistarActivity : AppCompatActivity() {
 
         val registerButton = findViewById<Button>(R.id.buttonRegister_registar)
 
-        if (password.text.toString() == confPassword.text.toString()) {
-            registerButton.setOnClickListener {
-                VolleyHelper.instance.userRegister(
-                    this@RegistarActivity,
-                    numerocartaocidadao.text.toString(),
-                    firstName.text.toString(),
-                    lastName.text.toString(),
-                    birthDate.text.toString(),
-                    username.text.toString(),
-                    password.text.toString()
-                ) {
-                    if (it) {
-                        val intent = Intent(this@RegistarActivity, LoginActivity::class.java)
-                        startActivity(intent)
-                    } else {
+        val check = findViewById<CheckBox>(R.id.checkBox)
+
+            if (password.text.toString() == confPassword.text.toString()) {
+                registerButton.setOnClickListener {
+                    if(check.isChecked) {
+                        VolleyHelper.instance.userRegister(
+                            this@RegistarActivity,
+                            numerocartaocidadao.text.toString(),
+                            firstName.text.toString(),
+                            lastName.text.toString(),
+                            birthDate.text.toString(),
+                            username.text.toString(),
+                            password.text.toString()
+                        ) {
+                            if (it) {
+                                val intent =
+                                    Intent(this@RegistarActivity, LoginActivity::class.java)
+                                startActivity(intent)
+                            } else {
+                                Toast.makeText(
+                                    this@RegistarActivity,
+                                    this@RegistarActivity.getString(R.string.login_failed),
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
+                        }
+                    }else {
                         Toast.makeText(
                             this@RegistarActivity,
-                            this@RegistarActivity.getString(R.string.login_failed),
+                            this@RegistarActivity.getString(R.string.checkBox_failed),
                             Toast.LENGTH_LONG
                         ).show()
                     }
                 }
-            }
-        } else {
+            }else {
             Toast.makeText(
                 this@RegistarActivity,
                 this@RegistarActivity.getString(R.string.login_failed),
                 Toast.LENGTH_LONG
             ).show()
         }
-
         textTermsOfUse.setOnClickListener {
             val intent = Intent(this, TermosECondicoes::class.java)
             startActivity(intent)

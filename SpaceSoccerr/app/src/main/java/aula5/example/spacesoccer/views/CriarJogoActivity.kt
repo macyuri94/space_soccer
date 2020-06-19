@@ -13,6 +13,7 @@ class CriarJogoActivity : AppCompatActivity() {
 
     var idTorneio: Int? = 0
     var nomeTorneio : String? = null
+    var email: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +23,7 @@ class CriarJogoActivity : AppCompatActivity() {
         bundle?.let {
             idTorneio = it.getInt("IdTorneio")
             nomeTorneio = it.getString("Nome")
+            email = it.getString("Email")
         }
 
         val nomeEquipaCasa = findViewById<EditText>(R.id.txtNomeEquipaCasa_criarJogo)
@@ -42,6 +44,9 @@ class CriarJogoActivity : AppCompatActivity() {
             ) {
                 if (it) {
                     val intent = Intent(this@CriarJogoActivity, JogosActivity::class.java)
+                    intent.putExtra("IdTorneio", idTorneio)
+                    intent.putExtra("Email", email)
+                    intent.putExtra("Nome", nomeTorneio)
                     startActivity(intent)
                 } else {
                     Toast.makeText(

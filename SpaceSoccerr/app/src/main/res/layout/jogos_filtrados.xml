@@ -34,13 +34,27 @@
         app:srcCompat="@drawable/img_user" />
 
     <Button
-        android:id="@+id/btHome_Jogos"
+        android:id="@+id/btHome_JogosFiltrados"
         android:layout_width="55sp"
         android:layout_height="55sp"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/bt_home_torneios"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNomeUtilizador_Jogos"
+        android:layout_width="228dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:text="Admin"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgPerfilUser_Jogos"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

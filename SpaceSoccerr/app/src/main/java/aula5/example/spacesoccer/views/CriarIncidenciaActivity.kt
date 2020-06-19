@@ -8,21 +8,24 @@ import android.widget.EditText
 import android.widget.Toast
 import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
-import aula5.example.spacesoccer.models.Jogos
 
 class CriarIncidenciaActivity : AppCompatActivity() {
 
-    var idJogo: Int? = 0
-    var nomeTorneio: String? = null
+    var idJogo:         Int? = 0
+    var idTorneio:      Int? = 0
+    var nomeTorneio:    String? = null
+    var email: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.criar_incidencia)
+        setContentView(R.layout.criar_estatistica)
 
         val bundle = intent.extras
         bundle?.let {
-            idJogo = it.getInt("IdJogo")
+            idJogo      = it.getInt("IdJogo")
+            idTorneio   = it.getInt("IdTorneio")
             nomeTorneio = it.getString("Nome")
+            email = it.getString("Email")
         }
 
         val possebolaA      = findViewById<EditText>(R.id.txtTotalPosseDeBolaEquipaCasa_criarincidencia)
@@ -44,6 +47,7 @@ class CriarIncidenciaActivity : AppCompatActivity() {
             VolleyHelper.instance.addEstatistica(
                 this@CriarIncidenciaActivity,
                 idJogo.toString().toInt(),
+                idTorneio.toString().toInt(),
                 possebolaA.text.toString().toInt(),
                 possebolaB.text.toString().toInt(),
                 rematesbalizaA.text.toString().toInt(),
@@ -59,6 +63,9 @@ class CriarIncidenciaActivity : AppCompatActivity() {
             ) {
                 if (it) {
                     val intent = Intent(this@CriarIncidenciaActivity, JogosActivity::class.java)
+                    intent.putExtra("IdTorneio", idTorneio)
+                    intent.putExtra("Email", email)
+                    intent.putExtra("Nome", nomeTorneio)
                     startActivity(intent)
                 } else {
                     Toast.makeText(

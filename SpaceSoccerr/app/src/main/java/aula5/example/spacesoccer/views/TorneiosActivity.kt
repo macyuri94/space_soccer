@@ -24,8 +24,11 @@ import org.json.JSONObject
 
 class TorneiosActivity : AppCompatActivity() {
 
-    var listarTorneios: MutableList<Torneios> = ArrayList()
-    var torneiosAdapter: TorneiosActivity.TorneiosAdapter? = null
+    var email: String? = null
+
+    var listarUtilizador    : MutableList<Utilizador> = ArrayList()
+    var listarTorneios      : MutableList<Torneios> = ArrayList()
+    var torneiosAdapter     : TorneiosActivity.TorneiosAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +36,12 @@ class TorneiosActivity : AppCompatActivity() {
 
         torneiosAdapter = TorneiosAdapter()
         listViewTorneios.adapter = torneiosAdapter
+
+        val bundle = intent.extras
+        bundle?.let {
+            email = it.getString("Email")
+        }
+
 
         VolleyHelper.instance.getAllTournaments(this) { response ->
             response?.let {
@@ -44,8 +53,20 @@ class TorneiosActivity : AppCompatActivity() {
             }
         }
 
+        VolleyHelper.instance.getUsersById(this, email.toString()) { response ->
+            response?.let {
+                for (index in 0 until it.length()) {
+                    val jsonPlayer = it[index] as JSONObject
+                    listarUtilizador.add(Utilizador.parseJson(jsonPlayer))
+
+                    txtNomeUtilizador_torneios.text = listarUtilizador[index].PrimeiroNome
+                }
+            }
+        }
+
         imgPerfilUserTorneios_torneios.setOnClickListener {
-            val intent = Intent(this, InformacaoJogadorActivity::class.java)
+            val intent = Intent(this, PerfilUtilizador::class.java)
+            intent.putExtra("Email", email.toString())
             startActivity(intent)
         }
 
@@ -67,6 +88,7 @@ class TorneiosActivity : AppCompatActivity() {
                 intent.putExtra("dtInicio", listarTorneios[position].dtInicio)
                 intent.putExtra("dtFim", listarTorneios[position].dtFim)
                 intent.putExtra("NumEquipas", listarTorneios[position].NumEquipas)
+                intent.putExtra("Email", email.toString())
                 startActivity(intent)
             }
 

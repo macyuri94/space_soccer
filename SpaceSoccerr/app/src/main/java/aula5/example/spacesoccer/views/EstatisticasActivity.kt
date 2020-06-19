@@ -14,8 +14,12 @@ import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
 import aula5.example.spacesoccer.models.Estatisticas
 import aula5.example.spacesoccer.models.Jogos
+import aula5.example.spacesoccer.models.Torneios
+import aula5.example.spacesoccer.models.Utilizador
 import kotlinx.android.synthetic.main.estatisticas.*
 import kotlinx.android.synthetic.main.jogos.*
+import kotlinx.android.synthetic.main.menu.*
+import kotlinx.android.synthetic.main.row_estatistica_painel1.*
 import kotlinx.android.synthetic.main.row_estatisticas.*
 import org.json.JSONObject
 
@@ -23,17 +27,23 @@ import org.json.JSONObject
 
 class EstatisticasActivity : AppCompatActivity() {
 
+    var IdTorneio: Int? = null
     var IdJogo: Int? = null
     var EquipaCasa: String? = null
     var EquipaConvidada: String? = null
     var DataJogo: String? = null
     var nomeTorneio: String? = null
 
-    var listarEstatistica: MutableList<Estatisticas> = ArrayList()
-    var estatisticaAdapter: EstatisticasActivity.EstatisticaAdapter? = null
+    var email:          String? = null
 
-    var listarEstatisticaPainel1: MutableList<Estatisticas> = ArrayList()
-    var estatisticaAdapterPainel1: EstatisticasActivity.EstatisticaPainel1Adapter? = null
+    var listarEstatistica           : MutableList<Estatisticas> = ArrayList()
+    var estatisticaAdapter          : EstatisticasActivity.EstatisticaAdapter? = null
+
+    var listarEstatisticaPainel1    : MutableList<Estatisticas> = ArrayList()
+    var estatisticaAdapterPainel1   : EstatisticasActivity.EstatisticaPainel1Adapter? = null
+
+    var listarUtilizador            : MutableList<Utilizador> = ArrayList()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,12 +51,15 @@ class EstatisticasActivity : AppCompatActivity() {
 
         val bundle = intent.extras
         bundle?.let {
-            IdJogo = it.getInt("IdJogo")
-            EquipaCasa = it.getString("EquipaCasa")
+            IdTorneio       = it.getInt("IdTorneio")
+            IdJogo          = it.getInt("IdJogo")
+            EquipaCasa      = it.getString("EquipaCasa")
             EquipaConvidada = it.getString("EquipaConvidada")
-            DataJogo = it.getString("DataJogo")
-            nomeTorneio = it.getString("Nome")
+            DataJogo        = it.getString("DataJogo")
+            nomeTorneio     = it.getString("Nome")
+            email           = it.getString("Email")
         }
+
 
         estatisticaAdapter = EstatisticaAdapter()
         listViewEstatistica.adapter = estatisticaAdapter
@@ -54,7 +67,7 @@ class EstatisticasActivity : AppCompatActivity() {
         estatisticaAdapterPainel1 = EstatisticaPainel1Adapter()
         listViewEstatistica_painel1.adapter = estatisticaAdapterPainel1
 
-        VolleyHelper.instance.getEstatisticaGamesById(this, IdJogo!!.toInt()) { response ->
+        VolleyHelper.instance.getEstatisticaGamesById(this, IdJogo!!) { response ->
             response?.let {
                 for (index in 0 until it.length()) {
                     val teamJSON: JSONObject = it[index] as JSONObject
@@ -64,18 +77,33 @@ class EstatisticasActivity : AppCompatActivity() {
             }
         }
 
-        VolleyHelper.instance.getEstatisticaGamesById(this, IdJogo!!.toInt()) { response ->
+        VolleyHelper.instance.getEstatisticaGamesById(this, IdJogo!!) { response ->
             response?.let {
                 for (index in 0 until it.length()) {
                     val teamJSON: JSONObject = it[index] as JSONObject
                     listarEstatisticaPainel1.add(Estatisticas.parseJson(teamJSON))
+
                 }
                 estatisticaAdapterPainel1?.notifyDataSetChanged()
             }
         }
 
+        VolleyHelper.instance.getUsersById(this, email.toString()) { response ->
+            response?.let {
+                for (index in 0 until it.length()) {
+                    val jsonPlayer = it[index] as JSONObject
+                    listarUtilizador.add(Utilizador.parseJson(jsonPlayer))
+
+                    txtNomeUtilizador_estatisticas.text = listarUtilizador[index].PrimeiroNome
+                }
+            }
+        }
+
         bthome_estatisticas.setOnClickListener {
             val intent = Intent(this, MenuActivity::class.java)
+            intent.putExtra("IdTorneio", IdTorneio)
+            intent.putExtra("Email", email)
+            intent.putExtra("Nome", nomeTorneio)
             startActivity(intent)
         }
     }
@@ -135,13 +163,15 @@ class EstatisticasActivity : AppCompatActivity() {
             val goloA = rowView2.findViewById<TextView>(R.id.txtresultadoequipa1_estatisticas)
             val goloB = rowView2.findViewById<TextView>(R.id.txtresultadoequipa2_estatisticas)
 
-            goloA.text = listarEstatistica[position].GolosA.toString()
-            goloB.text = listarEstatistica[position].GolosB.toString()
+            goloA.text = listarEstatisticaPainel1[position].GolosA.toString()
+            goloB.text = listarEstatisticaPainel1[position].GolosB.toString()
+
             NomeTorneio.text = nomeTorneio
             nomeEquipaA.text = EquipaCasa
             nomeEquipaB.text = EquipaConvidada
             tempoFinal.text = "TF"
             dataJogo.text = DataJogo
+
 
             return rowView2
         }

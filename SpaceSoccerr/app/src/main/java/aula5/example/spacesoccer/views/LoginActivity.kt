@@ -10,13 +10,12 @@ import android.widget.EditText
 import android.widget.Toast
 import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
+import aula5.example.spacesoccer.models.Torneios
 import aula5.example.spacesoccer.models.Utilizador
 
 // << ---------------------------------------------------------------------------------------- >> //
 
 class LoginActivity : AppCompatActivity() {
-
-    var listarUtilizador: MutableList<Utilizador> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,22 +25,6 @@ class LoginActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.txtPassword_login)
         val loginButton = findViewById<Button>(R.id.btLogin_login)
 
-        /*username.setText("nuno@gmail.com")
-        password.setText("nuno")
-
-        loginButton.setOnClickListener {
-            if (username.text.toString() == "nuno@gmail.com" && password.text.toString() == "nuno") {
-                val intent = Intent(this@LoginActivity, TorneiosActivity::class.java)
-                startActivity(intent)
-            } else {
-                Toast.makeText(
-                    this@LoginActivity,
-                    this@LoginActivity.getString(R.string.login_failed),
-                    Toast.LENGTH_LONG
-                ).show()
-            }
-        }*/
-
         loginButton.setOnClickListener {
             VolleyHelper.instance.userLogin ( this@LoginActivity,
                 username.text.toString(),
@@ -49,6 +32,7 @@ class LoginActivity : AppCompatActivity() {
             ) {
                 if (it) {
                     val intent = Intent(this@LoginActivity, TorneiosActivity::class.java)
+                    intent.putExtra("Email", username.text.toString())
                     startActivity(intent)
                 } else {
                     Toast.makeText(

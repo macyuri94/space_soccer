@@ -197,5 +197,34 @@
         app:layout_constraintStart_toStartOf="@+id/imageView_informacaoTorneio"
         app:layout_constraintTop_toTopOf="@+id/imageView_informacaoTorneio" />
 
+    <Button
+        android:id="@+id/btMedias_informacaoTorneio"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bt_registar_orange"
+        android:fontFamily="@font/roboto"
+        android:text="Médias"
+        android:textColor="#ffff"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ret4_informacaoTorneio" />
+
+    <TextView
+        android:id="@+id/txtNomeUtilizador_informacaoTorneio"
+        android:layout_width="228dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:text="Admin"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgPerfilUser_informacaoTorneio"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

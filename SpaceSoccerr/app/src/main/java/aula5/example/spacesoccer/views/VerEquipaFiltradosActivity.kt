@@ -14,6 +14,8 @@ import aula5.example.spacesoccer.R
 import aula5.example.spacesoccer.helper.VolleyHelper
 import aula5.example.spacesoccer.models.Equipas
 import aula5.example.spacesoccer.models.Torneios
+import aula5.example.spacesoccer.models.Utilizador
+import kotlinx.android.synthetic.main.informacao_equipa.*
 import kotlinx.android.synthetic.main.row_equipa_filtrado.*
 import kotlinx.android.synthetic.main.ver_equipa.*
 import kotlinx.android.synthetic.main.ver_equipa_filtrados.*
@@ -24,9 +26,13 @@ import org.json.JSONObject
 class VerEquipaFiltradosActivity : AppCompatActivity() {
 
     var idTorneio: Int? = null
+    var email: String? = null
+    var nomeTorneio: String? = null
 
     var listarEquipasFiltrado: MutableList<Equipas> = ArrayList()
     var equipasFiltradoAdapter: VerEquipaFiltradosActivity.EquipasFiltradoAdapter? = null
+
+    var listarUtilizador    : MutableList<Utilizador> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +41,8 @@ class VerEquipaFiltradosActivity : AppCompatActivity() {
         val bundle = intent.extras
         bundle?.let {
             idTorneio = it.getInt("IdTorneio")
+            email = it.getString("Email")
+            nomeTorneio = it.getString("Nome")
         }
 
         equipasFiltradoAdapter = EquipasFiltradoAdapter()
@@ -50,8 +58,22 @@ class VerEquipaFiltradosActivity : AppCompatActivity() {
             }
         }
 
+        VolleyHelper.instance.getUsersById(this, email.toString()) { response ->
+            response?.let {
+                for (index in 0 until it.length()) {
+                    val jsonPlayer = it[index] as JSONObject
+                    listarUtilizador.add(Utilizador.parseJson(jsonPlayer))
+
+                    txtNomeUtilizador_verEquipaFiltrado.text = listarUtilizador[index].PrimeiroNome
+                }
+            }
+        }
+
         btHome_verEquipaFiltrado.setOnClickListener {
-            val intent = Intent(this, TorneiosActivity::class.java)
+            val intent = Intent(this, MenuActivity::class.java)
+            intent.putExtra("IdTorneio", idTorneio!!.toInt())
+            intent.putExtra("Email", email)
+            intent.putExtra("Nome", nomeTorneio)
             startActivity(intent)
         }
 
@@ -70,6 +92,9 @@ class VerEquipaFiltradosActivity : AppCompatActivity() {
                 val intent = Intent(this@VerEquipaFiltradosActivity, VerJogadorActivity::class.java)
                 intent.putExtra("IdClube", listarEquipasFiltrado[position].IdClube)
                 intent.putExtra("NomeClube", listarEquipasFiltrado[position].NomeClube)
+                intent.putExtra("Email", email)
+                intent.putExtra("IdTorneio", idTorneio!!.toInt())
+                intent.putExtra("Nome", nomeTorneio)
                 startActivity(intent)
             }
 
