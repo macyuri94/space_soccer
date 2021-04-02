@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        tools:context=".views.PerfilUtilizador"
+    android:background="@drawable/background_blue_orange_white">
+
+    <ImageView
+        android:id="@+id/imgPerfilUser_PerfilUtilizador"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_user" />
+
+    <Button
+        android:id="@+id/btHome_PerfilUtilizador"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bt_home_torneios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLogoEquipa_PerfilUtilizador"
+        android:layout_width="120sp"
+        android:layout_height="120sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_PerfilUtilizador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.808"
+        app:srcCompat="@drawable/img_user" />
+
+    <ImageView
+        android:id="@+id/imageView_PerfilUtilizador"
+        android:layout_width="372dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="240dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_painel_equipa_jogador" />
+
+    <ImageView
+        android:id="@+id/ret2_PerfilUtilizadorr"
+        android:layout_width="372dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ret4_PerfilUtilizador"
+        app:srcCompat="@drawable/img_painel_equipa_jogador" />
+
+    <ImageView
+        android:id="@+id/ret3_PerfilUtilizador"
+        android:layout_width="372dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ret2_PerfilUtilizadorr"
+        app:srcCompat="@drawable/img_painel_equipa_jogador" />
+
+    <ImageView
+        android:id="@+id/ret4_PerfilUtilizador"
+        android:layout_width="372dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_PerfilUtilizador"
+        app:srcCompat="@drawable/img_painel_equipa_jogador" />
+
+    <TextView
+        android:id="@+id/txtTituloPrimeiroNome_PerfilUtilizador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/primeiro_nome"
+        android:textColor="#F4705B"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_PerfilUtilizador"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="@+id/imageView_PerfilUtilizador"
+        app:layout_constraintTop_toTopOf="@+id/imageView_PerfilUtilizador" />
+
+    <TextView
+        android:id="@+id/txtTituloDataNascimento_PerfilUtilizador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/data_nascimento"
+        android:textColor="#F4705B"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_PerfilUtilizador"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="@+id/imageView_PerfilUtilizador"
+        app:layout_constraintTop_toTopOf="@+id/ret2_PerfilUtilizadorr" />
+
+    <TextView
+        android:id="@+id/txtTituloEmail_PerfilUtilizador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:text="Email:"
+        android:textColor="#F4705B"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_PerfilUtilizador"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="@+id/imageView_PerfilUtilizador"
+        app:layout_constraintTop_toTopOf="@+id/ret3_PerfilUtilizador" />
+
+    <TextView
+        android:id="@+id/txtTituloUltimoNome_PerfilUtilizador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/ultimo_nome"
+        android:textColor="#F4705B"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_PerfilUtilizador"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="@+id/ret4_PerfilUtilizador"
+        app:layout_constraintTop_toTopOf="@+id/ret4_PerfilUtilizador" />
+
+    <TextView
+        android:id="@+id/txtPrimeiroNome_PerfilUtilizador"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto"
+        android:text="Nuno "
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView_PerfilUtilizador"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloPrimeiroNome_PerfilUtilizador" />
+
+    <TextView
+        android:id="@+id/txtDataNascimento_PerfilUtilizador"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto"
+        android:text="08/03/2020"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="@+id/ret2_PerfilUtilizadorr"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloDataNascimento_PerfilUtilizador" />
+
+    <TextView
+        android:id="@+id/txtEmail_PerfilUtilizador"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto"
+        android:text="Portuguesa"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="@+id/ret3_PerfilUtilizador"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloEmail_PerfilUtilizador" />
+
+    <TextView
+        android:id="@+id/txtultimoNome_PerfilUtilizador"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto"
+        android:text="Fernandes"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="@+id/ret4_PerfilUtilizador"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloUltimoNome_PerfilUtilizador" />
+
+    <TextView
+        android:id="@+id/txtNomeUtilizador_PerfilUtilizador"
+        android:layout_width="228dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:text="Admin"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgPerfilUser_PerfilUtilizador"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

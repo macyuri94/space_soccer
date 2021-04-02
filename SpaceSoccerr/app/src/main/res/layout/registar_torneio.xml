@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.RegistarTorneioActivity"
+    android:background="@drawable/background_blue">
+
+    <EditText
+        android:id="@+id/textTournamentName_registar_torneio"
+        android:layout_width="260sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="130sp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/nome_torneio"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textStartDate_registar_torneio"
+        android:layout_width="260sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/data_inicio"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTournamentName_registar_torneio" />
+
+    <EditText
+        android:id="@+id/textEndDate_registar_torneio"
+        android:layout_width="260sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="30sp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/data_fim"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textStartDate_registar_torneio" />
+
+    <EditText
+        android:id="@+id/textNumberOfTeams_registar_torneio"
+        android:layout_width="260sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/numero_equipas"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEndDate_registar_torneio" />
+
+    <Button
+        android:id="@+id/buttonSaveData_registar_torneio"
+        android:layout_width="180sp"
+        android:layout_height="50sp"
+        android:layout_marginBottom="64sp"
+        android:background="@drawable/bt_registar_orange"
+        android:fontFamily="@font/roboto"
+        android:text="Guardar Dados"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNumberOfTeams_registar_torneio" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

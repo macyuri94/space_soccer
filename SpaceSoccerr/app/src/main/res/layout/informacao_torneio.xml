@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.InformacaoTorneioActivity"
+    android:background="@drawable/background_blue_orange_white">
+
+    <TextView
+        android:id="@+id/txtTituloTorneio_informacaoTorneio"
+        android:layout_width="375dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="140dp"
+        android:text="TORNEIO A"
+        android:textAlignment="center"
+        android:textColor="#F4705B"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgPerfilUser_informacaoTorneio"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_user" />
+
+    <Button
+        android:id="@+id/btHome_informacaoTorneio"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bt_home_torneios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_informacaoTorneio"
+        android:layout_width="372dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="240dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_painel_equipa_jogador" />
+
+    <ImageView
+        android:id="@+id/ret2_informacaoTorneio"
+        android:layout_width="372dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="344dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_painel_equipa_jogador" />
+
+    <ImageView
+        android:id="@+id/ret3_informacaoTorneio"
+        android:layout_width="372dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="448dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_painel_equipa_jogador" />
+
+    <ImageView
+        android:id="@+id/ret4_informacaoTorneio"
+        android:layout_width="372dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="552dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_painel_equipa_jogador" />
+
+    <TextView
+        android:id="@+id/txtNomeTorneio_informacaoTorneio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/nome_torneio"
+        android:textColor="#F4705B"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacaoTorneio"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="@+id/imageView_informacaoTorneio"
+        app:layout_constraintTop_toTopOf="@+id/imageView_informacaoTorneio" />
+
+    <TextView
+        android:id="@+id/txtDataInicio_informacaoTorneio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/data_inicio"
+        android:textColor="#F4705B"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacaoTorneio"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="@+id/imageView_informacaoTorneio"
+        app:layout_constraintTop_toTopOf="@+id/imageView_informacaoTorneio" />
+
+    <TextView
+        android:id="@+id/txtDataFim_informacaoTorneio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="216dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/data_fim"
+        android:textColor="#F4705B"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacaoTorneio"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="@+id/imageView_informacaoTorneio"
+        app:layout_constraintTop_toTopOf="@+id/imageView_informacaoTorneio" />
+
+    <TextView
+        android:id="@+id/txtNumeroEquipas_informacaoTorneio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/numero_equipas"
+        android:textColor="#F4705B"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacaoTorneio"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="@+id/imageView_informacaoTorneio"
+        app:layout_constraintTop_toTopOf="@+id/imageView_informacaoTorneio" />
+
+    <TextView
+        android:id="@+id/txtNomeTorneio2_informacaoTorneio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:text="Liga Portuguesa"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacaoTorneio"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView_informacaoTorneio"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeTorneio_informacaoTorneio" />
+
+    <TextView
+        android:id="@+id/txtDataInicio2_informacaoTorneio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto"
+        android:text="08/03/2020"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacaoTorneio"
+        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintStart_toStartOf="@+id/ret2_informacaoTorneio"
+        app:layout_constraintTop_toBottomOf="@+id/txtDataInicio_informacaoTorneio" />
+
+    <TextView
+        android:id="@+id/txtDataFim2_informacaoTorneio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/roboto"
+        android:text="08/04/2020"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacaoTorneio"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ret3_informacaoTorneio"
+        app:layout_constraintTop_toBottomOf="@+id/txtDataFim_informacaoTorneio" />
+
+    <TextView
+        android:id="@+id/txtNumeroEquipas2_informacaoTorneio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/roboto"
+        android:text="4"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacaoTorneio"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ret4_informacaoTorneio"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumeroEquipas_informacaoTorneio" />
+
+    <Button
+        android:id="@+id/btMedias_informacaoTorneio"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bt_registar_orange"
+        android:fontFamily="@font/roboto"
+        android:text="Médias"
+        android:textColor="#ffff"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ret4_informacaoTorneio" />
+
+    <TextView
+        android:id="@+id/txtNomeUtilizador_informacaoTorneio"
+        android:layout_width="228dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:text="Admin"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgPerfilUser_informacaoTorneio"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

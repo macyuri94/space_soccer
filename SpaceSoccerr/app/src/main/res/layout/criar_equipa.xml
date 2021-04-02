@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_blue"
+    tools:context=".views.CriarEquipaActivity">
+
+    <EditText
+        android:id="@+id/txtNomeEquipa_criarEquipa"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="156dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/nome_equipa"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtPresidente_criarEquipa"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/presidente"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeEquipa_criarEquipa" />
+
+    <EditText
+        android:id="@+id/txtAnoFundacao_criarEquipa"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/ano_funda_o"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPresidente_criarEquipa" />
+
+    <EditText
+        android:id="@+id/txtCidadeFundacao_criarEquipa"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/cidade_funda_o"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAnoFundacao_criarEquipa" />
+
+    <EditText
+        android:id="@+id/txtTreinador_criarEquipa"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/treinador"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCidadeFundacao_criarEquipa" />
+
+    <Button
+        android:id="@+id/btGuardarDados_criarEquipa"
+        android:layout_width="163sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/bt_registar_orange"
+        android:fontFamily="@font/roboto"
+        android:text="@string/guardar_dados"
+        android:textColor="#ffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTreinador_criarEquipa" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

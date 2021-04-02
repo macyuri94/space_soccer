@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.LoginRegistarActivity"
+    android:background="@drawable/background_blue_orange">
+
+    <ImageView
+        android:id="@+id/imageView_login_registar"
+        android:layout_width="150sp"
+        android:layout_height="144sp"
+        android:layout_marginStart="16sp"
+        android:layout_marginTop="56sp"
+        android:layout_marginEnd="245sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/spacce_soccer_small_logo" />
+
+    <Button
+        android:id="@+id/buttonLogin_login_registar"
+        android:layout_width="180sp"
+        android:layout_height="60sp"
+        android:layout_marginTop="300sp"
+        android:background="@drawable/bt_login_white_with_effect"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRegister_login_registar"
+        android:layout_width="180sp"
+        android:layout_height="60sp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/bt_registar_white_with_effect"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin_login_registar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

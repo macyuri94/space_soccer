@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_blue"
+    tools:context=".views.CriarJogoActivity">
+
+    <EditText
+        android:id="@+id/txtNomeEquipaCasa_criarJogo"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="156dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/nome_equipa_da_casa"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNomeEquipaConvidada_criarJogo"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/nome_equipa_convidada"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeEquipaCasa_criarJogo" />
+
+    <EditText
+        android:id="@+id/txtNomeArbitro_criarJogo"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/arbitro"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeEquipaConvidada_criarJogo" />
+
+    <EditText
+        android:id="@+id/txtDataJogo_criarJogo"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background_txt"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/data_jogo"
+        android:paddingLeft="15sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeArbitro_criarJogo" />
+
+
+    <Button
+        android:id="@+id/btGuardarDados_criarJogo"
+        android:layout_width="163sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/bt_registar_orange"
+        android:fontFamily="@font/roboto"
+        android:text="@string/guardar_dados"
+        android:textColor="#ffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDataJogo_criarJogo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_blue_orange_white"
+    tools:context=".views.InformacaoEquipaActivity">
+
+    <ImageView
+        android:id="@+id/imgPerfilUser_informacao_equipa"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_user" />
+
+    <Button
+        android:id="@+id/btHome_informacao_equipa"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bt_home_torneios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLogoEquipa_informacao_equipa"
+        android:layout_width="120sp"
+        android:layout_height="120sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.783"
+        app:srcCompat="@drawable/img_team_logo" />
+
+    <ImageView
+        android:id="@+id/imageView_informacao_equipa"
+        android:layout_width="372dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="240dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_painel_equipa_jogador" />
+
+    <ImageView
+        android:id="@+id/ret2_informacao_equipa"
+        android:layout_width="372dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="344dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_painel_equipa_jogador" />
+
+    <ImageView
+        android:id="@+id/ret3_informacao_equipa"
+        android:layout_width="372dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="448dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_painel_equipa_jogador" />
+
+    <ImageView
+        android:id="@+id/ret4_informacao_equipa"
+        android:layout_width="372dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="552dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_painel_equipa_jogador" />
+
+    <TextView
+        android:id="@+id/txtTituloNomeEquipa_informacao_equipaquipa_informacao_equipa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/nome_da_equipa"
+        android:textColor="#F4705B"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
+
+    <TextView
+        android:id="@+id/txtTituloAnoFundacao_informacao_equipa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/ano_funda_o"
+        android:textColor="#F4705B"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
+
+    <TextView
+        android:id="@+id/txtTituloTreinador_informacao_equipa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="216dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/treinador"
+        android:textColor="#F4705B"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
+
+    <TextView
+        android:id="@+id/txtTituloLocalizacao_informacao_equipa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/localiza_o"
+        android:textColor="#F4705B"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
+
+    <TextView
+        android:id="@+id/txtNomeEquipa_informacao_equipa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toStartOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
+
+    <TextView
+        android:id="@+id/txtAnoFundacao_informacao_equipa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
+
+    <TextView
+        android:id="@+id/txtNomeEstadio_informacao_equipa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="256dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toStartOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
+
+    <TextView
+        android:id="@+id/txtNomeLocalizacao_informacao_equipa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toStartOf="@+id/imageView_informacao_equipa"
+        app:layout_constraintTop_toTopOf="@+id/imageView_informacao_equipa" />
+
+    <TextView
+        android:id="@+id/txtNomeUtilizador_informacaoEquipa"
+        android:layout_width="228dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:text="Admin"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgPerfilUser_informacao_equipa"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

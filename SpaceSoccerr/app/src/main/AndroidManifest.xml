@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="aula5.example.spacesoccer">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".views.PerfilUtilizador"></activity>
+        <activity android:name=".views.VerMedias" />
+        <activity android:name=".views.TermosECondicoes" />
+        <activity android:name=".views.JogosFiltradosActivity" />
+        <activity android:name=".views.CriarIncidenciaActivity" />
+        <activity android:name=".views.CriarJogoActivity" />
+        <activity android:name=".views.InformacaoTorneioActivity" />
+        <activity android:name=".views.JogosActivity" />
+        <activity android:name=".views.VerEquipaFiltradosActivity" />
+        <activity android:name=".views.EstatisticasActivity" />
+        <activity android:name=".views.MenuActivity" />
+        <activity android:name=".views.InformacaoJogadorActivity" />
+        <activity android:name=".views.InformacaoEquipaActivity" />
+        <activity android:name=".views.VerJogadorActivity" />
+        <activity android:name=".views.VerEquipaActivity" />
+        <activity android:name=".views.CriarJogadorActivity" />
+        <activity android:name=".views.CriarEquipaActivity" />
+        <activity android:name=".views.TorneiosActivity" />
+        <activity android:name=".views.RegistarTorneioActivity" />
+        <activity android:name=".views.RegistarActivity" />
+        <activity android:name=".views.LoginActivity" />
+        <activity android:name=".views.LoginRegistarActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
